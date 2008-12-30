@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>kstewart</title>
+ <link href="http://kstewart.name/atom.xml" rel="self"/>
+ <link href="http://kstewart.name/"/>
+ <updated>2008-12-29T22:18:33-08:00</updated>
+ <id>http://kstewart.name/</id>
+ <author>
+   <name>Kevin Stewart</name>
+   <email>kevin.p.stewart@gmail.com</email>
+ </author>
+ 
+ 
+ <entry>
+   <title>Welcome!</title>
+   <link href="http://kstewart.name/2008/12/29/first.html"/>
+   <updated>2008-12-29T00:00:00-08:00</updated>
+   <id>http://kstewart.name/2008/12/29/first</id>
+   <content type="html">&lt;p&gt;Welcome to [working code]&lt;/p&gt;</content>
+ </entry>
+ 
+ 
+</feed>
