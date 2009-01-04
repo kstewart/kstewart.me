@@ -4,13 +4,51 @@
  <title>kstewart</title>
  <link href="http://kstewart.name/atom.xml" rel="self"/>
  <link href="http://kstewart.name/"/>
- <updated>2008-12-29T22:18:33-08:00</updated>
+ <updated>2009-01-03T22:29:17-08:00</updated>
  <id>http://kstewart.name/</id>
  <author>
    <name>Kevin Stewart</name>
    <email>kevin.p.stewart@gmail.com</email>
  </author>
  
+ 
+ <entry>
+   <title>Is Agile or Lean Enough?</title>
+   <link href="http://kstewart.name/2009/01/03/is-agile-or-lean-enough.html"/>
+   <updated>2009-01-03T00:00:00-08:00</updated>
+   <id>http://kstewart.name/2009/01/03/is-agile-or-lean-enough</id>
+   <content type="html">&lt;p&gt;At the end of the year, I tend to reflect on the progress my team has made and what directions we should take in the new year. Actually, I think about this all the time. However, since the company shuts down I have extra time to be introspective. This year given the snowstorms in Seattle, I&#8217;ve had even more time.&lt;br /&gt;
+                                 &lt;br /&gt;
+Generally, I have been a proponent of agile techniques. They&#8217;re basically codifications of common sense best practices. For the past few years, I&#8217;ve been particularly attracted to Scrum for managing my development projects. While the basics are pretty easy, Scrum (like most agile methodologies) actually requires a lot of discipline. So, my team and I spent a lot of time increasing our discipline and paying attention to the issues that Scrum surfaced in our development process.&lt;/p&gt;
+&lt;p&gt;While that approach definitely delivered some benefits, I constantly felt like there were huge gaps in what agile in general and Scrum in particular were bringing to the table. A recent blog post by James Shore, &lt;a href="http://jamesshore.com/Blog/The-Decline-and-Fall-of-Agile.html"&gt;The Decline and Fall of Agile&lt;/a&gt;, captured some of my concerns:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It says that the team should be cross-functional and recommends co-locating the team in a shared workspace. It says the team should deliver a valuable, shippable product at the end of every Sprint, and that the team should self-organize, discover impediments, and remove them.&lt;br /&gt;
+Oh, and it also has a few mechanical things about a monthly Sprint and daily Scrum. Trivial stuff compared to the rest. But guess which part people adopt? That&#8217;s right&#8212;Sprints and Scrums. Rapid cycles, but none of the good stuff that makes rapid cycles sustainable.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Taking part in many agile discussions at work as well as practicing it on my project, I recognized this as one of the bigger problems. As much as my team and I may want to work in an agile fashion, there were other factors conspiring against us. Co-location was the biggest one and getting a fully cross-functional team in place is not always possible. Shore also states:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It&#8217;s human nature to only do the stuff that&#8217;s familiar and fun, and that&#8217;s what has happened with Agile. People look at agile methods as a chinese menu of practices, choose the few that look cool, and ditch the rest. Unfortunately, the parts they leave out are the parts that make Agile work. Scrum makes it worse by ignoring important (but hard) agile engineering practices, and the Scrum Alliance makes it worse still with their armies of trainers some good, some not issuing dubious &#8220;ScrumMaster&#8221; certificates to people who demonstrated competence in connecting butt to chair for two days.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I&#8217;ll be honest, our company offered Scrum training with Ken Schwaber and I took it (Hey, it was &lt;span class="caps"&gt;FREE&lt;/span&gt;!) And yes, I am now a Certified Scrum Master. And what enlightenment did I receive from this training. Not a whole heckuva lot. In fact, at the conclusion of this training I painfully recalled an enjoyable post from Steve Yegge, &lt;a href="http://steve-yegge.blogspot.com/2006/09/good-agile-bad-agile_27.html"&gt;Good Agile, Bad Agile&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Up until maybe a year ago, I had a pretty one-dimensional view of so-called &#8220;Agile&#8221; programming, namely that it&#8217;s an idiotic fad-diet of a marketing scam making the rounds as yet another technological virus implanting itself in naive programmers who&#8217;ve never read &#8220;No Silver Bullet&#8221;, the kinds of programmers who buy extended warranties and self-help books and believe their bosses genuinely care about them as people, the kinds of programmers who attend conferences to make friends and who don&#8217;t know how to avoid eye contact with leaflet-waving fanatics in airports and who believe writing shit on index cards will suddenly make software development easier.&lt;br /&gt;
+You know. Chumps. That&#8217;s the word I&#8217;m looking for. My bad-cholesterol view was that Agile Methodologies are for chumps.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;And if you have taken this particular Scrum course and recall the &#8220;secret handshake&#8221; at the end, the &lt;strong&gt;chump&lt;/strong&gt; title probably seems like a better name for the certification you received. Sure, there were a few useful bits in terms of clarifying a few ambiguous parts of the standard Scrum literature. However, the course offered no practical help with day-to-day development issues. Specifically, the disconnect from one or more development practices that pair up well with Scrum as Shore notes.&lt;/p&gt;
+&lt;p&gt;So, reflecting on the past year I see two fundamental issues with our adoption of agile practices. The first is the lack of top-down adoption of agile in our company. While there are many teams adopting agile (specifically Scrum), there is still the cross-functional gap. That leads to a lot of wasted time spent context switching between Scrum and the &#8220;traditional&#8221; development process. I&#8217;ve witnessed a lot of teams say that they&#8217;re &lt;em&gt;doing Scrum&lt;/em&gt; but they&#8217;re just re-labeling portions of the legacy process with terms they learned from Scrum. More &lt;strong&gt;fragile&lt;/strong&gt; than agile. It seems as if there is not an organizational drive towards continuous improvement that is driven from the top, then it is easy to regress to past behavioral patterns. In &lt;a href="http://www.amazon.com/Scaling-Lean-Agile-Development-Organizational/dp/0321480961/ref=wl_it_dp?ie=UTF8&amp;coliid=I2EDC0NTF1H01X&amp;colid=1HKQWRT70OE52"&gt;Scaling Lean and Agile Development&lt;/a&gt;, Craig Larman summarizes this nicely:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There are better ways to build large systems than with many developers in many places. Rather, build a small group of great developers and other talents that can work together in teams, pay them well, and keep them together in one place with product management or whoever acts as the voice of the customer.&lt;br /&gt;
+But of course you are &lt;em&gt;still&lt;/em&gt; going to do large, multisite, or offshore development. This is because your existing system is already structured that way, or because in the case of large groups there is the mindset that &#8220;big systems need lots of people.&#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;THAT&#8217;S what our current situation feels like. And that&#8217;s not something that can be addressed from the bottom up alone.&lt;/p&gt;
+&lt;p&gt;And my second issue? Exactly what Shore mentioned:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Scrum makes it worse by ignoring important (but hard) agile engineering practices&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Scrum does not prescribe any development practice to use alongside it. That&#8217;s OK, but one would think that by now the Scrum practitioners would have strong recommendations based on real-world experience. The common wisdom is Extreme Programming (XP), but I have several issues with XP. It seems to be even more of a take-it-all-or-leave-it-all religion than Scrum is. And XP doesn&#8217;t work for all teams. And most agile processes over-focus on the development team, but gloss over the other cross-functional team members.&lt;/p&gt;
+&lt;p&gt;Now that the Scrum backlash is in full swing, people are starting to embrace Lean. What they fail to realize is that Scrum is just the gateway drug to Lean. Scrum is not a pure pull system, which is what you would have once you Got Lean. After reading Corey Ladas&#8217; &lt;a href="http://leansoftwareengineering.com/ksse/scrum-ban/"&gt;blog post&lt;/a&gt; and &lt;a href="http://www.lulu.com/content/3864767"&gt;book&lt;/a&gt; some of the ideas resonated with me. But, this was only because I had years before been a fan of the Theory of Constraints and Eliyahu Goldratt&#8217;s books (sidebar: his books are great due to his ability to communicate dry, academic topics via engaging novels). And again, the pragmatic issues around cross-functional product development processes are still largely ignored.&lt;/p&gt;
+&lt;p&gt;So, in 2009, how will I evolve my team&#8217;s processes? We&#8217;ll probably continue with Scrum or even &#8220;evolve&#8221; towards Lean. But our focus will be on sharpening our engineering practices. We&#8217;ve been pretty good about constant communication and unit testing, but we can probably tighten up our feature designs and code reviews. It&#8217;s all about balance.&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>Welcome!</title>
