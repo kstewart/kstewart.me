@@ -1,0 +1,31 @@
+---
+layout: post
+title: Web Development vs. Software Development
+---
+
+From Eric S. Raymond, <em>The Art of Unix Programming, Chapter 11: The Web Browser as a Universal Front End</em>
+
+bq. For a large class of applications, it makes increasing sense not to write a custom GUI front end at all, but rather to press Web browsers into service in that role. This approach has many advantages. The most obvious is that you don't have to write procedural GUI code - instead, you can describe the GUI you want in languages (HTML and JavaScript) that are specialized for it. This avoids a lot of expensive and complex single-purpose coding and often more than halves the total project effort. Another is that it makes your application instantly Internet-ready; the front end may be on the same host as the back end, or may be a thousand miles away. Yet another is that all the minor presentation details of the application (such as fonts and color) are no longer your back end's problem, and indeed can be customized by users to their own tastes through mechanisms like browser preferences and cascading style sheets. Finally, the uniform elements of the Web interface substantially ease the user's learning task.
+
+For most of my career, there has been endless, tedious debate over the nature of software development. Is it math, science, engineering or craft? Well, having gone to an "engineering school":http://poly.edu to study computer science and in the process take a TON of math, science and engineering courses I can tell you that the majority of what people call software development is a "craft":http://en.wikipedia.org/wiki/Craft and we should stop obsessing over that fact.
+
+I have been a self-professed <strong>computer science bigot</strong> for a long time. I tended to make a distinction between people who had degrees in computer science (or at least studied the foundation stuff) and self taught developers. You know, a caste system. The high priesthood vs. the unwashed masses. And, in the dotcom days, that bias was reinforced when I saw the "designs" created by the Perl and PHP hackers. I have never, and probably will never, write a line of Perl in my life. Of course, some think that Ruby is the new Perl so I may have just lied! :-)
+
+However, after a few years writing Active Server Pages applications with VBScript and then moving back to a more comfortable language in Java with servlets, JavaServer Pages and JDBC my perspective slowly changed. Sure, I wrote model-view-controller (MVC) code in classic ASP just as I did in Java. But, I learned many things by working closely with Web designers. I gained greater appreciation for aesthetics, user experience and "interaction design":http://www.cooper.com/insights/books/#inmates as I built more Web applications. While my stomach churned over some of the hackish code I saw, I realized their true beauty... they worked and provided value for their users.
+
+Most computer science programs unwittingly reinforce this foolish caste system mentality from the 60s and 70s because faculty see themselves as divorced from the trivialities of <em>pragmatism, usefulness and real-world scenarios</em> because they are teaching theory and not practice. Some institutes of higher learning have at least acknowledged the need for a separate track in <strong>software engineering</strong> that focuses more on what practicing developers need to know: version control, debugging, cross-functional collaboration, etc. However, the very term <em>software engineering</em> still conveys the wrong sentiment that what we do is equivalent to electrical, aerospace or chemical engineering. It, emphatically, is not.
+
+Going off on a tangent for a moment, I used to feel the same way about <strong>game developers</strong>. I used to read Game Developer magazine, especially their Postmortem column, for years and marveled at how little these people seemed to know about basic development principles like object-oriented design. Yet, like Web developers they made products that people paid good money for and enjoyed using. Who cares then if few of them knew how to write a class that properly demonstrated "encapsulation, inheritance and polymorphism":http://en.wikipedia.org/wiki/Object-oriented_programming?
+
+Perhaps, the differences could better be described as <em>web <strong>design</strong> vs. web <strong>development</strong></em>? Unfortunately, this too is a false dichotomy. Web design without development often leads to brochureware. Or, some Web designers fool themselves into thinking that what they are doing is not creating code. I've seen some self-professed designers churn out some awesome Javascript and PHP or Python yet they don't believe that they are developing software (even as they check their code into their Subversion repository...)
+
+I may be in the minority here, but I actually believe that Apple did the WRONG thing with the iPhone SDK. I think they should have stuck to their guns and NOT come out with a way to build native applications for the iPhone. (Brief pause as multiple people pick their jaws up from the floor.) That's right, I said it. I would have been much more impressed if they stuck to the idea that Web applications ARE applications and can be used across multiple device contexts. Apple could have exposed more of the iPhone's features as Javascript objects that developers could utilize in their "Web" applications. By caving to the pressure to provide a "real" SDK Apple has continued to perpetuate the caste system. Granted, the iPhone is such a compelling device that many "Web developers" grumbled but grudgingly started to learn Objective C and Cocoa in order to build applications for it...
+
+Wait. <strong>Web developers</strong> learned a language like Objective C that you compile down to a binary in order to deploy on a device? Isn't that the domain of <em>software developers</em>?!? The false dichotomy breaks down! There is no <em>us vs. them</em> or <em>hacking vs. engineering</em>. There are only the people who like to tirelessly debate false dichotomies:
+
+* vim vs. Emacs
+* Tabs vs. spaces
+* Python vs. Ruby
+* Microsoft vs. everyone else
+
+and those of us who care about our craft enough to focus on building beautiful things that people love to use.
