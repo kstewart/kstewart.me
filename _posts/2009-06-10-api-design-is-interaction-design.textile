@@ -1,6 +1,6 @@
 ---
 layout: post
-title: API Design as Interaction Design
+title: API Design is Interaction Design
 ---
 
 For the past few weeks, I have been working with my team on refining the REST API for our Web service. While there will be some new additions in order to meet requirements for applications that will build upon the API, many of the changes are refinements. Early adopters and our own experience has provided a treasure trove of information that has guided the development of the latest version.
