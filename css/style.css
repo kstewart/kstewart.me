@@ -143,7 +143,7 @@ h4 {
 .post p a { font-weight:bold }
 
 .post {
-    border-bottom: 1px solid #ccc;
+/*    border-bottom: 1px solid #ccc;*/
 	padding:18px 0 0 0;
 	text-align:left;
     width:500px;

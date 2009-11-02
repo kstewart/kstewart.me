@@ -34,9 +34,10 @@
 	
 		    <div>
     			<p><strong>Recently</strong></p>
-				{% for post in site.posts %}
+				{% for post in site.posts limit:3 reversed %}
 			      <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a><br />
-			    {% endfor %}			
+			    {% endfor %}
+				<div><p><strong><a href="archives.html">archives</a></strong></p></div>
 		    </div>
 	
 			<div class="last">
