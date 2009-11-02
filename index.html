@@ -3,9 +3,7 @@ layout: default
 title: [working code]
 ---
  
-  <h2><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h2>
+<h3><a href="{{ site.posts.first.url }}">{{ site.posts.first.title }}</a></h3>
+<p class="byline">Posted by <strong>kstewart</strong> on {{ site.posts.first.date | date_to_string }}</p>
 
-  {{site.posts.first.content}} 
-  
-  {{ site.posts.first.date | date_to_string }} &raquo; posted by <strong>kstewart</strong> - <a href="{{ site.posts.first.url }}#disqus_thread"></a>
-  
+{{site.posts.first.content}} 

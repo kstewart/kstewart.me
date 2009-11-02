@@ -1,48 +1,29 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>[working code]</title>
-<link href="/css/screen.css" rel="stylesheet" type="text/css" />
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>[working code]</title>
+	<link href="/css/style.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
-<div id="container">
-	<div id="header">
-	  <h1><a href="/">[working code]</a></h1>
-	  <p>mastering the craft.</p>
+<div class="container">
+	<div class="header">
+	    <h1>
+			<a href="/">[working code]</a> 
+			<span>mastering the craft.</span>
+		</h1>
 	</div>
-	
-	<div id="navigation"> 
-		<ul id="navlist">
-			<li><p><strong>working code</strong> is the professional blog of kevin stewart.<br/>		  </li>
-		</ul>
+<!-- end header -->
 
-  </div>
-	  <div id="sidebar">
-	    <h2>elsewhere</h2>  
-	    	<div id="github-badge"></div>
-			<script type="text/javascript" charset="utf-8">
-			  GITHUB_USERNAME = "kstewart";
-			  GITHUB_LIST_LENGTH = 10;
-			  GITHUB_HEAD = "div"; // e.g. change to "h2" for wordpress sidebars
-			  GITHUB_THEME = "white"; // try 'black'
-			  GITHUB_TITLE = "on github"
-			  GITHUB_SHOW_ALL = "Show all"
-			</script>
-			<script src="http://drnicjavascript.rubyforge.org/github_badge/dist/github-badge-launcher.js" type="text/javascript"></script>
-	    <p><div id="twitter_div"><h3>on twitter</h3> <ul id="twitter_update_list"></ul></div></p>
-		<p><div id="dopplr-blog-badge-for-kstewart"><script type="text/javascript" src="http://www.dopplr.com/blogbadge/script/04af60ae87ab03a403ba6e6f1ff295cb?div-id=dopplr-blog-badge-for-kstewart"></script></div></p>
-		<p><a href="http://www.linkedin.com/in/kstewart" ><img src="http://www.linkedin.com/img/webpromo/btn_profile_bluetxt_80x15.gif" width="80" height="15" border="0" alt="View Kevin Stewart's profile on LinkedIn"></a></p>  
-		<p><a href="/archives.html">archives</a></p>    
-		<p><a href="http://feeds.feedburner.com/working-code" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/working-code" rel="alternate" type="application/rss+xml">Subscribe to [working code]</a></p>
-	    </div>
-	  
-	  	<div id="content">
-           
 
-<p>At the end of the year, I tend to reflect on the progress my team has made and what directions we should take in the new year. Actually, I think about this all the time. However, since the company shuts down I have extra time to be introspective. This year given the snowstorms in Seattle, I&#8217;ve had even more time.<br />
-                                 <br />
-Generally, I have been a proponent of agile techniques. They&#8217;re basically codifications of common sense best practices. For the past few years, I&#8217;ve been particularly attracted to Scrum for managing my development projects. While the basics are pretty easy, Scrum (like most agile methodologies) actually requires a lot of discipline. So, my team and I spent a lot of time increasing our discipline and paying attention to the issues that Scrum surfaced in our development process.</p>
+<div class="post">
+  
+<h3>Is Agile or Lean Enough?</h3>
+
+<div class="post">
+	<p>At the end of the year, I tend to reflect on the progress my team has made and what directions we should take in the new year. Actually, I think about this all the time. However, since the company shuts down I have extra time to be introspective. This year given the snowstorms in Seattle, I&#8217;ve had even more time.</p>
+<p>Generally, I have been a proponent of agile techniques. They&#8217;re basically codifications of common sense best practices. For the past few years, I&#8217;ve been particularly attracted to Scrum for managing my development projects. While the basics are pretty easy, Scrum (like most agile methodologies) actually requires a lot of discipline. So, my team and I spent a lot of time increasing our discipline and paying attention to the issues that Scrum surfaced in our development process.</p>
 <p>While that approach definitely delivered some benefits, I constantly felt like there were huge gaps in what agile in general and Scrum in particular were bringing to the table. A recent blog post by James Shore, <a href="http://jamesshore.com/Blog/The-Decline-and-Fall-of-Agile.html">The Decline and Fall of Agile</a>, captured some of my concerns:</p>
 <blockquote>
 <p>It says that the team should be cross-functional and recommends co-locating the team in a shared workspace. It says the team should deliver a valuable, shippable product at the end of every Sprint, and that the team should self-organize, discover impediments, and remove them.<br />
@@ -71,36 +52,56 @@ But of course you are <em>still</em> going to do large, multisite, or offshore d
 <p>Scrum does not prescribe any development practice to use alongside it. That&#8217;s OK, but one would think that by now the Scrum practitioners would have strong recommendations based on real-world experience. The common wisdom is Extreme Programming (XP), but I have several issues with XP. It seems to be even more of a take-it-all-or-leave-it-all religion than Scrum is. And XP doesn&#8217;t work for all teams. And most agile processes over-focus on the development team, but gloss over the other cross-functional team members.</p>
 <p>Now that the Scrum backlash is in full swing, people are starting to embrace Lean. What they fail to realize is that Scrum is just the gateway drug to Lean. Scrum is not a pure pull system, which is what you would have once you Got Lean. After reading Corey Ladas&#8217; <a href="http://leansoftwareengineering.com/ksse/scrum-ban/">blog post</a> and <a href="http://www.lulu.com/content/3864767">book</a> some of the ideas resonated with me. But, this was only because I had years before been a fan of the Theory of Constraints and Eliyahu Goldratt&#8217;s books (sidebar: his books are great due to his ability to communicate dry, academic topics via engaging novels). And again, the pragmatic issues around cross-functional product development processes are still largely ignored.</p>
 <p>So, in 2009, how will I evolve my team&#8217;s processes? We&#8217;ll probably continue with Scrum or even &#8220;evolve&#8221; towards Lean. But our focus will be on sharpening our engineering practices. We&#8217;ve been pretty good about constant communication and unit testing, but we can probably tighten up our feature designs and code reviews. It&#8217;s all about balance.</p>
+</div>
 
-<div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/working-code/embed.js"></script><noscript><a href="http://working-code.disqus.com/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 
 
-  		</div>
-	  
-	<div id="footer">
-	<p><a href="http://validator.w3.org/check?uri=referer" target="_blank">Valid 
-  XHTML</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">Valid 
-  CSS</a> | Copyright &copy; Kevin Stewart | Design by <a href="http://smallpark.org">SmallPark</a></p>
-  </div>
-</div>  
+</div>
 
+
+<br clear="all" />
+
+    <div class="footer">
+		
+		    <div>
+    			<p><strong>About</strong></p>
+    			<p><strong>working code</strong> is the professional blog of kevin stewart.</p>
+				<p><a href="http://www.linkedin.com/in/kstewart" ><img src="http://www.linkedin.com/img/webpromo/btn_profile_bluetxt_80x15.gif" width="80" height="15" border="0" alt="View Kevin Stewart's profile on LinkedIn"></a></p>
+		    </div>
+	
+		    <div>
+    			<p><strong>Recently</strong></p>
+				
+			      <span>10 Jun 2009</span> &raquo; <a href="/2009/06/10/api-design-is-interaction-design.html">API Design is Interaction Design</a><br />
+			    
+			      <span>13 Apr 2009</span> &raquo; <a href="/2009/04/13/webdev-vs-swdev.html">Web Development vs. Software Development</a><br />
+			    
+			      <span>25 Jan 2009</span> &raquo; <a href="/2009/01/25/seven-things.html">Seven Things</a><br />
+			    
+			      <span>03 Jan 2009</span> &raquo; <a href="/2009/01/03/is-agile-or-lean-enough.html">Is Agile or Lean Enough?</a><br />
+			    
+			      <span>29 Dec 2008</span> &raquo; <a href="/2008/12/29/first.html">Welcome!</a><br />
+			    			
+		    </div>
+	
+			<div class="last">
+    			<p><strong>Et Cetera</strong></p>
+			    <p><div id="twitter_div"><ul id="twitter_update_list"></ul></div></p>			
+			</div>
+	
+	    </div><!-- end footer -->
+
+        <br clear="all" />
+        
+		<div class="copyright">
+            <p>&copy; [working code]. Powered by <a href="http://pages.github.com">GitHub Pages</a> using the <a href="http://powazek.com/depo-skinny">DePo Skinny Theme</a>.</p>
+		</div>
+
+	</div> <!-- end container -->
+	
 <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
-<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/kstewart.json?callback=twitterCallback2&amp;count=5"></script> 
-
-<script type="text/javascript">
-//<![CDATA[
-(function() {
-		var links = document.getElementsByTagName('a');
-		var query = '?';
-		for(var i = 0; i < links.length; i++) {
-			if(links[i].href.indexOf('#disqus_thread') >= 0) {
-				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-			}
-		}
-		document.write('<script type="text/javascript" src="http://disqus.com/forums/working-code/get_num_replies.js' + query + '"></' + 'script>');
-	})();
-//]]>
-</script>
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/kstewart.json?callback=twitterCallback2&amp;count=3"></script> 
 
 </body>
 </html>
+
