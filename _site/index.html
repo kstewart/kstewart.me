@@ -18,54 +18,42 @@
 
 
 <div class="post">
-   
-<h3><a href="/2009/06/10/api-design-is-interaction-design.html">API Design is Interaction Design</a></h3>
-<p class="byline">Posted by <strong>kstewart</strong> on 10 Jun 2009</p>
+  <h3><a href="/2010/02/20/mobile-is-the-new-desktop.html">Mobile Is The New Desktop</a></h3>
+<p class="byline">Posted by <strong>kstewart</strong> on 20 Feb 2010</p>
 
-<p>For the past few weeks, I have been working with my team on refining the <span class="caps">REST</span> <span class="caps">API</span> for our Web service. While there will be some new additions in order to meet requirements for applications that will build upon the <span class="caps">API</span>, many of the changes are refinements. Early adopters and our own experience has provided a treasure trove of information that has guided the development of the latest version.</p>
-<p>From the very beginning, I chose a <span class="caps">REST</span> Oriented Architecture (<span class="caps">ROA</span>) for the service. To me, this just seemed obvious. I&#8217;ve followed the development of <span class="caps">XML</span>-<span class="caps">RPC</span> and <span class="caps">SOAP</span> for years. For awhile, <span class="caps">XML</span>-<span class="caps">RPC</span> seemed pretty cool and simple to me especially when compared to the mess that is <span class="caps">SOAP</span> (which evolved into <strong><em>WS-Death Star</em></strong>). However, in practice I always ended up sending some simple, Plain Ol&#8217; <span class="caps">XML</span> over <span class="caps">HTTP</span>. For the majority of cases, <span class="caps">HTTP</span> and URIs covered the functionality I needed sufficiently.</p>
-<p>As <span class="caps">REST</span> became a more prevalent meme, I got a copy of <a href="http://www.amazon.com/RESTful-Web-Services-Leonard-Richardson/dp/0596529260/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1244646726&amp;sr=8-1">RESTful Web Services</a> and read it cover-to-cover. I recommend this book to <strong><span class="caps">ANYONE</span></strong> building Web applications. It put what was common practice for me into context and really illustrated what <span class="caps">REST</span> and <span class="caps">ROA</span> are really about and what tradeoffs need to be made in every application.</p>
-<p>One part of the book that really stood out for me were the sections on <strong>resource design</strong>. Instead of the highly procedural <span class="caps">XML</span>-<span class="caps">RPC</span> or my own custom-coded <span class="caps">XML</span> schemas in my <span class="caps">POX</span>/<span class="caps">HHTP</span> implementations, <span class="caps">REST</span> made me think more about the actual objects, or resources, that I wanted to interact with over the network. Doing this forced me to think harder about naming and behaviors (whether or not they mapped cleanly to <span class="caps">GET</span>, <span class="caps">PUT</span>, <span class="caps">HEAD</span>, <span class="caps">DELETE</span> and, of course, <span class="caps">POST</span>). For error conditions, there was almost always an <span class="caps">HTTP</span> status code that would work for us. And, <span class="caps">HTTP</span> headers were incredibly useful in dealing with metadata.</p>
-<p>So, on my first pass with our <span class="caps">API</span> I attempted to adhere to RESTful principles. After identifying my resources, I spent even more time thinking about <strong>representations</strong>, the content types and schemas for the data my service would consume and produce. Many of my early assumptions changed quickly as I worked through this process (and again as we started working on the latest version) For instance, I once considered <span class="caps">XML</span> a safe, de facto format to support in an <span class="caps">API</span>. Then, along came <span class="caps">JSON</span>. When, I looked at some of my earlier representations I saw almost an order or magnitude difference in the size of an <span class="caps">XML</span> response compared to its <span class="caps">JSON</span> counterpart <em>for exactly the same data!</em> Now, in many cases, <span class="caps">XML</span> is a requirement. However, if you have the ability to define exactly which representations you will support, think long and hard about when to use <span class="caps">XML</span>. Given the proliferation of libraries in almost every conceivable language, <span class="caps">JSON</span> is almost as de facto a choice as <span class="caps">XML</span> and has even more practical benefits although there are also downsides, like potential security vulnerabilities. As in everything else, one should pick the tools that help solve the problem at hand.</p>
-<p>The first versions of our <span class="caps">API</span> worked fine. The true test was seeing the number of people who just went to our documentation page and started coding against it. Generally, we received fewer than half a dozen questions via email before they were able to productively use the service. That&#8217;s a huge win! We also ate our own dog food by prototyping clients for the service using:</p>
-<ul>
-	<li>curl</li>
-	<li>Ruby (using <a href="http://merbivore.com">Merb</a> as our framework)</li>
-	<li>Flash (ActionScript 3 and the Flex framework)</li>
-	<li>Adobe <span class="caps">AIR</span></li>
-</ul>
-<p>All the clients worked well, with the minor exception of Flash. Unfortunately, Flash has some limitations with respect to things like:</p>
-<ul>
-	<li><span class="caps">HTTP</span> response codes other than 200</li>
-	<li><span class="caps">PUT</span> and <span class="caps">DELETE</span></li>
-	<li>Custom <span class="caps">HTTP</span> headers</li>
-	<li>Using the User-Agent to identify the Flash Player</li>
-</ul>
-<p>Surprisingly, Adobe <span class="caps">AIR</span> works just fine with our <span class="caps">REST</span> <span class="caps">API</span>. Here, we had a nicely defined <span class="caps">API</span> but needed to make it work with Flash. The thought of either creating a separate <span class="caps">API</span> or moving to a least common delimiter approach for everyone was not appealing. However, there was actually a simple solution. If we added a prefix to all our <span class="caps">API</span> endpoints, we would know that the client was the Flash Player. In our Web service code, we wrote a proxy that would extract input from the request and then call the <span class="caps">REST</span> <span class="caps">API</span> directly. When the <span class="caps">API</span> code generated a response, the proxy would repackage it appropriately for the player:</p>
-<ul>
-	<li>Always generate a 200 response</li>
-	<li>In the response body, use an <span class="caps">XML</span> document to house:
-	<ul>
-		<li>The actual <span class="caps">HTTP</span> response code</li>
-		<li>Standard and custom headers</li>
-		<li>Response body from the <span class="caps">REST</span> <span class="caps">API</span></li>
-	</ul></li>
-</ul>
-<p>The beauty of this approach is that it is fairly generic. As we add new endpoints, the proxy does not need to be changed. The Web frameworks router just tries to match everything after the prefix against our existing RESTful routes. If we have a match, then the proxy calls that <span class="caps">API</span>. Otherwise, we return an error. Simple. So, how is this interaction design? Well, developers are users, right? For the most part, we try every new <span class="caps">API</span> by using <strong>curl</strong> or these days, <a href="http://rest-client.heroku.com/rdoc/">rest-client</a>. If the <span class="caps">API</span> seems too cumbersome using either of these tools, then we&#8217;ve probably done something really wrong. And, we did. There were a few APIs that were a little unwieldy or confusing due to the naming, so we focused on them a lot for the latest version. Deprecation can be a good thing.</p>
-<p>As developers, we use tons of APIs from various sources. Some are good, some not so good. <a href="http://al3x.net">Alex Payne</a>, the <span class="caps">API</span> Lead at <a href="http://twitter.com">Twitter</a> gave a great presentation the <a href="http://www.slideshare.net/al3x/the-interaction-design-of-apis">interaction design of APIs</a>. I almost didn&#8217;t write this blog post because Alex&#8217;s presentation was so spot on. But, I think it is a topic that may not get the attention it deserves so I&#8217;ll throw my hat in the ring. In our <span class="caps">API</span>, we leverage an internal user authentication service as opposed to rolling our own. This service had an &#8220;<span class="caps">XML</span> <span class="caps">API</span>&#8221; that was essentially a Plain Ol&#8217; <span class="caps">XML</span> over <span class="caps">HTTP</span> endpoint that called into their Java code. Not really RESTful, but generally workable. The problem was that their <span class="caps">XML</span> <span class="caps">API</span> did not have feature parity with their Java and ActionScript APIs. We were told that this would be addressed with the next version of the <span class="caps">API</span> and there would be a new &#8220;<span class="caps">REST</span> <span class="caps">API</span>&#8221;. Great!</p>
-<p>Well, maybe not so great. The user authentication service was growing to meet the needs of multiple clients and, like us, did not want to rewrite their code to address their non-primary clients. Their approach was to use a proxy approach as well that generated interfaces from their Java class and method definitions. See where this is going yet?</p>
-<p>The <span class="caps">XML</span> generated from the class and method definitions was approximately <strong>an order of magnitude</strong> larger than the previous <span class="caps">XML</span>. Sure, we got feature parity but good luck trying to figure out how to <span class="caps">USE</span> the <span class="caps">API</span>. I had to have at least 5 browser tabs open and look through JavaDocs to figure out how to create an account! I know, I know&#8230; once we get it done it&#8217;s done&#8230;or is it? What happens when they change method names or parameter lists? Alex defines &#8220;The <strong>Humane</strong> <span class="caps">API</span>&#8221; as:</p>
-<ul>
-	<li>Explorable</li>
-	<li>Predictable</li>
-	<li>Consistent</li>
-</ul>
-<p>This user authentication <span class="caps">API</span> is not humane currently. I suspect that this is rooted in its implementation. It is a Java-based Web service and there are tons of tools and APIs that can turn Java objects into Web services. Unfortunately, the services generated are best consumed by <em>other Java applications and services</em>. My team uses <a href="http://danube.com/scrumworks/pro">ScrumWorks Pro</a> for our agile planning and task tracking. It too has one of these Java-generated Web service APIs which I just find inscrutable. I&#8217;ve seen similar things in the .<span class="caps">NET</span> world as well. On the Web, Web service clients can be as simple as curl or as complex as a desktop Windows or Mac application like iTunes. Every programming language/tool has its own idioms, but they all have one thing in common: they likely have one or more libraries for communicating via <span class="caps">HTTP</span>.</p>
-<p>And that is the interaction design advice I&#8217;d like to impart. Recently, there have been a proliferation of projects that help you build applications and services with nothing more than <span class="caps">HTTP</span>, Javascript/<span class="caps">JSON</span> and general RESTful principles. <a href="http://getcloudkit.com">CloudKit</a> bills itself as an <strong><em>Open Web <span class="caps">JSON</span> Appliance</em></strong>. Once you&#8217;ve downloaded and installed the Ruby gem, you can expose a resource and immediately interact with it using curl. Awesome! And then there is CouchDB, which is getting a ton of attention and for good reason. Jacob Kaplan-Moss, one of the creators of Django, said this of CouchDB in a blog post called <a href="http://jacobian.org/writing/of-the-web/">Of the Web</a>:</p>
+<p>Given all the hubbub around the iPad and everyone wishing for the fall of my <a href='http://adobe.com'>employer&#8217;s</a> platform, I&#8217;ve been wondering how best to express my thoughts on the current state of affairs.</p>
+
+<p>Several years ago, I made the personal decision to focus on Web development. Primarily, building backend applications and Web services for browser-based clients. While I love working for Adobe, I am not really interested in Flash or AIR technically. That is probably due in part to the years I&#8217;d spent doing cross-platform development for Windows and Mac OS. Flash, in my opinion, is good in small doses. And AIR is mostly useful (to me at least) when used where people would have built a Visual Basic application 15 years ago. Even that is a weak argument as those people would build a Web application today.</p>
+
+<p>At the end of the day, I grew tired of trying to keep up with Microsoft&#8217;s technology du jour. I think Joel Spolsky&#8217;s essay <a href='http://www.joelonsoftware.com/articles/APIWar.html'>How Microsoft Lost the API War</a> sums up my feelings pretty nicely:</p>
+
 <blockquote>
-<p>Let me tell you something: Django may be built for the Web, but CouchDB is built of the Web. I&#8217;ve never seen software that so completely embraces the philosophies behind <span class="caps">HTTP</span>. CouchDB makes Django look old-school in the same way that Django makes <span class="caps">ASP</span> look outdated. Let me try to explain what I&#8217;m talking about. You want an <span class="caps">API</span> without having to write a line of code? It&#8217;s called curl, and it ships with your MacBook. And just look at how simple the APIs are in your favorite language.</p>
+<p>Outside developers, who were never particularly happy with the complexity of Windows development, have defected from the Microsoft platform <em>en-masse</em> and are now developing for the web&#8230;None of this bodes well for Microsoft and the profits it enjoyed thanks to its API power. The new API is HTML, and the new winners in the application development marketplace will be the people who can make HTML sing.</p>
 </blockquote>
-<p>If you are building a Web application or service, strive to make it <strong>Of the Web</strong>.</p> 
+
+<p>And although at that time I came to favor the Mac as my platform of choice, I couldn&#8217;t bring myself to develop for it. I just had no desire to become a <a href='http://www.tbray.org/ongoing/When/200x/2003/07/12/WebsThePlace'>sharecropper</a>. Using a Mac as my personal computing platform, but developing for the Web using Unix/Linux as my server OS felt <strong><em>right</em></strong>.</p>
+
+<p>Last year, I attended Apple&#8217;s Worldwide Developer Conference. Although the bulk of the conference was about iPhone OS 3.0 and the bazillions of apps being developed, I mostly went to the Web/Safari tracks. All the work regarding HTML5 support seemed much more relevant. Web development was moving forward again.</p>
+
+<p><strong>STILL</strong>, everybody wanted to know how to build native iPhone apps so they could sell them in the App Store and become millionaires. Aside from games and a few other visually complex games, I didn&#8217;t get it. Sure, the App Store solved some problems and was a great way to <strong><em>maybe</em></strong> get your app in front of millions of people. But, at what cost?</p>
+
+<p>Flash forward to today. There has been plenty of griping about the App Store review process. The sheer number of apps makes it difficult to find the gems in a sea of crap. Reviews are outdated and can potentially affect sales even though the stated issues may have already been addressed. Frankly, the majority of apps I see in the App Store could <strong>EASILY</strong> have been webapps, including <a href='http://ego-app.com'>some that friends of mine have made</a>.</p>
+
+<p>Android and Blackberry are no better. I have no desire to develop in Java again and if I did I would use it on the server like I used to. Palm actually appears to have gotten it right with webOS but, umm&#8230;, nobody&#8217;s really buying those devices.</p>
+
+<p>I tried, unsuccessfully, to write an iPhone app. I&#8217;ll admit I bit off more than I could chew at first and my own disgust for IDEs and C/C++/Objective C got in the way. Considering Objective C and Cocoa Touch (or C# and MonoTouch) are the only real ways to build a native app for the iPhone I probably won&#8217;t be building native apps anytime soon, unless <a href='http://macruby.org'>MacRuby</a> adds iPhone support. No, I won&#8217;t use the <a href='http://labs.adobe.com/technologies/flashcs5/appsfor_iphone/'>Flash iPhone Packager</a>; see my position statement above.</p>
+
+<p>The iPhone (and now, the Droid and Nexus One and <em>insert next model smartphone here</em>) and iPad are showing what the future holds. Mobile devices are the new personal computers. Their form factor combined with native apps, including desktop class Web browsers, make them the perfect devices for information consumption. Desktops and laptops will be relegated to mostly <em>content creation</em> tasks. I can easily see my son&#8217;s first computer being a tablet of some sort. And, that&#8217;s great.</p>
+
+<p>As a developer, however, I STILL don&#8217;t want to get sucked into the &#8220;develop for our platform&#8221; crap that dominated the desktop era. I will readily concede that their is still a need for native applications. Heck, I still use them! I&#8217;m just not interested in <em>writing them</em>.</p>
+
+<p>Many talk about <strong>software plus services</strong> but this is usually just a way to position rich client technology. I believe in software that <em>complements</em> services. iTunes is actually a good example of this, but the plethora of Twitter clients is an even better one. Twitter the Web service was valuable in and of itself, but by exposing a great API, clients could be built that made it even more valuable. I&#8217;m kinda partial to <a href='http://www.atebits.com/tweetie-iphone/'>Tweetie</a> myself.</p>
+
+<p>But, Tweetie 2 is not on Android and it may never be. I&#8217;m sure I could find a reasonable substitute as I am considering buying a Nexus One. But, as a developer myself, do I want to invest time in learning iPhone development AND Android development AND Blackberry development (and maybe even Palm development). &#8216;Cause it&#8217;s just not the learning curve involved, but dealing with all these damn App Stores that are cropping up. You know every time Apple does something competitors copy it&#8230;badly. My head is hurting already!</p>
+
+<p>No, I&#8217;ll spend my time improving my Ruby and Javascript skills. Maybe I&#8217;ll pick up Erlang and Clojure to stretch my brain a bit. I&#8217;ll DEFINITELY learn HTML5 and CSS3. But, I&#8217;ll let others tackle developing native apps for all these mobile devices; I&#8217;m sure I&#8217;ll even buy a few.</p>
+
+<p>I&#8217;m sticking with The Web.</p> 
 </div>
 
 
@@ -82,16 +70,13 @@
 		    <div>
     			<p><strong>Recently</strong></p>
 				
+			      <span>20 Feb 2010</span> &raquo; <a href="/2010/02/20/mobile-is-the-new-desktop.html">Mobile Is The New Desktop</a><br />
+			    
 			      <span>10 Jun 2009</span> &raquo; <a href="/2009/06/10/api-design-is-interaction-design.html">API Design is Interaction Design</a><br />
 			    
 			      <span>13 Apr 2009</span> &raquo; <a href="/2009/04/13/webdev-vs-swdev.html">Web Development vs. Software Development</a><br />
 			    
-			      <span>25 Jan 2009</span> &raquo; <a href="/2009/01/25/seven-things.html">Seven Things</a><br />
-			    
-			      <span>03 Jan 2009</span> &raquo; <a href="/2009/01/03/is-agile-or-lean-enough.html">Is Agile or Lean Enough?</a><br />
-			    
-			      <span>29 Dec 2008</span> &raquo; <a href="/2008/12/29/first.html">Welcome!</a><br />
-			    			
+				<div><p><strong><a href="archives.html">archives</a></strong></p></div>
 		    </div>
 	
 			<div class="last">
@@ -104,6 +89,7 @@
         <br clear="all" />
         
 		<div class="copyright">
+			<p>The opinions expressed on this blog are mine alone and do not represent the opinions of my <a href="http://adobe.com">employer</a>.</p>
             <p>&copy; [working code]. Powered by <a href="http://pages.github.com">GitHub Pages</a> using the <a href="http://powazek.com/depo-skinny">DePo Skinny Theme</a>.</p>
 		</div>
 

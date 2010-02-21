@@ -1,26 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>kstewart</title>
- <link href="http://kstewart.name/atom.xml" rel="self"/>
- <link href="http://kstewart.name/"/>
- <updated>2009-11-01T23:39:53-08:00</updated>
- <id>http://kstewart.name/</id>
+ <title>[working code]</title>
+ <link href="http://working-code.com/atom.xml" rel="self"/>
+ <link href="http://working-code.com/"/>
+ <updated>2010-02-20T15:54:44-08:00</updated>
+ <id>http://working-code.com</id>
  <author>
    <name>Kevin Stewart</name>
-   <email>kevin.p.stewart@gmail.com</email>
+   <email>kevin@working-code.com</email>
  </author>
  
  
  <entry>
+   <title>Mobile Is The New Desktop</title>
+   <link href="http://working-code.com/2010/02/20/mobile-is-the-new-desktop.html"/>
+   <updated>2010-02-20T00:00:00-08:00</updated>
+   <id>http://working-code.com/2010/02/20/mobile-is-the-new-desktop</id>
+   <content type="html">&lt;p&gt;Given all the hubbub around the iPad and everyone wishing for the fall of my &lt;a href='http://adobe.com'&gt;employer&amp;#8217;s&lt;/a&gt; platform, I&amp;#8217;ve been wondering how best to express my thoughts on the current state of affairs.&lt;/p&gt;
+
+&lt;p&gt;Several years ago, I made the personal decision to focus on Web development. Primarily, building backend applications and Web services for browser-based clients. While I love working for Adobe, I am not really interested in Flash or AIR technically. That is probably due in part to the years I&amp;#8217;d spent doing cross-platform development for Windows and Mac OS. Flash, in my opinion, is good in small doses. And AIR is mostly useful (to me at least) when used where people would have built a Visual Basic application 15 years ago. Even that is a weak argument as those people would build a Web application today.&lt;/p&gt;
+
+&lt;p&gt;At the end of the day, I grew tired of trying to keep up with Microsoft&amp;#8217;s technology du jour. I think Joel Spolsky&amp;#8217;s essay &lt;a href='http://www.joelonsoftware.com/articles/APIWar.html'&gt;How Microsoft Lost the API War&lt;/a&gt; sums up my feelings pretty nicely:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Outside developers, who were never particularly happy with the complexity of Windows development, have defected from the Microsoft platform &lt;em&gt;en-masse&lt;/em&gt; and are now developing for the web&amp;#8230;None of this bodes well for Microsoft and the profits it enjoyed thanks to its API power. The new API is HTML, and the new winners in the application development marketplace will be the people who can make HTML sing.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And although at that time I came to favor the Mac as my platform of choice, I couldn&amp;#8217;t bring myself to develop for it. I just had no desire to become a &lt;a href='http://www.tbray.org/ongoing/When/200x/2003/07/12/WebsThePlace'&gt;sharecropper&lt;/a&gt;. Using a Mac as my personal computing platform, but developing for the Web using Unix/Linux as my server OS felt &lt;strong&gt;&lt;em&gt;right&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Last year, I attended Apple&amp;#8217;s Worldwide Developer Conference. Although the bulk of the conference was about iPhone OS 3.0 and the bazillions of apps being developed, I mostly went to the Web/Safari tracks. All the work regarding HTML5 support seemed much more relevant. Web development was moving forward again.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;STILL&lt;/strong&gt;, everybody wanted to know how to build native iPhone apps so they could sell them in the App Store and become millionaires. Aside from games and a few other visually complex games, I didn&amp;#8217;t get it. Sure, the App Store solved some problems and was a great way to &lt;strong&gt;&lt;em&gt;maybe&lt;/em&gt;&lt;/strong&gt; get your app in front of millions of people. But, at what cost?&lt;/p&gt;
+
+&lt;p&gt;Flash forward to today. There has been plenty of griping about the App Store review process. The sheer number of apps makes it difficult to find the gems in a sea of crap. Reviews are outdated and can potentially affect sales even though the stated issues may have already been addressed. Frankly, the majority of apps I see in the App Store could &lt;strong&gt;EASILY&lt;/strong&gt; have been webapps, including &lt;a href='http://ego-app.com'&gt;some that friends of mine have made&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Android and Blackberry are no better. I have no desire to develop in Java again and if I did I would use it on the server like I used to. Palm actually appears to have gotten it right with webOS but, umm&amp;#8230;, nobody&amp;#8217;s really buying those devices.&lt;/p&gt;
+
+&lt;p&gt;I tried, unsuccessfully, to write an iPhone app. I&amp;#8217;ll admit I bit off more than I could chew at first and my own disgust for IDEs and C/C++/Objective C got in the way. Considering Objective C and Cocoa Touch (or C# and MonoTouch) are the only real ways to build a native app for the iPhone I probably won&amp;#8217;t be building native apps anytime soon, unless &lt;a href='http://macruby.org'&gt;MacRuby&lt;/a&gt; adds iPhone support. No, I won&amp;#8217;t use the &lt;a href='http://labs.adobe.com/technologies/flashcs5/appsfor_iphone/'&gt;Flash iPhone Packager&lt;/a&gt;; see my position statement above.&lt;/p&gt;
+
+&lt;p&gt;The iPhone (and now, the Droid and Nexus One and &lt;em&gt;insert next model smartphone here&lt;/em&gt;) and iPad are showing what the future holds. Mobile devices are the new personal computers. Their form factor combined with native apps, including desktop class Web browsers, make them the perfect devices for information consumption. Desktops and laptops will be relegated to mostly &lt;em&gt;content creation&lt;/em&gt; tasks. I can easily see my son&amp;#8217;s first computer being a tablet of some sort. And, that&amp;#8217;s great.&lt;/p&gt;
+
+&lt;p&gt;As a developer, however, I STILL don&amp;#8217;t want to get sucked into the &amp;#8220;develop for our platform&amp;#8221; crap that dominated the desktop era. I will readily concede that their is still a need for native applications. Heck, I still use them! I&amp;#8217;m just not interested in &lt;em&gt;writing them&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Many talk about &lt;strong&gt;software plus services&lt;/strong&gt; but this is usually just a way to position rich client technology. I believe in software that &lt;em&gt;complements&lt;/em&gt; services. iTunes is actually a good example of this, but the plethora of Twitter clients is an even better one. Twitter the Web service was valuable in and of itself, but by exposing a great API, clients could be built that made it even more valuable. I&amp;#8217;m kinda partial to &lt;a href='http://www.atebits.com/tweetie-iphone/'&gt;Tweetie&lt;/a&gt; myself.&lt;/p&gt;
+
+&lt;p&gt;But, Tweetie 2 is not on Android and it may never be. I&amp;#8217;m sure I could find a reasonable substitute as I am considering buying a Nexus One. But, as a developer myself, do I want to invest time in learning iPhone development AND Android development AND Blackberry development (and maybe even Palm development). &amp;#8216;Cause it&amp;#8217;s just not the learning curve involved, but dealing with all these damn App Stores that are cropping up. You know every time Apple does something competitors copy it&amp;#8230;badly. My head is hurting already!&lt;/p&gt;
+
+&lt;p&gt;No, I&amp;#8217;ll spend my time improving my Ruby and Javascript skills. Maybe I&amp;#8217;ll pick up Erlang and Clojure to stretch my brain a bit. I&amp;#8217;ll DEFINITELY learn HTML5 and CSS3. But, I&amp;#8217;ll let others tackle developing native apps for all these mobile devices; I&amp;#8217;m sure I&amp;#8217;ll even buy a few.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;m sticking with The Web.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
    <title>API Design is Interaction Design</title>
-   <link href="http://kstewart.name/2009/06/10/api-design-is-interaction-design.html"/>
+   <link href="http://working-code.com/2009/06/10/api-design-is-interaction-design.html"/>
    <updated>2009-06-10T00:00:00-07:00</updated>
-   <id>http://kstewart.name/2009/06/10/api-design-is-interaction-design</id>
+   <id>http://working-code.com/2009/06/10/api-design-is-interaction-design</id>
    <content type="html">&lt;p&gt;For the past few weeks, I have been working with my team on refining the &lt;span class=&quot;caps&quot;&gt;REST&lt;/span&gt; &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; for our Web service. While there will be some new additions in order to meet requirements for applications that will build upon the &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;, many of the changes are refinements. Early adopters and our own experience has provided a treasure trove of information that has guided the development of the latest version.&lt;/p&gt;
 &lt;p&gt;From the very beginning, I chose a &lt;span class=&quot;caps&quot;&gt;REST&lt;/span&gt; Oriented Architecture (&lt;span class=&quot;caps&quot;&gt;ROA&lt;/span&gt;) for the service. To me, this just seemed obvious. I&amp;#8217;ve followed the development of &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt;-&lt;span class=&quot;caps&quot;&gt;RPC&lt;/span&gt; and &lt;span class=&quot;caps&quot;&gt;SOAP&lt;/span&gt; for years. For awhile, &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt;-&lt;span class=&quot;caps&quot;&gt;RPC&lt;/span&gt; seemed pretty cool and simple to me especially when compared to the mess that is &lt;span class=&quot;caps&quot;&gt;SOAP&lt;/span&gt; (which evolved into &lt;strong&gt;&lt;em&gt;WS-Death Star&lt;/em&gt;&lt;/strong&gt;). However, in practice I always ended up sending some simple, Plain Ol&amp;#8217; &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt; over &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt;. For the majority of cases, &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; and URIs covered the functionality I needed sufficiently.&lt;/p&gt;
 &lt;p&gt;As &lt;span class=&quot;caps&quot;&gt;REST&lt;/span&gt; became a more prevalent meme, I got a copy of &lt;a href=&quot;http://www.amazon.com/RESTful-Web-Services-Leonard-Richardson/dp/0596529260/ref=sr_1_1?ie=UTF8&amp;amp;s=books&amp;amp;qid=1244646726&amp;amp;sr=8-1&quot;&gt;RESTful Web Services&lt;/a&gt; and read it cover-to-cover. I recommend this book to &lt;strong&gt;&lt;span class=&quot;caps&quot;&gt;ANYONE&lt;/span&gt;&lt;/strong&gt; building Web applications. It put what was common practice for me into context and really illustrated what &lt;span class=&quot;caps&quot;&gt;REST&lt;/span&gt; and &lt;span class=&quot;caps&quot;&gt;ROA&lt;/span&gt; are really about and what tradeoffs need to be made in every application.&lt;/p&gt;
-&lt;p&gt;One part of the book that really stood out for me were the sections on &lt;strong&gt;resource design&lt;/strong&gt;. Instead of the highly procedural &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt;-&lt;span class=&quot;caps&quot;&gt;RPC&lt;/span&gt; or my own custom-coded &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt; schemas in my &lt;span class=&quot;caps&quot;&gt;POX&lt;/span&gt;/&lt;span class=&quot;caps&quot;&gt;HHTP&lt;/span&gt; implementations, &lt;span class=&quot;caps&quot;&gt;REST&lt;/span&gt; made me think more about the actual objects, or resources, that I wanted to interact with over the network. Doing this forced me to think harder about naming and behaviors (whether or not they mapped cleanly to &lt;span class=&quot;caps&quot;&gt;GET&lt;/span&gt;, &lt;span class=&quot;caps&quot;&gt;PUT&lt;/span&gt;, &lt;span class=&quot;caps&quot;&gt;HEAD&lt;/span&gt;, &lt;span class=&quot;caps&quot;&gt;DELETE&lt;/span&gt; and, of course, &lt;span class=&quot;caps&quot;&gt;POST&lt;/span&gt;). For error conditions, there was almost always an &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; status code that would work for us. And, &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; headers were incredibly useful in dealing with metadata.&lt;/p&gt;
+&lt;p&gt;One part of the book that really stood out for me were the sections on &lt;strong&gt;resource design&lt;/strong&gt;. Instead of the highly procedural &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt;-&lt;span class=&quot;caps&quot;&gt;RPC&lt;/span&gt; or my own custom-coded &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt; schemas in my &lt;span class=&quot;caps&quot;&gt;POX&lt;/span&gt;/&lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; implementations, &lt;span class=&quot;caps&quot;&gt;REST&lt;/span&gt; made me think more about the actual objects, or resources, that I wanted to interact with over the network. Doing this forced me to think harder about naming and behaviors (whether or not they mapped cleanly to &lt;span class=&quot;caps&quot;&gt;GET&lt;/span&gt;, &lt;span class=&quot;caps&quot;&gt;PUT&lt;/span&gt;, &lt;span class=&quot;caps&quot;&gt;HEAD&lt;/span&gt;, &lt;span class=&quot;caps&quot;&gt;DELETE&lt;/span&gt; and, of course, &lt;span class=&quot;caps&quot;&gt;POST&lt;/span&gt;). For error conditions, there was almost always an &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; status code that would work for us. And, &lt;span class=&quot;caps&quot;&gt;HTTP&lt;/span&gt; headers were incredibly useful in dealing with metadata.&lt;/p&gt;
 &lt;p&gt;So, on my first pass with our &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; I attempted to adhere to RESTful principles. After identifying my resources, I spent even more time thinking about &lt;strong&gt;representations&lt;/strong&gt;, the content types and schemas for the data my service would consume and produce. Many of my early assumptions changed quickly as I worked through this process (and again as we started working on the latest version) For instance, I once considered &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt; a safe, de facto format to support in an &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt;. Then, along came &lt;span class=&quot;caps&quot;&gt;JSON&lt;/span&gt;. When, I looked at some of my earlier representations I saw almost an order or magnitude difference in the size of an &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt; response compared to its &lt;span class=&quot;caps&quot;&gt;JSON&lt;/span&gt; counterpart &lt;em&gt;for exactly the same data!&lt;/em&gt; Now, in many cases, &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt; is a requirement. However, if you have the ability to define exactly which representations you will support, think long and hard about when to use &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt;. Given the proliferation of libraries in almost every conceivable language, &lt;span class=&quot;caps&quot;&gt;JSON&lt;/span&gt; is almost as de facto a choice as &lt;span class=&quot;caps&quot;&gt;XML&lt;/span&gt; and has even more practical benefits although there are also downsides, like potential security vulnerabilities. As in everything else, one should pick the tools that help solve the problem at hand.&lt;/p&gt;
 &lt;p&gt;The first versions of our &lt;span class=&quot;caps&quot;&gt;API&lt;/span&gt; worked fine. The true test was seeing the number of people who just went to our documentation page and started coding against it. Generally, we received fewer than half a dozen questions via email before they were able to productively use the service. That&amp;#8217;s a huge win! We also ate our own dog food by prototyping clients for the service using:&lt;/p&gt;
 &lt;ul&gt;
@@ -65,9 +105,9 @@
  
  <entry>
    <title>Web Development vs. Software Development</title>
-   <link href="http://kstewart.name/2009/04/13/webdev-vs-swdev.html"/>
+   <link href="http://working-code.com/2009/04/13/webdev-vs-swdev.html"/>
    <updated>2009-04-13T00:00:00-07:00</updated>
-   <id>http://kstewart.name/2009/04/13/webdev-vs-swdev</id>
+   <id>http://working-code.com/2009/04/13/webdev-vs-swdev</id>
    <content type="html">&lt;p&gt;From Eric S. Raymond, &lt;em&gt;The Art of Unix Programming, Chapter 11: The Web Browser as a Universal Front End&lt;/em&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;For a large class of applications, it makes increasing sense not to write a custom &lt;span class=&quot;caps&quot;&gt;GUI&lt;/span&gt; front end at all, but rather to press Web browsers into service in that role. This approach has many advantages. The most obvious is that you don&amp;#8217;t have to write procedural &lt;span class=&quot;caps&quot;&gt;GUI&lt;/span&gt; code &amp;#8211; instead, you can describe the &lt;span class=&quot;caps&quot;&gt;GUI&lt;/span&gt; you want in languages (&lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; and JavaScript) that are specialized for it. This avoids a lot of expensive and complex single-purpose coding and often more than halves the total project effort. Another is that it makes your application instantly Internet-ready; the front end may be on the same host as the back end, or may be a thousand miles away. Yet another is that all the minor presentation details of the application (such as fonts and color) are no longer your back end&amp;#8217;s problem, and indeed can be customized by users to their own tastes through mechanisms like browser preferences and cascading style sheets. Finally, the uniform elements of the Web interface substantially ease the user&amp;#8217;s learning task.&lt;/p&gt;
@@ -91,11 +131,10 @@
  
  <entry>
    <title>Seven Things</title>
-   <link href="http://kstewart.name/2009/01/25/seven-things.html"/>
+   <link href="http://working-code.com/2009/01/25/seven-things.html"/>
    <updated>2009-01-25T00:00:00-08:00</updated>
-   <id>http://kstewart.name/2009/01/25/seven-things</id>
-   <content type="html">
-&lt;p&gt;Damn you, &lt;a href=&quot;http://flinglog.com&quot;&gt;Brian!&lt;/a&gt; for tagging me with this meme. But, since it is currently snowing (again?!?!) here in the Seattle area, I figured I needed a diversion. So here goes&amp;#8230;&lt;/p&gt;
+   <id>http://working-code.com/2009/01/25/seven-things</id>
+   <content type="html">&lt;p&gt;Damn you, &lt;a href=&quot;http://flinglog.com&quot;&gt;Brian!&lt;/a&gt; for tagging me with this meme. But, since it is currently snowing (again?!?!) here in the Seattle area, I figured I needed a diversion. So here goes&amp;#8230;&lt;/p&gt;
 &lt;h2&gt;One&lt;/h2&gt;
 &lt;p&gt;I was born left-handed. My parents are from the West Indies and apparently, being left-handed was considered &lt;span class=&quot;caps&quot;&gt;BAD&lt;/span&gt;. So, at a very young age whenever my Mom saw me doing something with my left hand, she would say &amp;#8220;Use your right hand!&amp;#8221;. My wife told me she thought I was left-handed when she met me because I tended to do things with that hand. Ironically, both my son and our new President are left-handed. I&amp;#8217;ve also learned that lefties tend to be more creative and possibly smarter. See what you&amp;#8217;ve done to me, Mom?&lt;/p&gt;
 &lt;h2&gt;Two&lt;/h2&gt;
@@ -132,9 +171,9 @@
  
  <entry>
    <title>Is Agile or Lean Enough?</title>
-   <link href="http://kstewart.name/2009/01/03/is-agile-or-lean-enough.html"/>
+   <link href="http://working-code.com/2009/01/03/is-agile-or-lean-enough.html"/>
    <updated>2009-01-03T00:00:00-08:00</updated>
-   <id>http://kstewart.name/2009/01/03/is-agile-or-lean-enough</id>
+   <id>http://working-code.com/2009/01/03/is-agile-or-lean-enough</id>
    <content type="html">&lt;p&gt;At the end of the year, I tend to reflect on the progress my team has made and what directions we should take in the new year. Actually, I think about this all the time. However, since the company shuts down I have extra time to be introspective. This year given the snowstorms in Seattle, I&amp;#8217;ve had even more time.&lt;/p&gt;
 &lt;p&gt;Generally, I have been a proponent of agile techniques. They&amp;#8217;re basically codifications of common sense best practices. For the past few years, I&amp;#8217;ve been particularly attracted to Scrum for managing my development projects. While the basics are pretty easy, Scrum (like most agile methodologies) actually requires a lot of discipline. So, my team and I spent a lot of time increasing our discipline and paying attention to the issues that Scrum surfaced in our development process.&lt;/p&gt;
 &lt;p&gt;While that approach definitely delivered some benefits, I constantly felt like there were huge gaps in what agile in general and Scrum in particular were bringing to the table. A recent blog post by James Shore, &lt;a href=&quot;http://jamesshore.com/Blog/The-Decline-and-Fall-of-Agile.html&quot;&gt;The Decline and Fall of Agile&lt;/a&gt;, captured some of my concerns:&lt;/p&gt;
@@ -169,9 +208,9 @@ But of course you are &lt;em&gt;still&lt;/em&gt; going to do large, multisite, o
  
  <entry>
    <title>Welcome!</title>
-   <link href="http://kstewart.name/2008/12/29/first.html"/>
+   <link href="http://working-code.com/2008/12/29/first.html"/>
    <updated>2008-12-29T00:00:00-08:00</updated>
-   <id>http://kstewart.name/2008/12/29/first</id>
+   <id>http://working-code.com/2008/12/29/first</id>
    <content type="html">&lt;p&gt;Welcome to [working code]&lt;/p&gt;</content>
  </entry>
  
