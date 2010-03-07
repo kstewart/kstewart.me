@@ -15,7 +15,7 @@ And although at that time I came to favor the Mac as my platform of choice, I co
 
 Last year, I attended Apple's Worldwide Developer Conference. Although the bulk of the conference was about iPhone OS 3.0 and the bazillions of apps being developed, I mostly went to the Web/Safari tracks. All the work regarding HTML5 support seemed much more relevant. Web development was moving forward again.
 
-**STILL**, everybody wanted to know how to build native iPhone apps so they could sell them in the App Store and become millionaires. Aside from games and a few other visually complex games, I didn't get it. Sure, the App Store solved some problems and was a great way to ***maybe*** get your app in front of millions of people. But, at what cost?
+**STILL**, everybody wanted to know how to build native iPhone apps so they could sell them in the App Store and become millionaires. Aside from games and a few other visually complex applications, I didn't get it. Sure, the App Store solved some problems and was a great way to ***maybe*** get your app in front of millions of people. But, at what cost?
 
 Flash forward to today. There has been plenty of griping about the App Store review process. The sheer number of apps makes it difficult to find the gems in a sea of crap. Reviews are outdated and can potentially affect sales even though the stated issues may have already been addressed. Frankly, the majority of apps I see in the App Store could **EASILY** have been webapps, including [some that friends of mine have made](http://ego-app.com).
 
@@ -25,7 +25,7 @@ I tried, unsuccessfully, to write an iPhone app. I'll admit I bit off more than 
 
 The iPhone (and now, the Droid and Nexus One and *insert next model smartphone here*) and iPad are showing what the future holds. Mobile devices are the new personal computers. Their form factor combined with native apps, including desktop class Web browsers, make them the perfect devices for information consumption. Desktops and laptops will be relegated to mostly *content creation* tasks. I can easily see my son's first computer being a tablet of some sort. And, that's great.
 
-As a developer, however, I STILL don't want to get sucked into the "develop for our platform" crap that dominated the desktop era. I will readily concede that their is still a need for native applications. Heck, I still use them! I'm just not interested in *writing them*.
+As a developer, however, I STILL don't want to get sucked into the "develop for our platform" crap that dominated the desktop era. I will readily concede that there is still a need for native applications. Heck, I still use them! I'm just not interested in *writing them*.
 
 Many talk about **software plus services** but this is usually just a way to position rich client technology. I believe in software that *complements* services. iTunes is actually a good example of this, but the plethora of Twitter clients is an even better one. Twitter the Web service was valuable in and of itself, but by exposing a great API, clients could be built that made it even more valuable. I'm kinda partial to [Tweetie](http://www.atebits.com/tweetie-iphone/) myself.
 
