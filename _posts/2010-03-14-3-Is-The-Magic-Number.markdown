@@ -1,3 +1,8 @@
+---
+layout: post
+title: 3 Is The Magic Number
+---
+
 More or less. At least, when it comes to software development these days. That's not to say it's a hard and fast number, but it is the sweet spot in my experience. But, before people start raking me over the coals asking, *"Do you actually believe only 3 people could write something as complex as Photoshop?"* let me set the context here and now *(Oh, and to answer the previous question, Yes)* :
 
 * A large percentage of software development is in building Web applications and lately smaller, mobile applications for iPhones, Android devices and Blackberrys.
