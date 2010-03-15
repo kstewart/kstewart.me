@@ -4,13 +4,97 @@
  <title>[working code]</title>
  <link href="http://working-code.com/atom.xml" rel="self"/>
  <link href="http://working-code.com/"/>
- <updated>2010-02-21T16:16:05-08:00</updated>
+ <updated>2010-03-14T19:53:14-07:00</updated>
  <id>http://working-code.com</id>
  <author>
    <name>Kevin Stewart</name>
    <email>kevin@working-code.com</email>
  </author>
  
+ 
+ <entry>
+   <title>3 Is The Magic Number</title>
+   <link href="http://working-code.com/2010/03/14/3-Is-The-Magic-Number.html"/>
+   <updated>2010-03-14T00:00:00-08:00</updated>
+   <id>http://working-code.com/2010/03/14/3-Is-The-Magic-Number</id>
+   <content type="html">&lt;p&gt;More or less. At least, when it comes to software development these days. That&amp;#8217;s not to say it&amp;#8217;s a hard and fast number, but it is the sweet spot in my experience. But, before people start raking me over the coals asking, &lt;em&gt;&amp;#8220;Do you actually believe only 3 people could write something as complex as Photoshop?&amp;#8221;&lt;/em&gt; let me set the context here and now &lt;em&gt;(Oh, and to answer the previous question, Yes)&lt;/em&gt; :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;A large percentage of software development is in building Web applications and lately smaller, mobile applications for iPhones, Android devices and Blackberrys.&lt;/li&gt;
+
+&lt;li&gt;There is a vibrant community of independent software developers that are building desktop applications with teams as small as &lt;strong&gt;1&lt;/strong&gt; and making a good living.&lt;/li&gt;
+
+&lt;li&gt;The majority of large applications did not START as large applications. They were small applications that &lt;em&gt;GREW&lt;/em&gt; into large applications. And when they started, there were only a few developers (&lt;em&gt;even Photoshop!&lt;/em&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id='rethinking_brookss_law'&gt;Rethinking Brooks&amp;#8217;s Law&lt;/h1&gt;
+
+&lt;p&gt;As often misquoted as &lt;a href='http://en.wikipedia.org/wiki/Brooks%27s_law'&gt;Brooks&amp;#8217;s Law&lt;/a&gt; is, the core tenet is still valid. The communication costs incurred by adding more people to a project can be crippling.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#8220;You won&amp;#8217;t catch me advocating for &amp;#8216;hard-working average programmers&amp;#8217;. What I do believe is: you should stock your team with only rockstars, between 2 and 4 of them. I&amp;#8217;ve worked on teams that only had 3 people. I&amp;#8217;ve worked on teams with about 16. I was a consultant, I&amp;#8217;ve worked on a lot of teams - big and small. My experience was that the smaller teams were much more effective, every time.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Jay Fields, &lt;a href='http://blog.jayfields.com/2010/03/pairing-isnt-solution.html'&gt;Pairing isn&amp;#8217;t the Solution&lt;/a&gt; via &lt;a href='http://twitter.com/zedshaw/status/10356819700'&gt;Zed Shaw&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The right way to think about Brooks&amp;#8217;s Law is to pay more attention to how we form teams in the first place. Too many companies think of developers as interchangeable cogs and just throw people onto projects as if what they are working on and who they work with do not matter. &lt;strong&gt;NOTHING&lt;/strong&gt; could be farther from the truth.&lt;/p&gt;
+
+&lt;h1 id='software_development_is_a_social_activity'&gt;Software Development is a Social Activity&lt;/h1&gt;
+
+&lt;p&gt;Whether you are pair programming on some Java code, chatting in the #mongodb IRC channel on &lt;a href='http://freenode.net'&gt;freenode&lt;/a&gt; or typing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git push github master&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;writing code is a social activity. Developers need to talk to other developers, bounce ideas off each other or just show off. It&amp;#8217;s a &lt;em&gt;craft&lt;/em&gt;. That&amp;#8217;s why the whole idea of software craftsmanship holds so much appeal. We applied Industrial Revolution principles to knowledge work and that&amp;#8217;s just insane. Unfortunately, many large companies still haven&amp;#8217;t &lt;a href='http://www.entertonement.com/clips/pmrmbndcrh--Did-you-see-the-memo-about-thisOffice-Space-Gary-Cole-Bill-Lumbergh-'&gt;gotten the memo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Large companies have introduced so much overhead to the process delivering software it&amp;#8217;s amazing any gets released at all. Much of this overhead is related to &lt;em&gt;managing communication between functional teams&lt;/em&gt;. Interesting&amp;#8230;&lt;/p&gt;
+
+&lt;p&gt;Has any one considered WHY we even have functional teams? Why isn&amp;#8217;t everyone involved on the project on one team? &lt;em&gt;Duh! Too many people.&lt;/em&gt; Why do we have so many people? &lt;em&gt;Because we need specialists, so we break them up into teams, give them managers and then add project managers to facilitate communication&amp;#8230;&lt;/em&gt; Which, of course, is absolutely necessary because we all know that engineers don&amp;#8217;t have &lt;a href='http://www.break.com/usercontent/2008/4/Office-Space-I-have-people-skills-488721.html'&gt;people skills&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Except that is a big, fat, honking &lt;strong&gt;LIE&lt;/strong&gt;. The real issue is that developers have to hold a ton of information in their heads and attain a high state of concentration. They understandably get a wee bit irritated every time they have to context switch to address the latest issue of &lt;strong&gt;The Institution&lt;/strong&gt;. Large teams introduce every possible detriment to a developer:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Interruptions&lt;/li&gt;
+
+&lt;li&gt;Unnecessary communication&lt;/li&gt;
+
+&lt;li&gt;Low bandwidth communication&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;How can we turn this around? In my utopian vision of the future, software development teams are comprised of:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Developers&lt;/li&gt;
+
+&lt;li&gt;Designer&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;When I say &lt;em&gt;developers&lt;/em&gt;, I am stating that these people fulfill the roles of developers, testers and operations people. If you had a development manager on the team before I hope s/he can code. Otherwise, we have no need for them.&lt;/p&gt;
+
+&lt;p&gt;I also think there should be a &lt;strong&gt;SINGLE&lt;/strong&gt; designer on the team that is both the interaction and visual designer. This, in my mind, helps retain the conceptual integrity of the user experience design. I completely agree with &lt;a href='http://elliotjaystocks.com/blog/web-designers-who-cant-code/'&gt;Elliot Jay Stocks&lt;/a&gt; that designers must be able to code in this day and age. More importantly, they should heed at least one part of Ryan Singer&amp;#8217;s description of the &lt;a href='http://37signals.com/svn/posts/2135-podcast-episode-7-ryan-singer-on-the-37signals-design-process'&gt;37signals design process&lt;/a&gt;&amp;#8230;work in the code. By writing HTML and CSS, checking templates into version control and running the software locally on their own machines during development designers will have a much more intimate relationship with the final product. In the process, it helps address that whole &lt;a href='http://www.adobe.com/resources/business/rich_internet_apps/workflow/'&gt;designer/developer workflow&lt;/a&gt; thing.&lt;/p&gt;
+
+&lt;h1 id='but_that_doesnt_scale'&gt;But, That Doesn&amp;#8217;t Scale&amp;#153;&lt;/h1&gt;
+
+&lt;p&gt;Of course it does, just not in the way you&amp;#8217;ve been conditioned to think. Jason Fried gets it:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#8220;We&amp;#8217;re going to start working in teams. A team is made of three people: One designer and two programmers. A system administrator will also assist the team when necessary. To start, we will have two dedicated teams plus one slack team. The slack team is available to help either team, or take on other stuff that inevitably comes up. In March we expect to have a third team dedicated to the products.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Jason Fried, &lt;a href='http://37signals.com/svn/posts/2099-2010-the-year-of-the-products-a-new-way-of-working'&gt;2010: The year of the products + a new way of working&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Microsoft has/had a similar concept called feature teams. Amazon does the two-pizza team thing. It&amp;#8217;s intrinsic to human nature to prefer small circles. Ever notice at a large party that everyone breaks off into small groups of 4-6 people to have conversation? Why do you think that is? Seth Godin gives us a hint:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#8220;Handshakes. How many handshakes do you need to introduce three people? Only three. Ishita, meet Susan. Susan, meet Clay. Clay, meet Ishita. Four people need twice as many, six. And five people? Ten.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Seth Godin, &lt;a href='http://www.amazon.com/Linchpin-Are-Indispensable-Seth-Godin/dp/1591843162/ref=sr_1_1?ie=UTF8&amp;amp;s=books&amp;amp;qid=1268610473&amp;amp;sr=1-1'&gt;Linchpin&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Who will talk to the customers, get their requirements, understand the market&amp;#8230;.?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;You haven&amp;#8217;t been following along, have you?&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>Mobile Is The New Desktop</title>
@@ -31,7 +115,7 @@
 
 &lt;p&gt;Last year, I attended Apple&amp;#8217;s Worldwide Developer Conference. Although the bulk of the conference was about iPhone OS 3.0 and the bazillions of apps being developed, I mostly went to the Web/Safari tracks. All the work regarding HTML5 support seemed much more relevant. Web development was moving forward again.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;STILL&lt;/strong&gt;, everybody wanted to know how to build native iPhone apps so they could sell them in the App Store and become millionaires. Aside from games and a few other visually complex games, I didn&amp;#8217;t get it. Sure, the App Store solved some problems and was a great way to &lt;strong&gt;&lt;em&gt;maybe&lt;/em&gt;&lt;/strong&gt; get your app in front of millions of people. But, at what cost?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;STILL&lt;/strong&gt;, everybody wanted to know how to build native iPhone apps so they could sell them in the App Store and become millionaires. Aside from games and a few other visually complex applications, I didn&amp;#8217;t get it. Sure, the App Store solved some problems and was a great way to &lt;strong&gt;&lt;em&gt;maybe&lt;/em&gt;&lt;/strong&gt; get your app in front of millions of people. But, at what cost?&lt;/p&gt;
 
 &lt;p&gt;Flash forward to today. There has been plenty of griping about the App Store review process. The sheer number of apps makes it difficult to find the gems in a sea of crap. Reviews are outdated and can potentially affect sales even though the stated issues may have already been addressed. Frankly, the majority of apps I see in the App Store could &lt;strong&gt;EASILY&lt;/strong&gt; have been webapps, including &lt;a href='http://ego-app.com'&gt;some that friends of mine have made&lt;/a&gt;.&lt;/p&gt;
 
@@ -41,7 +125,7 @@
 
 &lt;p&gt;The iPhone (and now, the Droid and Nexus One and &lt;em&gt;insert next model smartphone here&lt;/em&gt;) and iPad are showing what the future holds. Mobile devices are the new personal computers. Their form factor combined with native apps, including desktop class Web browsers, make them the perfect devices for information consumption. Desktops and laptops will be relegated to mostly &lt;em&gt;content creation&lt;/em&gt; tasks. I can easily see my son&amp;#8217;s first computer being a tablet of some sort. And, that&amp;#8217;s great.&lt;/p&gt;
 
-&lt;p&gt;As a developer, however, I STILL don&amp;#8217;t want to get sucked into the &amp;#8220;develop for our platform&amp;#8221; crap that dominated the desktop era. I will readily concede that their is still a need for native applications. Heck, I still use them! I&amp;#8217;m just not interested in &lt;em&gt;writing them&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;As a developer, however, I STILL don&amp;#8217;t want to get sucked into the &amp;#8220;develop for our platform&amp;#8221; crap that dominated the desktop era. I will readily concede that there is still a need for native applications. Heck, I still use them! I&amp;#8217;m just not interested in &lt;em&gt;writing them&lt;/em&gt;.&lt;/p&gt;
 
 &lt;p&gt;Many talk about &lt;strong&gt;software plus services&lt;/strong&gt; but this is usually just a way to position rich client technology. I believe in software that &lt;em&gt;complements&lt;/em&gt; services. iTunes is actually a good example of this, but the plethora of Twitter clients is an even better one. Twitter the Web service was valuable in and of itself, but by exposing a great API, clients could be built that made it even more valuable. I&amp;#8217;m kinda partial to &lt;a href='http://www.atebits.com/tweetie-iphone/'&gt;Tweetie&lt;/a&gt; myself.&lt;/p&gt;
 
