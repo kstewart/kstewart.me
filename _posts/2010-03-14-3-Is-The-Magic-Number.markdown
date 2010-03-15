@@ -27,7 +27,7 @@ Whether you are pair programming on some Java code, chatting in the #mongodb IRC
     
 writing code is a social activity. Developers need to talk to other developers, bounce ideas off each other or just show off. It's a *craft*. That's why the whole idea of software craftsmanship holds so much appeal. We applied Industrial Revolution principles to knowledge work and that's just insane. Unfortunately, many large companies still haven't [gotten the memo](http://www.entertonement.com/clips/pmrmbndcrh--Did-you-see-the-memo-about-thisOffice-Space-Gary-Cole-Bill-Lumbergh-).
 
-Large companies have introduced so much overhead to the process delivering software it's amazing any gets released at all. Much of this overhead is related to *managing communication between functional teams*. Interesting...
+Large companies have introduced so much overhead to the process of delivering software it's amazing any gets released at all. Much of this overhead is related to *managing communication between functional teams*. Interesting...
 
 Has any one considered WHY we even have functional teams? Why isn't everyone involved on the project on one team? *Duh! Too many people.* Why do we have so many people? *Because we need specialists, so we break them up into teams, give them managers and then add project managers to facilitate communication...* Which, of course, is absolutely necessary because we all know that engineers don't have [people skills](http://www.break.com/usercontent/2008/4/Office-Space-I-have-people-skills-488721.html).
 
