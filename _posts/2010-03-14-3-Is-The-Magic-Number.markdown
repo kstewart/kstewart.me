@@ -54,7 +54,7 @@ Of course it does, just not in the way you've been conditioned to think. Jason F
 
 ***Jason Fried, [2010: The year of the products + a new way of working](http://37signals.com/svn/posts/2099-2010-the-year-of-the-products-a-new-way-of-working)***
 
-Microsoft has/had a similar concept called feature teams. Amazon does the two-pizza team thing. It's intrinsic to human nature to prefer small circles. Ever notice at a large party that everyone breaks off into small groups of 4-6 people to have conversation? Why do you think that is? Seth Godin gives us a hint:
+Microsoft has/had a similar concept called feature teams. Amazon does the two-pizza team thing. It's intrinsic to human nature to prefer small circles. Ever notice at a large party that everyone breaks off into small groups of 4-6 people to have a conversation? Why do you think that is? Seth Godin gives us a hint:
 
 > "Handshakes. How many handshakes do you need to introduce three people? Only three. Ishita, meet Susan. Susan, meet Clay. Clay, meet Ishita. Four people need twice as many, six. And five people? Ten."
 
