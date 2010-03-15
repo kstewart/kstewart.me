@@ -9,7 +9,7 @@ More or less. At least, when it comes to software development these days. That's
 * There is a vibrant community of independent software developers that are building desktop applications with teams as small as **1** and making a good living.
 * The majority of large applications did not START as large applications. They were small applications that *GREW* into large applications. And when they started, there were only a few developers (*even Photoshop!*).
 
-# Rethinking Brooks's Law
+#### Rethinking Brooks's Law
 
 As often misquoted as [Brooks's Law](http://en.wikipedia.org/wiki/Brooks%27s_law) is, the core tenet is still valid. The communication costs incurred by adding more people to a project can be crippling.
 	
@@ -19,7 +19,7 @@ As often misquoted as [Brooks's Law](http://en.wikipedia.org/wiki/Brooks%27s_law
 
 The right way to think about Brooks's Law is to pay more attention to how we form teams in the first place. Too many companies think of developers as interchangeable cogs and just throw people onto projects as if what they are working on and who they work with do not matter. **NOTHING** could be farther from the truth.
 
-# Software Development is a Social Activity
+#### Software Development is a Social Activity
 
 Whether you are pair programming on some Java code, chatting in the #mongodb IRC channel on [freenode](http://freenode.net) or typing:
     
@@ -46,7 +46,7 @@ When I say *developers*, I am stating that these people fulfill the roles of dev
 
 I also think there should be a **SINGLE** designer on the team that is both the interaction and visual designer. This, in my mind, helps retain the conceptual integrity of the user experience design. I completely agree with [Elliot Jay Stocks](http://elliotjaystocks.com/blog/web-designers-who-cant-code/) that designers must be able to code in this day and age. More importantly, they should heed at least one part of Ryan Singer's description of the [37signals design process](http://37signals.com/svn/posts/2135-podcast-episode-7-ryan-singer-on-the-37signals-design-process)...work in the code. By writing HTML and CSS, checking templates into version control and running the software locally on their own machines during development designers will have a much more intimate relationship with the final product. In the process, it helps address that whole [designer/developer workflow](http://www.adobe.com/resources/business/rich_internet_apps/workflow/) thing.
 
-# But, That Doesn't Scale&#0153;
+#### But, That Doesn't Scale&#0153;
 
 Of course it does, just not in the way you've been conditioned to think. Jason Fried gets it:
 
