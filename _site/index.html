@@ -18,86 +18,38 @@
 
 
 <div class="post">
-  <h3><a href="/2010/03/14/3-Is-The-Magic-Number.html">3 Is The Magic Number</a></h3>
-<p class="byline">Posted by <strong>kstewart</strong> on 14 Mar 2010</p>
+  <h3><a href="/2010/04/30/mostly-cloudy.html">Mostly Cloudy</a></h3>
+<p class="byline">Posted by <strong>kstewart</strong> on 2010-04-30 00:00:00 -0700</p>
 
-<p>More or less. At least, when it comes to software development these days. That&#8217;s not to say it&#8217;s a hard and fast number, but it is the sweet spot in my experience. But, before people start raking me over the coals asking, <em>&#8220;Do you actually believe only 3 people could write something as complex as Photoshop?&#8221;</em> let me set the context here and now <em>(Oh, and to answer the previous question, Yes)</em> :</p>
+<p>In a <a href='/2010/02/20/mobile-is-the-new-desktop.html'>previous post</a>, I talked about my preference for developing for the Web as opposed to jumping on the native application bandwagon that is dominating mobile development these days. In this post, I&#8217;d like to go deeper on that topic.</p>
 
-<ul>
-<li>A large percentage of software development is in building Web applications and lately smaller, mobile applications for iPhones, Android devices and Blackberrys.</li>
+<p>At my <a href='http://adobe.com'>day job</a>, I spend a good part of my day explaining services to people. Some may say that we don&#8217;t <a href='http://www.mslater.com/2009/12/4/10-years-later-thoughts-on-phototablet-fotiva-adobe'>get the Web</a> and there is probably some truth to that given <a href='http://www.apple.com/hotnews/thoughts-on-flash/'>recent events</a>. Yet, being inside the <strike>sausage</strike> software factory has shown me that it is more a cultural issue; we rose to prominence during the Age of Software as a Product. Combine that with a specialist and generally long-tenured workforce, it is no surprise that we have difficulty adapting to the software as a service era.</p>
 
-<li>There is a vibrant community of independent software developers that are building desktop applications with teams as small as <strong>1</strong> and making a good living.</li>
+<p>One major mind shift for people coming from a desktop application development perspective is the idea that <em>multi-user</em> is the rule, not the exception. Also, the fact that since you no longer have the hassle of creating installers that have to deal with wildly varying system configurations, you have more flexibility in the choice of languages, libraries and applications you can use to build your service. You, the software developer, have a lot more freedom.</p>
 
-<li>The majority of large applications did not START as large applications. They were small applications that <em>GREW</em> into large applications. And when they started, there were only a few developers (<em>even Photoshop!</em>).</li>
-</ul>
+<p>Of course, there are tradeoffs. As opposed to worrying about the intricacies of your widget toolkit, keeping your interface responsive and, of course, making it attractive and functional you have to deal with lower-level details. Concurrency. Latency. Throughput. Serialization. <em>This stuff is really cool, BTW.</em></p>
 
-<h4 id='rethinking_brookss_law'>Rethinking Brooks&#8217;s Law</h4>
+<p>I tend to call this <strong>the iceberg</strong>. Most people see the part that penetrates the water&#8217;s surface, but never pay attention to the incredible mass that lurks below. Another analogy, soon to be relegated to the historical trash can, is the <strong>dial tone</strong>. Do you ever stop to consider all the engineering that goes behind producing that pleasing tone that informs you that you can press a few buttons and connect with another human being? Of course you don&#8217;t! <em>You tweet, just like me. What the hell is a dial tone?</em></p>
 
-<p>As often misquoted as <a href='http://en.wikipedia.org/wiki/Brooks%27s_law'>Brooks&#8217;s Law</a> is, the core tenet is still valid. The communication costs incurred by adding more people to a project can be crippling.</p>
+<p>A <a href='http://blog.kevingoldsmith.com/'>co-worker</a> and I were talking one day and he mentioned a former colleague of his who was a Unix geek before going to Microsoft for many years. When this guy left and went back to hacking Unix, he was (pleasantly) surprised how easy it was for him to jump back into things. Very little had changed in all that time. vi and emacs were still the dominant editors. More importantly, the programming model hadn&#8217;t changed. Write small programs that do one thing well and connect them via pipes.</p>
 
-<blockquote>
-<p>&#8220;You won&#8217;t catch me advocating for &#8216;hard-working average programmers&#8217;. What I do believe is: you should stock your team with only rockstars, between 2 and 4 of them. I&#8217;ve worked on teams that only had 3 people. I&#8217;ve worked on teams with about 16. I was a consultant, I&#8217;ve worked on a lot of teams - big and small. My experience was that the smaller teams were much more effective, every time.&#8221;</p>
-</blockquote>
+<p>My friend and I pondered this. How, after all this time and with the rapid pace of technology, was Unix not only mostly the same but <strong>thriving</strong>? My theory: cause its model works.</p>
 
-<p><strong><em>Jay Fields, <a href='http://blog.jayfields.com/2010/03/pairing-isnt-solution.html'>Pairing isn&#8217;t the Solution</a> via <a href='http://twitter.com/zedshaw/status/10356819700'>Zed Shaw</a></em></strong></p>
+<p>Take concurrency. Hard-assed problem, no one will argue that. And, we have all learned the hard way that <em>threads suck</em>. And while there are great new constructs like <em>actors</em> and <em>software transactional memory</em>, they are generally implemented in obscure and academic languages like Scala and Haskell (<em>here comes the hate mail!</em>)</p>
 
-<p>The right way to think about Brooks&#8217;s Law is to pay more attention to how we form teams in the first place. Too many companies think of developers as interchangeable cogs and just throw people onto projects as if what they are working on and who they work with do not matter. <strong>NOTHING</strong> could be farther from the truth.</p>
+<p>Or, you could fall back to the Unix process model. <strong>fork</strong> and <strong>exec</strong> still work well for a lot of cases. Building an asynchronous backend for a service requires long-running processes for message queues and daemon processes for pulling jobs and spinning up workers. This is Mom and apple pie for Unix wonks.</p>
 
-<h4 id='software_development_is_a_social_activity'>Software Development is a Social Activity</h4>
+<p>Add to that the complexity of processing large amounts of data or responding in near realtime to requests from multiple clients. As great as the frameworks are that come out of Cupertino, they&#8217;re not going to wrap up that kind of stuff and make it easy for the Cocoa Touch crowd to deploy highly scalable services. If it happens at all, it will come out of <a href='http://aws.amazon.com'>Seattle</a>.</p>
 
-<p>Whether you are pair programming on some Java code, chatting in the #mongodb IRC channel on <a href='http://freenode.net'>freenode</a> or typing:</p>
+<p>You can&#8217;t abstract everything. At some point, you have to know how things <em>work</em>. Even with amazing cloud platforms like <a href='http://aws.amazon.com/ec2/'>Amazon EC2</a>, <a href='http://heroku.com'>Heroku</a> (<em>LOVE</em> what these guys are doing!) and <a href='http://engineyard.com'>Engine Yard</a> you need to understand how things interact, how latency will impact you and how to orchestrate multiple cooperating services. You have to internalize that <em>failure happens, and you need to figure out how to deal with it because you can&#8217;t prevent it</em>.</p>
 
-<pre><code>git push github master</code></pre>
+<p>So, how does this relate to the new world of mobile development? Aside from games and a handful of other apps, how many apps do you use that are <strong>NOT</strong> connected to some kind of service? All those location-aware, map intensive, real-time and messaging apps that you couldn&#8217;t live without are just the <a href='http://en.wikipedia.org/wiki/Icebergs'>tips of the icebergs</a>. The services that push data to these apps are amazingly intricate and complex. And like the ice below the surface, most people (including app developers) shy away from understanding how they are designed and implemented. They do realize, however, that they are necessary.</p>
 
-<p>writing code is a social activity. Developers need to talk to other developers, bounce ideas off each other or just show off. It&#8217;s a <em>craft</em>. That&#8217;s why the whole idea of software craftsmanship holds so much appeal. We applied Industrial Revolution principles to knowledge work and that&#8217;s just insane. Unfortunately, many large companies still haven&#8217;t <a href='http://www.entertonement.com/clips/pmrmbndcrh--Did-you-see-the-memo-about-thisOffice-Space-Gary-Cole-Bill-Lumbergh-'>gotten the memo</a>.</p>
+<p>HTTP will be with us for a while, and TCP/IP even longer. The Web may recede behind pay walls, but you&#8217;ll still use the Internet. Android may overtake iPhone OS or maybe Microsoft will come from behind again and convince people that Windows Phone 364 is for the <em>social network ready</em> enterprise. Whatever. No matter the platform, the genie is out of the bottle. People expect to be online and connected to services no matter the device. Amazingly, services today can work with any kind of client that has a network library and a way to parse the data you receive (assuming you designed it correctly).</p>
 
-<p>Large companies have introduced so much overhead to the process of delivering software it&#8217;s amazing any gets released at all. Much of this overhead is related to <em>managing communication between functional teams</em>. Interesting&#8230;</p>
+<p>There are a slew of hard problems to solve on the services side of the new software development landscape. Sure, the front end is what people see and respond to for the most part. But, in reality, people are attracted to the <strong>value</strong> that a well-designed app and its corresponding service provide. While I can appreciate great visual and interaction design, I am not especially skilled at either. My creativity comes out in figuring out how to leverage things like <a href='http://nodejs.org/'>node.js</a>, <a href='http://code.google.com/p/redis/'>Redis</a>, <a href='http://unicorn.bogomips.org/'>Unicorn</a> and <a href='http://kr.github.com/beanstalkd/'>beanstalkd</a>.</p>
 
-<p>Has any one considered WHY we even have functional teams? Why isn&#8217;t everyone involved on the project on one team? <em>Duh! Too many people.</em> Why do we have so many people? <em>Because we need specialists, so we break them up into teams, give them managers and then add project managers to facilitate communication&#8230;</em> Which, of course, is absolutely necessary because we all know that engineers don&#8217;t have <a href='http://www.break.com/usercontent/2008/4/Office-Space-I-have-people-skills-488721.html'>people skills</a>.</p>
-
-<p>Except that is a big, fat, honking <strong>LIE</strong>. The real issue is that developers have to hold a ton of information in their heads and attain a high state of concentration. They understandably get a wee bit irritated every time they have to context switch to address the latest issue of <strong>The Institution</strong>. Large teams introduce every possible detriment to a developer:</p>
-
-<ol>
-<li>Interruptions</li>
-
-<li>Unnecessary communication</li>
-
-<li>Low bandwidth communication</li>
-</ol>
-
-<p>How can we turn this around? In my utopian vision of the future, software development teams are comprised of:</p>
-
-<ol>
-<li>Developers</li>
-
-<li>Designer</li>
-</ol>
-
-<p>When I say <em>developers</em>, I am stating that these people fulfill the roles of developers, testers and operations people. If you had a development manager on the team before I hope s/he can code. Otherwise, we have no need for them.</p>
-
-<p>I also think there should be a <strong>SINGLE</strong> designer on the team that is both the interaction and visual designer. This, in my mind, helps retain the conceptual integrity of the user experience design. I completely agree with <a href='http://elliotjaystocks.com/blog/web-designers-who-cant-code/'>Elliot Jay Stocks</a> that designers must be able to code in this day and age. More importantly, they should heed at least one part of Ryan Singer&#8217;s description of the <a href='http://37signals.com/svn/posts/2135-podcast-episode-7-ryan-singer-on-the-37signals-design-process'>37signals design process</a>&#8230;work in the code. By writing HTML and CSS, checking templates into version control and running the software locally on their own machines during development designers will have a much more intimate relationship with the final product. In the process, it helps address that whole <a href='http://www.adobe.com/resources/business/rich_internet_apps/workflow/'>designer/developer workflow</a> thing.</p>
-
-<h4 id='but_that_doesnt_scale'>But, That Doesn&#8217;t Scale&#153;</h4>
-
-<p>Of course it does, just not in the way you&#8217;ve been conditioned to think. Jason Fried gets it:</p>
-
-<blockquote>
-<p>&#8220;We&#8217;re going to start working in teams. A team is made of three people: One designer and two programmers. A system administrator will also assist the team when necessary. To start, we will have two dedicated teams plus one slack team. The slack team is available to help either team, or take on other stuff that inevitably comes up. In March we expect to have a third team dedicated to the products.&#8221;</p>
-</blockquote>
-
-<p><strong><em>Jason Fried, <a href='http://37signals.com/svn/posts/2099-2010-the-year-of-the-products-a-new-way-of-working'>2010: The year of the products + a new way of working</a></em></strong></p>
-
-<p>Microsoft has/had a similar concept called feature teams. Amazon does the two-pizza team thing. It&#8217;s intrinsic to human nature to prefer small circles. Ever notice at a large party that everyone breaks off into small groups of 4-6 people to have a conversation? Why do you think that is? Seth Godin gives us a hint:</p>
-
-<blockquote>
-<p>&#8220;Handshakes. How many handshakes do you need to introduce three people? Only three. Ishita, meet Susan. Susan, meet Clay. Clay, meet Ishita. Four people need twice as many, six. And five people? Ten.&#8221;</p>
-</blockquote>
-
-<p><strong><em>Seth Godin, <a href='http://www.amazon.com/Linchpin-Are-Indispensable-Seth-Godin/dp/1591843162/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1268610473&amp;sr=1-1'>Linchpin</a></em></strong></p>
-
-<p><em>Who will talk to the customers, get their requirements, understand the market&#8230;.?</em></p>
-
-<p>You haven&#8217;t been following along, have you?</p> 
+<p>If you made it this far, I recommend you read The State of the Internet Operating System, <a href='http://radar.oreilly.com/2010/03/state-of-internet-operating-system.html'>Part I</a> and <a href='http://radar.oreilly.com/2010/04/handicapping-internet-platform-wars.html'>Part II</a>. They don&#8217;t call Tim O&#8217;Reilly <em>The Prophet</em> for nuthin&#8217;!</p> 
 </div>
 
 
@@ -117,15 +69,15 @@
 		    <div>
     			<p><strong>Recently</strong></p>
 				
-			      <span>14 Mar 2010</span> &raquo; <a href="/2010/03/14/3-Is-The-Magic-Number.html">3 Is The Magic Number</a><br />
+			      <span>2010-04-30 00:00:00 -0700</span> &raquo; <a href="/2010/04/30/mostly-cloudy.html">Mostly Cloudy</a><br />
 			    
-			      <span>20 Feb 2010</span> &raquo; <a href="/2010/02/20/mobile-is-the-new-desktop.html">Mobile Is The New Desktop</a><br />
+			      <span>2010-03-14 00:00:00 -0800</span> &raquo; <a href="/2010/03/14/3-Is-The-Magic-Number.html">3 Is The Magic Number</a><br />
 			    
-			      <span>10 Jun 2009</span> &raquo; <a href="/2009/06/10/api-design-is-interaction-design.html">API Design is Interaction Design</a><br />
+			      <span>2010-02-20 00:00:00 -0800</span> &raquo; <a href="/2010/02/20/mobile-is-the-new-desktop.html">Mobile Is The New Desktop</a><br />
 			    
-			      <span>13 Apr 2009</span> &raquo; <a href="/2009/04/13/webdev-vs-swdev.html">Web Development vs. Software Development</a><br />
+			      <span>2009-06-10 00:00:00 -0700</span> &raquo; <a href="/2009/06/10/api-design-is-interaction-design.html">API Design is Interaction Design</a><br />
 			    
-			      <span>25 Jan 2009</span> &raquo; <a href="/2009/01/25/seven-things.html">Seven Things</a><br />
+			      <span>2009-04-13 00:00:00 -0700</span> &raquo; <a href="/2009/04/13/webdev-vs-swdev.html">Web Development vs. Software Development</a><br />
 			    
 				<div></div>
 		    </div>
