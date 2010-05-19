@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LAMP Is Dead, Long Live...DyLAN?
+title: LAMP Is Dead. Long Live...DyLAN?
 ---
 
 I'm sure you think the title of this post is linkbait. Maybe it is, I have an ego like everyone else. However, I've been wondering lately...
