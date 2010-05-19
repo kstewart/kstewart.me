@@ -18,38 +18,78 @@
 
 
 <div class="post">
-  <h3><a href="/2010/04/30/mostly-cloudy.html">Mostly Cloudy</a></h3>
-<p class="byline">Posted by <strong>kstewart</strong> on 2010-04-30 00:00:00 -0700</p>
+  <h1><a href="/2010/05/18/lamp-is-dead.html">LAMP Is Dead, Long Live...DyLAN?</a></h1>
+<p class="byline">Posted by <strong>kstewart</strong> on 2010-05-18 00:00:00 -0700</p>
 
-<p>In a <a href='/2010/02/20/mobile-is-the-new-desktop.html'>previous post</a>, I talked about my preference for developing for the Web as opposed to jumping on the native application bandwagon that is dominating mobile development these days. In this post, I&#8217;d like to go deeper on that topic.</p>
+<p>I&#8217;m sure you think the title of this post is linkbait. Maybe it is, I have an ego like everyone else. However, I&#8217;ve been wondering lately&#8230;</p>
 
-<p>At my <a href='http://adobe.com'>day job</a>, I spend a good part of my day explaining services to people. Some may say that we don&#8217;t <a href='http://www.mslater.com/2009/12/4/10-years-later-thoughts-on-phototablet-fotiva-adobe'>get the Web</a> and there is probably some truth to that given <a href='http://www.apple.com/hotnews/thoughts-on-flash/'>recent events</a>. Yet, being inside the <strike>sausage</strike> software factory has shown me that it is more a cultural issue; we rose to prominence during the Age of Software as a Product. Combine that with a specialist and generally long-tenured workforce, it is no surprise that we have difficulty adapting to the software as a service era.</p>
+<blockquote>
+<p>Is the LAMP stack <strong>THE</strong> Web stack still?</p>
+</blockquote>
 
-<p>One major mind shift for people coming from a desktop application development perspective is the idea that <em>multi-user</em> is the rule, not the exception. Also, the fact that since you no longer have the hassle of creating installers that have to deal with wildly varying system configurations, you have more flexibility in the choice of languages, libraries and applications you can use to build your service. You, the software developer, have a lot more freedom.</p>
+<p>Let&#8217;s take a look at what we have today.</p>
 
-<p>Of course, there are tradeoffs. As opposed to worrying about the intricacies of your widget toolkit, keeping your interface responsive and, of course, making it attractive and functional you have to deal with lower-level details. Concurrency. Latency. Throughput. Serialization. <em>This stuff is really cool, BTW.</em></p>
+<h1 id='linux'>Linux</h1>
 
-<p>I tend to call this <strong>the iceberg</strong>. Most people see the part that penetrates the water&#8217;s surface, but never pay attention to the incredible mass that lurks below. Another analogy, soon to be relegated to the historical trash can, is the <strong>dial tone</strong>. Do you ever stop to consider all the engineering that goes behind producing that pleasing tone that informs you that you can press a few buttons and connect with another human being? Of course you don&#8217;t! <em>You tweet, just like me. What the hell is a dial tone?</em></p>
+<p>I will give credit to <a href='http://stackoverflow.com'>Stack Overflow</a> for pragmatically showcasing the <a href='http://asp.net/mvc'>ASP.NET MVC</a> Web stack. This site is one of many that invalidates the idea that Unix/Linux is the only choice for a server OS. Windows can do just fine, thank you.</p>
 
-<p>A <a href='http://blog.kevingoldsmith.com/'>co-worker</a> and I were talking one day and he mentioned a former colleague of his who was a Unix geek before going to Microsoft for many years. When this guy left and went back to hacking Unix, he was (pleasantly) surprised how easy it was for him to jump back into things. Very little had changed in all that time. vi and emacs were still the dominant editors. More importantly, the programming model hadn&#8217;t changed. Write small programs that do one thing well and connect them via pipes.</p>
+<p>That said, the other Web stack components naturally lead many developers down the Open Source path and, inevitably, Linux. Sure, there are many still who think <a href='http://freebsd.org'>FreeBSD</a> is The One True Unix. Or, if you&#8217;re a <a href='http://joyent.com'>Joyeur</a> then <a href='http://hub.opensolaris.org/bin/view/Main/'>OpenSolaris</a> is the bee&#8217;s knees. Everyone else is on Linux.</p>
 
-<p>My friend and I pondered this. How, after all this time and with the rapid pace of technology, was Unix not only mostly the same but <strong>thriving</strong>? My theory: cause its model works.</p>
+<h1 id='apache'>Apache</h1>
 
-<p>Take concurrency. Hard-assed problem, no one will argue that. And, we have all learned the hard way that <em>threads suck</em>. And while there are great new constructs like <em>actors</em> and <em>software transactional memory</em>, they are generally implemented in obscure and academic languages like Scala and Haskell (<em>here comes the hate mail!</em>)</p>
+<p><a href='http://httpd.apache.org/'>Apache</a> is still King of The Mountain, but <a href='http://wiki.nginx.org/Main'>Nginx</a> is gaining ground. The more important thing to notice is that in the old days, your Web server was also your application server. Your language binding to the Web server was either <em>mod_perl</em> or <em>mod_php</em>. This is the primary reason the LAMP stack took off; most Web hosts ran Apache and by then mod_perl and mod_php were default installs.</p>
 
-<p>Or, you could fall back to the Unix process model. <strong>fork</strong> and <strong>exec</strong> still work well for a lot of cases. Building an asynchronous backend for a service requires long-running processes for message queues and daemon processes for pulling jobs and spinning up workers. This is Mom and apple pie for Unix wonks.</p>
+<p>With the rise of other dynamic languages (see later section), Apache and Nginx have started to be used for more static content serving and as <a href='http://httpd.apache.org/docs/2.0/mod/mod_proxy.html'>reverse HTTP proxies</a> for passing requests to backend servers like <a href='http://github.com/fauna/mongrel'>Mongrel</a>, <a href='http://code.macournoyer.com/thin/'>Thin</a> or <a href='http://unicorn.bogomips.org/'>Unicorn</a> (familiar to Ruby developers).</p>
 
-<p>Add to that the complexity of processing large amounts of data or responding in near realtime to requests from multiple clients. As great as the frameworks are that come out of Cupertino, they&#8217;re not going to wrap up that kind of stuff and make it easy for the Cocoa Touch crowd to deploy highly scalable services. If it happens at all, it will come out of <a href='http://aws.amazon.com'>Seattle</a>.</p>
+<p>Apache is still widely used and is a robust option. If you know how to manage and configure it, you can make it do awesome things. Nginx is small and fast and has a more sane (to me and several others, at least) configuration syntax. Its number of modules is steadily increasing. In my opinion, Apache and Nginx are two sides of the same coin. <a href='http://varnish-cache.org/'>Varnish</a>, on the other hand, is in a league of its own.</p>
 
-<p>You can&#8217;t abstract everything. At some point, you have to know how things <em>work</em>. Even with amazing cloud platforms like <a href='http://aws.amazon.com/ec2/'>Amazon EC2</a>, <a href='http://heroku.com'>Heroku</a> (<em>LOVE</em> what these guys are doing!) and <a href='http://engineyard.com'>Engine Yard</a> you need to understand how things interact, how latency will impact you and how to orchestrate multiple cooperating services. You have to internalize that <em>failure happens, and you need to figure out how to deal with it because you can&#8217;t prevent it</em>.</p>
+<h1 id='mysql'>MySQL</h1>
 
-<p>So, how does this relate to the new world of mobile development? Aside from games and a handful of other apps, how many apps do you use that are <strong>NOT</strong> connected to some kind of service? All those location-aware, map intensive, real-time and messaging apps that you couldn&#8217;t live without are just the <a href='http://en.wikipedia.org/wiki/Icebergs'>tips of the icebergs</a>. The services that push data to these apps are amazingly intricate and complex. And like the ice below the surface, most people (including app developers) shy away from understanding how they are designed and implemented. They do realize, however, that they are necessary.</p>
+<p>Ahh, MySQL. The workhorse. The incumbent. The hammer that makes every problem look like a nail.</p>
 
-<p>HTTP will be with us for a while, and TCP/IP even longer. The Web may recede behind pay walls, but you&#8217;ll still use the Internet. Android may overtake iPhone OS or maybe Microsoft will come from behind again and convince people that Windows Phone 364 is for the <em>social network ready</em> enterprise. Whatever. No matter the platform, the genie is out of the bottle. People expect to be online and connected to services no matter the device. Amazingly, services today can work with any kind of client that has a network library and a way to parse the data you receive (assuming you designed it correctly).</p>
+<p>I jest&#8230;somewhat. Many years ago, there was more diversity in the database world. But, the world was different then. The primary problem was transaction processing and relational databases handled that problem well. Combined with the pseudo-standardization of SQL, victory was <em>Oracle&#8217;s</em>?</p>
 
-<p>There are a slew of hard problems to solve on the services side of the new software development landscape. Sure, the front end is what people see and respond to for the most part. But, in reality, people are attracted to the <strong>value</strong> that a well-designed app and its corresponding service provide. While I can appreciate great visual and interaction design, I am not especially skilled at either. My creativity comes out in figuring out how to leverage things like <a href='http://nodejs.org/'>node.js</a>, <a href='http://code.google.com/p/redis/'>Redis</a>, <a href='http://unicorn.bogomips.org/'>Unicorn</a> and <a href='http://kr.github.com/beanstalkd/'>beanstalkd</a>.</p>
+<p>But, in the early days of the Web people persisted their data to flat files or DBM files. I recall people writing CGI applications and worrying about file locking, which opened the door to using relational databases. <a href='http://www.mysql.com/'>MySQL</a>, <a href='http://www.postgresql.org/'>PostgreSQL</a>, <a href='http://www.oracle.com/'>Oracle</a>, <a href='http://www.sybase.com/'>Sybase</a> and sometimes even <a href='http://www.microsoft.com/sqlserver/'>SQL Server</a>.</p>
 
-<p>If you made it this far, I recommend you read The State of the Internet Operating System, <a href='http://radar.oreilly.com/2010/03/state-of-internet-operating-system.html'>Part I</a> and <a href='http://radar.oreilly.com/2010/04/handicapping-internet-platform-wars.html'>Part II</a>. They don&#8217;t call Tim O&#8217;Reilly <em>The Prophet</em> for nuthin&#8217;!</p> 
+<p>Then, Web 2.0 &#8220;happened&#8221;. And Ajax. And Twitter. The script kiddies who didn&#8217;t actually understand how RDMSes worked started having <strong>scaling problems</strong>. For some applications, scaling an RDBMS isn&#8217;t hard&#8230;it&#8217;s <em>costly</em>. So, if you&#8217;re a twenty-something with a hot new Web app and no real funding <strong>costly</strong> is synonymous with <strong>hard</strong> <em>(especially if you have no business model)</em>.</p>
+
+<p>Enter <strong>NoSQL</strong>. The new hammer. NoSQL&#8217;s claim to fame is <em>easier</em> scalability via swapping <a href='http://en.wikipedia.org/wiki/ACID'>ACID</a> properties for the <a href='http://en.wikipedia.org/wiki/CAP_theorem'>CAP theorem</a>. Simply put, transactions and consistency are less important than availability and partition tolerance (distribution). Most developers end up using object-relational mappers to flatten out objects in order to serialize them to database tables. As APIs became more prevalent and people became disillusioned with XML as a format, developers moved to <a href='http://www.json.org/'>JSON</a>. When they looked at JSON, many saw the hash data structure they were already using in their code. Serialize hashes, huh? Old hat to the Perl developers out there. And Amazon S3 is essentially a big-assed distributed hash table in the cloud.</p>
+
+<p>MySQL is still around and will continue to be used due to familiarity. However, as more developers use less of the relational aspects the door is opening for a NoSQL replacement&#8230;the MySQL of NoSQL if you will.</p>
+
+<h1 id='perlpythonphp'>(Perl|Python|PHP)</h1>
+
+<p>As soon as Ruby on Rails hit the scene, the <strong>P</strong> in LAMP grew a tail. Many who know me know that I think Perl is pure evil and PHP is an abomination. Before you start unfollowing me on Twitter, realize that even <a href='http://lerdorf.com/bio.php'>Rasmus</a> knows it&#8217;s kinda crappy. PHP is more XML bindings to C code than a language. Perl is a write-once, debug many collection of syntactic atrocities. Python is actually a language, and a nice one at that.</p>
+
+<p>As is Ruby, my current favorite. However, it doesn&#8217;t matter what the language is. The real value is the renaming of <strong>scripting languages</strong> to <em>dynamic languages</em>. This slight semantic adjustment ended up highlighting the productivity gains that were lost when everyone went stampeding to Java and C# (like I did). Essentially, a whole generation of developers never learned about <a href='http://en.wikipedia.org/wiki/Read-eval-print_loop'>REPL</a>. Luckily, the next generation rediscovered it and all the wonders it brings to bear. Static typing is almost a necessity for desktop applications, but for server-side stuff that is <strong>mostly</strong> processing text, dynamic typing is hard to beat&#8230;if not downright invaluable.</p>
+
+<p>This new (old) discovery has spawned a renaissance in programming languages. People are experimenting with a whole set of languages, especially functional ones. <a href='http://www.paulgraham.com/icad.html'>Paul Graham</a> would be proud; everyone is re(inventing|discovering) LISP. Who would have thought that <strong><em>Javascript</em></strong> would be the new hotness in programming languages? <em>(<a href='http://nodejs.org/'>Node.js</a>, by the way, is amazing!)</em></p>
+
+<h1 id='lamp_is_dead_or_at_least_in_critical_condition'>LAMP is dead (or at least in critical condition)</h1>
+
+<p>So, you&#8217;ve built your kick-ass Web 7.0 social media disintermediation geolocation application and subsequently get Dugg, Gruber&#8217;ed and Crunch&#8217;ed. Now, your sloppily coded and barely designed LAMP app is bursting at the scenes. You trek on over to <a href='http://highscalability.com/'>High Scalability</a> to search for your <a href='http://www.virtualschool.edu/mon/SoftwareEngineering/BrooksNoSilverBullet.html'>Silver Bullet</a>. Unfortunately, it&#8217;s not as easy as when you started slinging your PHP code. Should you use Hadoop or Cassandra? Everyone uses <a href='http://memcached.org/'>memcached</a>, but few tell you how to deal with cache invalidation. Is <a href='http://1978th.net/tokyotyrant/'>Tokyo Tyrant</a> really distributed, or does it just support easier replication?</p>
+
+<p>Thing is, it always comes down to understanding your problem and doing some careful and considered design. However, some trends have emerged in the evolution of the LAMP stack:</p>
+
+<ul>
+<li>Dynamic language</li>
+
+<li>Linux (still The King, baby!)</li>
+
+<li>Apache (or Nginx, but this makes my acronym work&#8230;)</li>
+
+<li>NoSQL</li>
+</ul>
+
+<p>LAMP is dead. Long live <strong>DyLAN!!!</strong></p>
+
+<p>That is, if you still care about servers and all that mess. The <strong><em>REAL</em></strong> hotshots know to embrace Platform as a Service (Paas) or The Cloud. Get an account on <a href='http://code.google.com/appengine/'>Google App Engine</a>, <a href='http://www.engineyard.com/'>Engine Yard</a> or <a href='http://heroku.com/'>Heroku</a>. If you have to do more than:</p>
+
+<blockquote>
+<p>git push origin master</p>
+</blockquote>
+
+<p>to deploy your app <em>you&#8217;re doing it wrong</em>.</p> 
 </div>
 
 
@@ -69,6 +109,8 @@
 		    <div>
     			<p><strong>Recently</strong></p>
 				
+			      <span>2010-05-18 00:00:00 -0700</span> &raquo; <a href="/2010/05/18/lamp-is-dead.html">LAMP Is Dead, Long Live...DyLAN?</a><br />
+			    
 			      <span>2010-04-30 00:00:00 -0700</span> &raquo; <a href="/2010/04/30/mostly-cloudy.html">Mostly Cloudy</a><br />
 			    
 			      <span>2010-03-14 00:00:00 -0800</span> &raquo; <a href="/2010/03/14/3-Is-The-Magic-Number.html">3 Is The Magic Number</a><br />
@@ -76,8 +118,6 @@
 			      <span>2010-02-20 00:00:00 -0800</span> &raquo; <a href="/2010/02/20/mobile-is-the-new-desktop.html">Mobile Is The New Desktop</a><br />
 			    
 			      <span>2009-06-10 00:00:00 -0700</span> &raquo; <a href="/2009/06/10/api-design-is-interaction-design.html">API Design is Interaction Design</a><br />
-			    
-			      <span>2009-04-13 00:00:00 -0700</span> &raquo; <a href="/2009/04/13/webdev-vs-swdev.html">Web Development vs. Software Development</a><br />
 			    
 				<div></div>
 		    </div>

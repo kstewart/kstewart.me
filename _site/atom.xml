@@ -4,13 +4,89 @@
  <title>[working code]</title>
  <link href="http://working-code.com/atom.xml" rel="self"/>
  <link href="http://working-code.com/"/>
- <updated>2010-05-18 14:09:36 -0700</updated>
+ <updated>2010-05-18 17:21:03 -0700</updated>
  <id>http://working-code.com</id>
  <author>
    <name>Kevin Stewart</name>
    <email>kevin@working-code.com</email>
  </author>
  
+ 
+ <entry>
+   <title>LAMP Is Dead, Long Live...DyLAN?</title>
+   <link href="http://working-code.com/2010/05/18/lamp-is-dead.html"/>
+   <updated>2010-05-18 00:00:00 -0700</updated>
+   <id>http://working-code.com/2010/05/18/lamp-is-dead</id>
+   <content type="html"><p>I&#8217;m sure you think the title of this post is linkbait. Maybe it is, I have an ego like everyone else. However, I&#8217;ve been wondering lately&#8230;</p>
+
+<blockquote>
+<p>Is the LAMP stack <strong>THE</strong> Web stack still?</p>
+</blockquote>
+
+<p>Let&#8217;s take a look at what we have today.</p>
+
+<h1 id='linux'>Linux</h1>
+
+<p>I will give credit to <a href='http://stackoverflow.com'>Stack Overflow</a> for pragmatically showcasing the <a href='http://asp.net/mvc'>ASP.NET MVC</a> Web stack. This site is one of many that invalidates the idea that Unix/Linux is the only choice for a server OS. Windows can do just fine, thank you.</p>
+
+<p>That said, the other Web stack components naturally lead many developers down the Open Source path and, inevitably, Linux. Sure, there are many still who think <a href='http://freebsd.org'>FreeBSD</a> is The One True Unix. Or, if you&#8217;re a <a href='http://joyent.com'>Joyeur</a> then <a href='http://hub.opensolaris.org/bin/view/Main/'>OpenSolaris</a> is the bee&#8217;s knees. Everyone else is on Linux.</p>
+
+<h1 id='apache'>Apache</h1>
+
+<p><a href='http://httpd.apache.org/'>Apache</a> is still King of The Mountain, but <a href='http://wiki.nginx.org/Main'>Nginx</a> is gaining ground. The more important thing to notice is that in the old days, your Web server was also your application server. Your language binding to the Web server was either <em>mod_perl</em> or <em>mod_php</em>. This is the primary reason the LAMP stack took off; most Web hosts ran Apache and by then mod_perl and mod_php were default installs.</p>
+
+<p>With the rise of other dynamic languages (see later section), Apache and Nginx have started to be used for more static content serving and as <a href='http://httpd.apache.org/docs/2.0/mod/mod_proxy.html'>reverse HTTP proxies</a> for passing requests to backend servers like <a href='http://github.com/fauna/mongrel'>Mongrel</a>, <a href='http://code.macournoyer.com/thin/'>Thin</a> or <a href='http://unicorn.bogomips.org/'>Unicorn</a> (familiar to Ruby developers).</p>
+
+<p>Apache is still widely used and is a robust option. If you know how to manage and configure it, you can make it do awesome things. Nginx is small and fast and has a more sane (to me and several others, at least) configuration syntax. Its number of modules is steadily increasing. In my opinion, Apache and Nginx are two sides of the same coin. <a href='http://varnish-cache.org/'>Varnish</a>, on the other hand, is in a league of its own.</p>
+
+<h1 id='mysql'>MySQL</h1>
+
+<p>Ahh, MySQL. The workhorse. The incumbent. The hammer that makes every problem look like a nail.</p>
+
+<p>I jest&#8230;somewhat. Many years ago, there was more diversity in the database world. But, the world was different then. The primary problem was transaction processing and relational databases handled that problem well. Combined with the pseudo-standardization of SQL, victory was <em>Oracle&#8217;s</em>?</p>
+
+<p>But, in the early days of the Web people persisted their data to flat files or DBM files. I recall people writing CGI applications and worrying about file locking, which opened the door to using relational databases. <a href='http://www.mysql.com/'>MySQL</a>, <a href='http://www.postgresql.org/'>PostgreSQL</a>, <a href='http://www.oracle.com/'>Oracle</a>, <a href='http://www.sybase.com/'>Sybase</a> and sometimes even <a href='http://www.microsoft.com/sqlserver/'>SQL Server</a>.</p>
+
+<p>Then, Web 2.0 &#8220;happened&#8221;. And Ajax. And Twitter. The script kiddies who didn&#8217;t actually understand how RDMSes worked started having <strong>scaling problems</strong>. For some applications, scaling an RDBMS isn&#8217;t hard&#8230;it&#8217;s <em>costly</em>. So, if you&#8217;re a twenty-something with a hot new Web app and no real funding <strong>costly</strong> is synonymous with <strong>hard</strong> <em>(especially if you have no business model)</em>.</p>
+
+<p>Enter <strong>NoSQL</strong>. The new hammer. NoSQL&#8217;s claim to fame is <em>easier</em> scalability via swapping <a href='http://en.wikipedia.org/wiki/ACID'>ACID</a> properties for the <a href='http://en.wikipedia.org/wiki/CAP_theorem'>CAP theorem</a>. Simply put, transactions and consistency are less important than availability and partition tolerance (distribution). Most developers end up using object-relational mappers to flatten out objects in order to serialize them to database tables. As APIs became more prevalent and people became disillusioned with XML as a format, developers moved to <a href='http://www.json.org/'>JSON</a>. When they looked at JSON, many saw the hash data structure they were already using in their code. Serialize hashes, huh? Old hat to the Perl developers out there. And Amazon S3 is essentially a big-assed distributed hash table in the cloud.</p>
+
+<p>MySQL is still around and will continue to be used due to familiarity. However, as more developers use less of the relational aspects the door is opening for a NoSQL replacement&#8230;the MySQL of NoSQL if you will.</p>
+
+<h1 id='perlpythonphp'>(Perl|Python|PHP)</h1>
+
+<p>As soon as Ruby on Rails hit the scene, the <strong>P</strong> in LAMP grew a tail. Many who know me know that I think Perl is pure evil and PHP is an abomination. Before you start unfollowing me on Twitter, realize that even <a href='http://lerdorf.com/bio.php'>Rasmus</a> knows it&#8217;s kinda crappy. PHP is more XML bindings to C code than a language. Perl is a write-once, debug many collection of syntactic atrocities. Python is actually a language, and a nice one at that.</p>
+
+<p>As is Ruby, my current favorite. However, it doesn&#8217;t matter what the language is. The real value is the renaming of <strong>scripting languages</strong> to <em>dynamic languages</em>. This slight semantic adjustment ended up highlighting the productivity gains that were lost when everyone went stampeding to Java and C# (like I did). Essentially, a whole generation of developers never learned about <a href='http://en.wikipedia.org/wiki/Read-eval-print_loop'>REPL</a>. Luckily, the next generation rediscovered it and all the wonders it brings to bear. Static typing is almost a necessity for desktop applications, but for server-side stuff that is <strong>mostly</strong> processing text, dynamic typing is hard to beat&#8230;if not downright invaluable.</p>
+
+<p>This new (old) discovery has spawned a renaissance in programming languages. People are experimenting with a whole set of languages, especially functional ones. <a href='http://www.paulgraham.com/icad.html'>Paul Graham</a> would be proud; everyone is re(inventing|discovering) LISP. Who would have thought that <strong><em>Javascript</em></strong> would be the new hotness in programming languages? <em>(<a href='http://nodejs.org/'>Node.js</a>, by the way, is amazing!)</em></p>
+
+<h1 id='lamp_is_dead_or_at_least_in_critical_condition'>LAMP is dead (or at least in critical condition)</h1>
+
+<p>So, you&#8217;ve built your kick-ass Web 7.0 social media disintermediation geolocation application and subsequently get Dugg, Gruber&#8217;ed and Crunch&#8217;ed. Now, your sloppily coded and barely designed LAMP app is bursting at the scenes. You trek on over to <a href='http://highscalability.com/'>High Scalability</a> to search for your <a href='http://www.virtualschool.edu/mon/SoftwareEngineering/BrooksNoSilverBullet.html'>Silver Bullet</a>. Unfortunately, it&#8217;s not as easy as when you started slinging your PHP code. Should you use Hadoop or Cassandra? Everyone uses <a href='http://memcached.org/'>memcached</a>, but few tell you how to deal with cache invalidation. Is <a href='http://1978th.net/tokyotyrant/'>Tokyo Tyrant</a> really distributed, or does it just support easier replication?</p>
+
+<p>Thing is, it always comes down to understanding your problem and doing some careful and considered design. However, some trends have emerged in the evolution of the LAMP stack:</p>
+
+<ul>
+<li>Dynamic language</li>
+
+<li>Linux (still The King, baby!)</li>
+
+<li>Apache (or Nginx, but this makes my acronym work&#8230;)</li>
+
+<li>NoSQL</li>
+</ul>
+
+<p>LAMP is dead. Long live <strong>DyLAN!!!</strong></p>
+
+<p>That is, if you still care about servers and all that mess. The <strong><em>REAL</em></strong> hotshots know to embrace Platform as a Service (Paas) or The Cloud. Get an account on <a href='http://code.google.com/appengine/'>Google App Engine</a>, <a href='http://www.engineyard.com/'>Engine Yard</a> or <a href='http://heroku.com/'>Heroku</a>. If you have to do more than:</p>
+
+<blockquote>
+<p>git push origin master</p>
+</blockquote>
+
+<p>to deploy your app <em>you&#8217;re doing it wrong</em>.</p></content>
+ </entry>
  
  <entry>
    <title>Mostly Cloudy</title>
