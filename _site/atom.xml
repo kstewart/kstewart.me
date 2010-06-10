@@ -4,7 +4,7 @@
  <title>[working code]</title>
  <link href="http://working-code.com/atom.xml" rel="self"/>
  <link href="http://working-code.com/"/>
- <updated>2010-05-18 17:21:03 -0700</updated>
+ <updated>2010-06-10 15:47:30 -0700</updated>
  <id>http://working-code.com</id>
  <author>
    <name>Kevin Stewart</name>
@@ -13,10 +13,76 @@
  
  
  <entry>
-   <title>LAMP Is Dead, Long Live...DyLAN?</title>
-   <link href="http://working-code.com/2010/05/18/lamp-is-dead.html"/>
+   <title>Oil and Water</title>
+   <link href="http://working-code.com/2010/06/10/oil-and-water.html"/>
+   <updated>2010-06-10 00:00:00 -0700</updated>
+   <id>http://working-code.com/2010/06/10/oil-and-water</id>
+   <content type="html"><p>Reality check time - Open Source will <strong>never</strong> produce insanely great products when it comes to <em>design</em>.</p>
+
+<p><em>Wow, didn&#8217;t even ease into the flamebait this time&#8230;</em></p>
+
+<p>Let&#8217;s look at the evidence, shall we? For years, we&#8217;ve been hearing about the rise of the Linux desktop. The desktop that would be easy enough for your Mom or Grandma to use. <em>&#8230;because the command line is too hard for women? Good luck with THAT sexist argument!</em> Or, because Linux is Open Source it is automatically better, purer and easier? Suuurrrreeee&#8230;&#8230;</p>
+
+<p>GNOME and KDE are the predominant Linux desktop environments. Know why some people prefer KDE over GNOME? Because it works more like Microsoft Windows. Yes, THAT Microsoft Windows&#8230;the one that all the Open Source fanatics love to hate. Closed, proprietary, downright <strong>EVIL</strong> Microsoft Windows. A popular Linux desktop environment that is essentially copying a closed, proprietary environment? Nah! Couldn&#8217;t be! <em>Except that every single Linux desktop app is essentially a clone of either a Windows or Macintosh application?</em> Oh, and the component model on which GNOME is built? Inspired by Microsoft COM.</p>
+
+<p>In the late nineties, Eazel tried to make Linux <a href='http://www.theregister.co.uk/2000/08/22/hertzfeld_spills_all_about_eazel/'>as easy to use as the Mac</a>. They managed to get a file manager out before they <a href='http://www.linux.com/archive/articles/9373'>shut their doors</a>. <a href='http://en.wikipedia.org/wiki/Ximian'>Ximian</a> tried to do the same, then got bought by <a href='http://www.theregister.co.uk/2003/08/04/novell_buys_ximian/'>Novell</a>. Canonical is (finally!) approaching Mac-like aesthetics with <a href='http://lowendmac.com/ed/bgray/bg10/ubuntu-10.04-review.html'>Ubuntu 10.04 Lucid Lynx</a>.</p>
+
+<p>Now, I love and support Open Source. However, one has to wonder if Open Source has so many advantages why has there been so little innovative, original design coming out of that community? Why do they just copy what has come before? One answer <strong>might</strong> be:</p>
+
+<blockquote>
+<p>&#34;Good artists copy. Great artists steal.&#34;</p>
+</blockquote>
+
+<p><a href='http://en.wikiquote.org/wiki/Art'>- Pablo Picasso</a></p>
+
+<p>Except, no Open Source product currently stands out as an exemplar of <strong>great design</strong>. So, the Open Source community is just copying. They need to steal.</p>
+
+<p>When it comes to infrastructure, things are a lot different. There are tons of examples of great code and creative uses of technology. Software that enables all of the wondrous services and tools we use on a daily basis. Hardware that used to fill a room that now fits in your pocket. Still, that is mostly the <em>function</em>. <strong>Form</strong> is just as critical a component and that is where I believe the Open Source community falls down.</p>
+
+<blockquote>
+<p>&#34;To make a user-friendly system, the system must have conceptual integrity, which can only be achieved by separating architecture from implementation.&#34;</p>
+</blockquote>
+
+<p><a href='http://en.wikipedia.org/wiki/The_Mythical_Man-Month#Conceptual_integrity'>- Frederick Brooks, The Mythical Man-Month</a></p>
+
+<p>Engineers tend to over-focus on the implementation; <em>what tool stack will we use, what&#8217;s the most efficient algorithm here, emacs or vim?</em> All of these are critical issues (except the last one. The answer is simple&#8230;<strong>vim</strong>.) And, they often address conceptual integrity in terms of code modularity and loose coupling. But, they often punt on design. Or, copy badly.</p>
+
+<p>Google, frankly, has been getting worse at this. No question, they employ some of the finest minds in the world. However, I once thought they had an interesting, minimalist design aesthetic. Their search engine, while maximizing function, also maximized form by what they left out. They epitomized this most famous of sayings:</p>
+
+<blockquote>
+<p>&#34;In anything at all, perfection is finally attained not when there is no longer anything to add, but when there is no longer anything to take away.&#34;</p>
+</blockquote>
+
+<p><a href='http://blog.gaiam.com/quotes/authors/antoine-de-saint-exupery/55029'>- Antoine de Saint-Exupery</a></p>
+
+<p>However, as Google has moved more into products, they seem to have fallen into copy mode. Google Apps looks more and more like Microsoft Office. Feature creep abounds. And today, they committed the most egregious of sins. They added a Microsoft Bing-like wallpaper feature to the main search page on <a href='http://google.com'>google.com</a>.</p>
+
+<p>Compare Android to Apple&#8217;s iOS. Well, try anyway. Which version of Android? On which device? The stock Android UI or the (purportedly) far superior Sense UI from HTC?</p>
+
+<p><strong>This</strong> is the critical error the Open Source community continues to make. They conflate providing choices with <em>making</em> choices. All the current arguments against Apple are about <strong>choice</strong>. <em>Users should be able to choose. They need their freedom. If I want to run Linux on my wristwatch, I should be able to even though there&#8217;s no damn good reason for doing so. Blah, blah, blah&#8230;</em></p>
+
+<p>Bullshit. Design is about making the most appropriate choices, so that your customers don&#8217;t have to <em>for the most common cases</em>. It&#8217;s about providing great defaults and fewer settings, not settings for every friggin&#8217; feature you offer. Sure, I could buy an Android phone and tweak it to my heart&#8217;s delight. But, do I <strong>want</strong> to? I have to think and decide all day long. Can&#8217;t I have one thing that doesn&#8217;t force me to twiddle with it needlessly just so I can use it?</p>
+
+<p>I want to love Open Source products, but I can&#8217;t&#8230;yet. To me, Linux on the desktop has long been displaced by Mac OS X. If some vendor creates a laptop with the build quality of a MacBook Pro, installs a distro that allows it to wake up from sleeping immediately and has non-flaky wireless support then you can bet I&#8217;ll give it a try.</p>
+
+<p>And I believe that <em>someone</em> out there can do it. They just need to <strong>steal</strong> from The Master:</p>
+
+<blockquote>
+<p>&#34;People think it&#8217;s this veneer &#8211; that the designers are handed this box and told, &#8216;Make it look good!&#8217; That&#8217;s not what we think design is. It&#8217;s not just what it looks like and feels like. Design is how it works.&#34;</p>
+</blockquote>
+
+<p><a href='http://www.nytimes.com/2003/11/30/magazine/30IPOD.html'>- Steve Jobs, 2003</a></p>
+
+<p>At the 2010 Apple Worldwide Developers Conference, Steve showed a slide with street signs indicating the intersection of <em>Liberal Arts</em> and <em>Technology</em>. Apple <strong>lives</strong> on this intersection. That is the lesson that the Open Source community needs to learn. The two are not mutually exclusive. They can work together harmoniously.</p>
+
+<p>Find a way to bring great designers into the community and learn to work with each other. I want there to be an Apple of Open Source. I want to be its customer.</p></content>
+ </entry>
+ 
+ <entry>
+   <title>LAMP Is Dead. Long Live...DyLAN?</title>
+   <link href="http://working-code.com/2010/05/18/lamp-is-dead-long-live-dylan.html"/>
    <updated>2010-05-18 00:00:00 -0700</updated>
-   <id>http://working-code.com/2010/05/18/lamp-is-dead</id>
+   <id>http://working-code.com/2010/05/18/lamp-is-dead-long-live-dylan</id>
    <content type="html"><p>I&#8217;m sure you think the title of this post is linkbait. Maybe it is, I have an ego like everyone else. However, I&#8217;ve been wondering lately&#8230;</p>
 
 <blockquote>
