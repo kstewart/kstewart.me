@@ -18,68 +18,52 @@
 
 
 <div class="post">
-  <h1><a href="/2010/06/10/oil-and-water.html">Oil and Water</a></h1>
-<p class="byline">Posted by <strong>kstewart</strong> on 2010-06-10 00:00:00 -0700</p>
+  <h1><a href="/2010/07/19/flip-the-script.html">Flip The Script</a></h1>
+<p class="byline">Posted by <strong>kstewart</strong> on 2010-07-19 00:00:00 -0700</p>
 
-<p>Reality check time - Open Source will <strong>never</strong> produce insanely great products when it comes to <em>design</em>.</p>
+<p>Last month, I had the pleasure of attending O&#8217;Reilly&#8217;s Velocity conference for the second year in a row. Truly awesome and inspiring sessions and people. The emphasis on culture and cooperation was a refreshing change from the usual corporate political mediocrity.</p>
 
-<p><em>Wow, didn&#8217;t even ease into the flamebait this time&#8230;</em></p>
-
-<p>Let&#8217;s look at the evidence, shall we? For years, we&#8217;ve been hearing about the rise of the Linux desktop. The desktop that would be easy enough for your Mom or Grandma to use. <em>&#8230;because the command line is too hard for women? Good luck with THAT sexist argument!</em> Or, because Linux is Open Source it is automatically better, purer and easier? Suuurrrreeee&#8230;&#8230;</p>
-
-<p>GNOME and KDE are the predominant Linux desktop environments. Know why some people prefer KDE over GNOME? Because it works more like Microsoft Windows. Yes, THAT Microsoft Windows&#8230;the one that all the Open Source fanatics love to hate. Closed, proprietary, downright <strong>EVIL</strong> Microsoft Windows. A popular Linux desktop environment that is essentially copying a closed, proprietary environment? Nah! Couldn&#8217;t be! <em>Except that every single Linux desktop app is essentially a clone of either a Windows or Macintosh application?</em> Oh, and the component model on which GNOME is built? Inspired by Microsoft COM.</p>
-
-<p>In the late nineties, Eazel tried to make Linux <a href='http://www.theregister.co.uk/2000/08/22/hertzfeld_spills_all_about_eazel/'>as easy to use as the Mac</a>. They managed to get a file manager out before they <a href='http://www.linux.com/archive/articles/9373'>shut their doors</a>. <a href='http://en.wikipedia.org/wiki/Ximian'>Ximian</a> tried to do the same, then got bought by <a href='http://www.theregister.co.uk/2003/08/04/novell_buys_ximian/'>Novell</a>. Canonical is (finally!) approaching Mac-like aesthetics with <a href='http://lowendmac.com/ed/bgray/bg10/ubuntu-10.04-review.html'>Ubuntu 10.04 Lucid Lynx</a>.</p>
-
-<p>Now, I love and support Open Source. However, one has to wonder if Open Source has so many advantages why has there been so little innovative, original design coming out of that community? Why do they just copy what has come before? One answer <strong>might</strong> be:</p>
+<p>Paul Hammond&#8217;s session, <a href='http://www.paulhammond.org/2010/06/trunk/'>Always Ship Trunk</a>, struck a chord in me as a developer. It ended with a question that I hope sparks a discussion deeper than this thread I found on <a href='http://news.ycombinator.com/item?id=1463751'>Hacker News</a>:</p>
 
 <blockquote>
-<p>&#34;Good artists copy. Great artists steal.&#34;</p>
+<p>What would a revision control system built for supporting deployed web applications be like?</p>
 </blockquote>
 
-<p><a href='http://en.wikiquote.org/wiki/Art'>- Pablo Picasso</a></p>
+<p>Huh? What could he mean? Just use Subversion, Git, Mercurial, Bazaar, Perforce, Visual SourceSafe&#8230;OK, just kidding on that last one. You&#8217;d be better off using numbered folders on a Novell Netware file server than that heinous pile of shit Visual Source(Un)safe. <em>My recommendation: Use Git or Mercurial if you can, Subversion if you must.</em></p>
 
-<p>Except, no Open Source product currently stands out as an exemplar of <strong>great design</strong>. So, the Open Source community is just copying. They need to steal.</p>
+<p>Anyway, Paul correctly asserts that there are three kinds of software:</p>
 
-<p>When it comes to infrastructure, things are a lot different. There are tons of examples of great code and creative uses of technology. Software that enables all of the wondrous services and tools we use on a daily basis. Hardware that used to fill a room that now fits in your pocket. Still, that is mostly the <em>function</em>. <strong>Form</strong> is just as critical a component and that is where I believe the Open Source community falls down.</p>
+<ol>
+<li>Installed software (Commercial/Proprietary)</li>
 
-<blockquote>
-<p>&#34;To make a user-friendly system, the system must have conceptual integrity, which can only be achieved by separating architecture from implementation.&#34;</p>
-</blockquote>
+<li>Installed software (Open Source)</li>
 
-<p><a href='http://en.wikipedia.org/wiki/The_Mythical_Man-Month#Conceptual_integrity'>- Frederick Brooks, The Mythical Man-Month</a></p>
+<li>Web applications (Software as a Service)</li>
+</ol>
 
-<p>Engineers tend to over-focus on the implementation; <em>what tool stack will we use, what&#8217;s the most efficient algorithm here, emacs or vim?</em> All of these are critical issues (except the last one. The answer is simple&#8230;<strong>vim</strong>.) And, they often address conceptual integrity in terms of code modularity and loose coupling. But, they often punt on design. Or, copy badly.</p>
+<p>and that Web applications are not like installed applications and that all existing revision control systems were built by people who build installed software. The implication being that the assumptions that drive the design of all version control systems do not take the deployment process of Web applications into account.</p>
 
-<p>Google, frankly, has been getting worse at this. No question, they employ some of the finest minds in the world. However, I once thought they had an interesting, minimalist design aesthetic. Their search engine, while maximizing function, also maximized form by what they left out. They epitomized this most famous of sayings:</p>
+<p>In the world of shrinkwrapped software, it is common to have multiple versions <em>in the wild</em> at the same time. You do a release, then possibly a minor update for small features and bug fixes, followed by another major release. All of these are independent versions. Then, you discover a security vulnerability and likely have to produce patches for all of these variants. This is one of the primary use cases for version control systems. The branch model is pretty much the only sane way to handle this scenario.</p>
 
-<blockquote>
-<p>&#34;In anything at all, perfection is finally attained not when there is no longer anything to add, but when there is no longer anything to take away.&#34;</p>
-</blockquote>
+<p>With Web applications, new releases/upgrades happen only once. Older versions of code do not get redeployed. In Web operations, this is known as <strong>rolling forward</strong> as in <em>&#8220;We don&#8217;t roll back to a previously known good version of the code. We make a fix and roll forward.&#8221;</em> Given this model, managing <strong>versions</strong> is less of an issue than managing releases. Thus, Paul recommends moving version management into the application itself.</p>
 
-<p><a href='http://blog.gaiam.com/quotes/authors/antoine-de-saint-exupery/55029'>- Antoine de Saint-Exupery</a></p>
+<p><a href='http://code.flickr.com/blog/2009/12/02/flipping-out/'>Feature flipping</a> is the common solution to in-application versioning. It essentially amounts to wrapping your code in <strong>if</strong> blocks with feature flags as the conditionals. The scope of these flags can be environments, pools of servers and/or pools of users. While simple and powerful, the thought of littering my code with if-else statements makes me cringe. However, Paul points out that you have to be disciplined in periodically pruning these flags from your codebase.</p>
 
-<p>However, as Google has moved more into products, they seem to have fallen into copy mode. Google Apps looks more and more like Microsoft Office. Feature creep abounds. And today, they committed the most egregious of sins. They added a Microsoft Bing-like wallpaper feature to the main search page on <a href='http://google.com'>google.com</a>.</p>
+<p><a href='http://github.com/blog/677-how-we-deploy-new-features'>GitHub</a> uses feature flipping as well and goes one step further by using <a href='http://code.google.com/p/redis/'>Redis</a> for configuration management. This is a much cleaner solution than having to manage and deploy a configuration file across all your servers. This also makes it easier to do things like dark launches and A/B tests given Redis&#8217; built-in ability to work with sets.</p>
 
-<p>Compare Android to Apple&#8217;s iOS. Well, try anyway. Which version of Android? On which device? The stock Android UI or the (purportedly) far superior Sense UI from HTC?</p>
+<p>By using feature flags, the only branch that really matters in your version control system is trunk (<em>master</em> for the Git Squad). Paul summarizes it nicely:</p>
 
-<p><strong>This</strong> is the critical error the Open Source community continues to make. They conflate providing choices with <em>making</em> choices. All the current arguments against Apple are about <strong>choice</strong>. <em>Users should be able to choose. They need their freedom. If I want to run Linux on my wristwatch, I should be able to even though there&#8217;s no damn good reason for doing so. Blah, blah, blah&#8230;</em></p>
+<ul>
+<li>Use branches for early development</li>
 
-<p>Bullshit. Design is about making the most appropriate choices, so that your customers don&#8217;t have to <em>for the most common cases</em>. It&#8217;s about providing great defaults and fewer settings, not settings for every friggin&#8217; feature you offer. Sure, I could buy an Android phone and tweak it to my heart&#8217;s delight. But, do I <strong>want</strong> to? I have to think and decide all day long. Can&#8217;t I have one thing that doesn&#8217;t force me to twiddle with it needlessly just so I can use it?</p>
+<li>Merge branches into trunk</li>
 
-<p>I want to love Open Source products, but I can&#8217;t&#8230;yet. To me, Linux on the desktop has long been displaced by Mac OS X. If some vendor creates a laptop with the build quality of a MacBook Pro, installs a distro that allows it to wake up from sleeping immediately and has non-flaky wireless support then you can bet I&#8217;ll give it a try.</p>
+<li>Use flags for rollout of almost-finished code</li>
 
-<p>And I believe that <em>someone</em> out there can do it. They just need to <strong>steal</strong> from The Master:</p>
+<li>Always deploy trunk to every server on every deploy and manage versions through configuration</li>
+</ul>
 
-<blockquote>
-<p>&#34;People think it&#8217;s this veneer &#8211; that the designers are handed this box and told, &#8216;Make it look good!&#8217; That&#8217;s not what we think design is. It&#8217;s not just what it looks like and feels like. Design is how it works.&#34;</p>
-</blockquote>
-
-<p><a href='http://www.nytimes.com/2003/11/30/magazine/30IPOD.html'>- Steve Jobs, 2003</a></p>
-
-<p>At the 2010 Apple Worldwide Developers Conference, Steve showed a slide with street signs indicating the intersection of <em>Liberal Arts</em> and <em>Technology</em>. Apple <strong>lives</strong> on this intersection. That is the lesson that the Open Source community needs to learn. The two are not mutually exclusive. They can work together harmoniously.</p>
-
-<p>Find a way to bring great designers into the community and learn to work with each other. I want there to be an Apple of Open Source. I want to be its customer.</p> 
+<p>I&#8217;m not sure I have the answer to Paul&#8217;s question but I wonder if the beginning of the answer lies in configuration management? Tools like cfengine, Puppet and Chef already integrate with version control systems for deployment. Should merge operations generate feature flag definitions? Teams using distributed version control tend to already adopt the approach of creating <em>feature branches</em> which they then merge back into the main branch. Maybe we can extend that operation to wrap the code created in the branch in conditionals as it gets merged back into the mainline, then export the flag definition into the configuration management system. Seems like an idea worth exploring further.</p> 
 </div>
 
 
@@ -99,6 +83,8 @@
 		    <div>
     			<p><strong>Recently</strong></p>
 				
+			      <span>2010-07-19 00:00:00 -0700</span> &raquo; <a href="/2010/07/19/flip-the-script.html">Flip The Script</a><br />
+			    
 			      <span>2010-06-10 00:00:00 -0700</span> &raquo; <a href="/2010/06/10/oil-and-water.html">Oil and Water</a><br />
 			    
 			      <span>2010-05-18 00:00:00 -0700</span> &raquo; <a href="/2010/05/18/lamp-is-dead-long-live-dylan.html">LAMP Is Dead. Long Live...DyLAN?</a><br />
@@ -106,8 +92,6 @@
 			      <span>2010-04-30 00:00:00 -0700</span> &raquo; <a href="/2010/04/30/mostly-cloudy.html">Mostly Cloudy</a><br />
 			    
 			      <span>2010-03-14 00:00:00 -0800</span> &raquo; <a href="/2010/03/14/3-Is-The-Magic-Number.html">3 Is The Magic Number</a><br />
-			    
-			      <span>2010-02-20 00:00:00 -0800</span> &raquo; <a href="/2010/02/20/mobile-is-the-new-desktop.html">Mobile Is The New Desktop</a><br />
 			    
 				<div></div>
 		    </div>

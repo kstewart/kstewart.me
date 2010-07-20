@@ -4,13 +4,63 @@
  <title>[working code]</title>
  <link href="http://working-code.com/atom.xml" rel="self"/>
  <link href="http://working-code.com/"/>
- <updated>2010-06-10 15:47:30 -0700</updated>
+ <updated>2010-07-19 22:43:42 -0700</updated>
  <id>http://working-code.com</id>
  <author>
    <name>Kevin Stewart</name>
    <email>kevin@working-code.com</email>
  </author>
  
+ 
+ <entry>
+   <title>Flip The Script</title>
+   <link href="http://working-code.com/2010/07/19/flip-the-script.html"/>
+   <updated>2010-07-19 00:00:00 -0700</updated>
+   <id>http://working-code.com/2010/07/19/flip-the-script</id>
+   <content type="html"><p>Last month, I had the pleasure of attending O&#8217;Reilly&#8217;s Velocity conference for the second year in a row. Truly awesome and inspiring sessions and people. The emphasis on culture and cooperation was a refreshing change from the usual corporate political mediocrity.</p>
+
+<p>Paul Hammond&#8217;s session, <a href='http://www.paulhammond.org/2010/06/trunk/'>Always Ship Trunk</a>, struck a chord in me as a developer. It ended with a question that I hope sparks a discussion deeper than this thread I found on <a href='http://news.ycombinator.com/item?id=1463751'>Hacker News</a>:</p>
+
+<blockquote>
+<p>What would a revision control system built for supporting deployed web applications be like?</p>
+</blockquote>
+
+<p>Huh? What could he mean? Just use Subversion, Git, Mercurial, Bazaar, Perforce, Visual SourceSafe&#8230;OK, just kidding on that last one. You&#8217;d be better off using numbered folders on a Novell Netware file server than that heinous pile of shit Visual Source(Un)safe. <em>My recommendation: Use Git or Mercurial if you can, Subversion if you must.</em></p>
+
+<p>Anyway, Paul correctly asserts that there are three kinds of software:</p>
+
+<ol>
+<li>Installed software (Commercial/Proprietary)</li>
+
+<li>Installed software (Open Source)</li>
+
+<li>Web applications (Software as a Service)</li>
+</ol>
+
+<p>and that Web applications are not like installed applications and that all existing revision control systems were built by people who build installed software. The implication being that the assumptions that drive the design of all version control systems do not take the deployment process of Web applications into account.</p>
+
+<p>In the world of shrinkwrapped software, it is common to have multiple versions <em>in the wild</em> at the same time. You do a release, then possibly a minor update for small features and bug fixes, followed by another major release. All of these are independent versions. Then, you discover a security vulnerability and likely have to produce patches for all of these variants. This is one of the primary use cases for version control systems. The branch model is pretty much the only sane way to handle this scenario.</p>
+
+<p>With Web applications, new releases/upgrades happen only once. Older versions of code do not get redeployed. In Web operations, this is known as <strong>rolling forward</strong> as in <em>&#8220;We don&#8217;t roll back to a previously known good version of the code. We make a fix and roll forward.&#8221;</em> Given this model, managing <strong>versions</strong> is less of an issue than managing releases. Thus, Paul recommends moving version management into the application itself.</p>
+
+<p><a href='http://code.flickr.com/blog/2009/12/02/flipping-out/'>Feature flipping</a> is the common solution to in-application versioning. It essentially amounts to wrapping your code in <strong>if</strong> blocks with feature flags as the conditionals. The scope of these flags can be environments, pools of servers and/or pools of users. While simple and powerful, the thought of littering my code with if-else statements makes me cringe. However, Paul points out that you have to be disciplined in periodically pruning these flags from your codebase.</p>
+
+<p><a href='http://github.com/blog/677-how-we-deploy-new-features'>GitHub</a> uses feature flipping as well and goes one step further by using <a href='http://code.google.com/p/redis/'>Redis</a> for configuration management. This is a much cleaner solution than having to manage and deploy a configuration file across all your servers. This also makes it easier to do things like dark launches and A/B tests given Redis&#8217; built-in ability to work with sets.</p>
+
+<p>By using feature flags, the only branch that really matters in your version control system is trunk (<em>master</em> for the Git Squad). Paul summarizes it nicely:</p>
+
+<ul>
+<li>Use branches for early development</li>
+
+<li>Merge branches into trunk</li>
+
+<li>Use flags for rollout of almost-finished code</li>
+
+<li>Always deploy trunk to every server on every deploy and manage versions through configuration</li>
+</ul>
+
+<p>I&#8217;m not sure I have the answer to Paul&#8217;s question but I wonder if the beginning of the answer lies in configuration management? Tools like cfengine, Puppet and Chef already integrate with version control systems for deployment. Should merge operations generate feature flag definitions? Teams using distributed version control tend to already adopt the approach of creating <em>feature branches</em> which they then merge back into the main branch. Maybe we can extend that operation to wrap the code created in the branch in conditionals as it gets merged back into the mainline, then export the flag definition into the configuration management system. Seems like an idea worth exploring further.</p></content>
+ </entry>
  
  <entry>
    <title>Oil and Water</title>
