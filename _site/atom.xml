@@ -4,7 +4,7 @@
  <title>[working code]</title>
  <link href="http://working-code.com/atom.xml" rel="self"/>
  <link href="http://working-code.com/"/>
- <updated>2010-07-21 16:29:52 -0700</updated>
+ <updated>2010-07-21 16:41:19 -0700</updated>
  <id>http://working-code.com</id>
  <author>
    <name>Kevin Stewart</name>
@@ -516,14 +516,6 @@ But of course you are <em>still</em> going to do large, multisite, or offshore d
 <p>Scrum does not prescribe any development practice to use alongside it. That&#8217;s OK, but one would think that by now the Scrum practitioners would have strong recommendations based on real-world experience. The common wisdom is Extreme Programming (XP), but I have several issues with XP. It seems to be even more of a take-it-all-or-leave-it-all religion than Scrum is. And XP doesn&#8217;t work for all teams. And most agile processes over-focus on the development team, but gloss over the other cross-functional team members.</p>
 <p>Now that the Scrum backlash is in full swing, people are starting to embrace Lean. What they fail to realize is that Scrum is just the gateway drug to Lean. Scrum is not a pure pull system, which is what you would have once you Got Lean. After reading Corey Ladas&#8217; <a href="http://leansoftwareengineering.com/ksse/scrum-ban/">blog post</a> and <a href="http://www.lulu.com/content/3864767">book</a> some of the ideas resonated with me. But, this was only because I had years before been a fan of the Theory of Constraints and Eliyahu Goldratt&#8217;s books (sidebar: his books are great due to his ability to communicate dry, academic topics via engaging novels). And again, the pragmatic issues around cross-functional product development processes are still largely ignored.</p>
 <p>So, in 2009, how will I evolve my team&#8217;s processes? We&#8217;ll probably continue with Scrum or even &#8220;evolve&#8221; towards Lean. But our focus will be on sharpening our engineering practices. We&#8217;ve been pretty good about constant communication and unit testing, but we can probably tighten up our feature designs and code reviews. It&#8217;s all about balance.</p></content>
- </entry>
- 
- <entry>
-   <title>Welcome!</title>
-   <link href="http://working-code.com/2008/12/29/first.html"/>
-   <updated>2008-12-29 00:00:00 -0800</updated>
-   <id>http://working-code.com/2008/12/29/first</id>
-   <content type="html"><p>Welcome to [working code]</p></content>
  </entry>
  
  
