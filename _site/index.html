@@ -1,8 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head profile="http://gmpg.org/xfn/11">
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<title>[working code]</title>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   	<title>[working code]</title>
+   	<meta name="author" content="Kevin Stewart" />
+	<link href="http://feeds.feedburner.com/workingcode" rel="alternate" title="[working code]" type="application/atom+xml" />
 	<link href="/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -18,52 +20,29 @@
 
 
 <div class="post">
-  <h1><a href="/2010/07/19/flip-the-script.html">Flip The Script</a></h1>
-<p class="byline">Posted by <strong>kstewart</strong> on 2010-07-19 00:00:00 -0700</p>
+  <h1><a href="/2010/08/30/urban-planning.html">Urban Planning</a></h1>
+<p class="byline">Posted by <strong>kstewart</strong> on 30 Aug 2010</p>
 
-<p>Last month, I had the pleasure of attending O&#8217;Reilly&#8217;s Velocity conference for the second year in a row. Truly awesome and inspiring sessions and people. The emphasis on culture and cooperation was a refreshing change from the usual corporate political mediocrity.</p>
+<blockquote><p>An organic build approach says plant a seed, watch it grow.  First, a sprout appears, with roots a stem and leaves.  The stem gets thicker, the roots grow deeper, and more leaves sprout. Branches grow. Flowers bud and fruit appears. When requirements change some pruning and grafting is required, but you don&rsquo;t have to tear down the tree and plan a new one from scratch or start a new tree on the side. The tree will grow around power lines and rocks and other trees as needed.</p>
 
-<p>Paul Hammond&#8217;s session, <a href='http://www.paulhammond.org/2010/06/trunk/'>Always Ship Trunk</a>, struck a chord in me as a developer. It ended with a question that I hope sparks a discussion deeper than this thread I found on <a href='http://news.ycombinator.com/item?id=1463751'>Hacker News</a>:</p>
+<p><a href="http://walkingoncoals.blogspot.com/2010/08/growing-tree-versus-building-house.html">Paul Boal, Growing a Tree versus Building a House</a></p></blockquote>
 
-<blockquote>
-<p>What would a revision control system built for supporting deployed web applications be like?</p>
-</blockquote>
+<p>The construction metaphor for software development has been around seemingly since the beginning of time. With the advent of agile, more organic memes have taken root (pun intended). As much as I identify with the idea of <em>growing software</em>, we shouldn&rsquo;t dismiss all aspects of the construction metaphor.</p>
 
-<p>Huh? What could he mean? Just use Subversion, Git, Mercurial, Bazaar, Perforce, Visual SourceSafe&#8230;OK, just kidding on that last one. You&#8217;d be better off using numbered folders on a Novell Netware file server than that heinous pile of shit Visual Source(Un)safe. <em>My recommendation: Use Git or Mercurial if you can, Subversion if you must.</em></p>
+<p>As I&rsquo;ve been working on my latest project, a multitenant Web application, the construction metaphor became evident. However, it was on a much larger scale than it&rsquo;s usually applied. Most people who compare developing software to erecting buildings tend to scope the discussion to a single structure. In my not particularly original opinion, building Web applications is a lot like <strong>urban planning</strong>.</p>
 
-<p>Anyway, Paul correctly asserts that there are three kinds of software:</p>
+<blockquote><p>To developers, the most conspicuous difference between Web-based and desktop software is that a Web-based application is not a single piece of code. It will be a collection of programs of different types rather than a single big binary. And so designing Web-based software is like designing a city rather than a building: as well as buildings you need roads, street signs, utilities, police and fire departments, and plans for both growth and various kinds of disasters.</p>
 
-<ol>
-<li>Installed software (Commercial/Proprietary)</li>
+<p><a href="http://paulgraham.com/road.html">Paul Graham, The Other Road Ahead</a></p></blockquote>
 
-<li>Installed software (Open Source)</li>
+<p>Much of my design process has involved this sort of thinking. One of the first decisions was splitting up the main site/administrative application from the multitenant application. That decision led to the idea of deploying to 2 different clouds, Heroku (which sits atop Amazon&rsquo;s EC2) and the Rackspace Cloud. This split affords a bit of fault tolerance as well as the ability to scale portions of the application independently. In the event of an outage on one cloud, it should be possible to redeploy to the other, thanks to the power of tools like <a href="http://www.puppetlabs.com/">Puppet</a> and <a href="http://opscode.com/chef/">Chef</a>.</p>
 
-<li>Web applications (Software as a Service)</li>
-</ol>
+<p>A Web application without an API is a eunuch. So, I&rsquo;ll be providing one. One school of thought is to build the API first and then make the Web app a client of the API. I favor this approach as it reflects the <em>eat your own dogfood</em> mentality. The other school of thought is to build the API adjacent to the Web app, usually starting with a read-only version, then adding write capability. As the API is really for the application&rsquo;s tenants, I am considering a hybrid approach: build the overall API infrastructure but only expose the read-only functionality initially. How am I going to do it? Job queues to the <a href="http://github.com/defunkt/resque">Resque</a>!</p>
 
-<p>and that Web applications are not like installed applications and that all existing revision control systems were built by people who build installed software. The implication being that the assumptions that drive the design of all version control systems do not take the deployment process of Web applications into account.</p>
+<p>Outsourcing is not just for call centers. It works for subsystems as well. I COULD set up <a href="http://www.mongodb.org/">MongoDB</a> and <a href="http://code.google.com/p/redis/">Redis</a> myself. Or, I could subcontract that work to <a href="https://mongohq.com/home">MongoHQ</a> and <a href="http://redistogo.com/">Redis To Go</a>, respectively. And, every city needs workers so I&rsquo;m sure I&rsquo;ll have at least half a dozen daemons running around autonomously taking care of sundry tasks.</p>
 
-<p>In the world of shrinkwrapped software, it is common to have multiple versions <em>in the wild</em> at the same time. You do a release, then possibly a minor update for small features and bug fixes, followed by another major release. All of these are independent versions. Then, you discover a security vulnerability and likely have to produce patches for all of these variants. This is one of the primary use cases for version control systems. The branch model is pretty much the only sane way to handle this scenario.</p>
-
-<p>With Web applications, new releases/upgrades happen only once. Older versions of code do not get redeployed. In Web operations, this is known as <strong>rolling forward</strong> as in <em>&#8220;We don&#8217;t roll back to a previously known good version of the code. We make a fix and roll forward.&#8221;</em> Given this model, managing <strong>versions</strong> is less of an issue than managing releases. Thus, Paul recommends moving version management into the application itself.</p>
-
-<p><a href='http://code.flickr.com/blog/2009/12/02/flipping-out/'>Feature flipping</a> is the common solution to in-application versioning. It essentially amounts to wrapping your code in <strong>if</strong> blocks with feature flags as the conditionals. The scope of these flags can be environments, pools of servers and/or pools of users. While simple and powerful, the thought of littering my code with if-else statements makes me cringe. However, Paul points out that you have to be disciplined in periodically pruning these flags from your codebase.</p>
-
-<p><a href='http://github.com/blog/677-how-we-deploy-new-features'>GitHub</a> uses feature flipping as well and goes one step further by using <a href='http://code.google.com/p/redis/'>Redis</a> for configuration management. This is a much cleaner solution than having to manage and deploy a configuration file across all your servers. This also makes it easier to do things like dark launches and A/B tests given Redis&#8217; built-in ability to work with sets.</p>
-
-<p>By using feature flags, the only branch that really matters in your version control system is trunk (<em>master</em> for the Git Squad). Paul summarizes it nicely:</p>
-
-<ul>
-<li>Use branches for early development</li>
-
-<li>Merge branches into trunk</li>
-
-<li>Use flags for rollout of almost-finished code</li>
-
-<li>Always deploy trunk to every server on every deploy and manage versions through configuration</li>
-</ul>
-
-<p>I&#8217;m not sure I have the answer to Paul&#8217;s question but I wonder if the beginning of the answer lies in configuration management? Tools like cfengine, Puppet and Chef already integrate with version control systems for deployment. Should merge operations generate feature flag definitions? Teams using distributed version control tend to already adopt the approach of creating <em>feature branches</em> which they then merge back into the main branch. Maybe we can extend that operation to wrap the code created in the branch in conditionals as it gets merged back into the mainline, then export the flag definition into the configuration management system. Seems like an idea worth exploring further.</p> 
+<p>Blogs. Forums. Issue Trackers. Chat Systems. Each of these is like a small park or shared garden. Their placement can be integral to the overall experience you are trying to create. Your Web application is a living, vibrant city. Be the mayor.</p>
+ 
 </div>
 
 
@@ -77,23 +56,23 @@
 				<p><a href="http://www.twitter.com/kstewart"><img src="http://twitter-badges.s3.amazonaws.com/follow_me-b.png" alt="Follow kstewart on Twitter"/></a></p>
 				<p><a href="http://www.linkedin.com/in/kstewart" ><img src="http://www.linkedin.com/img/webpromo/btn_profile_bluetxt_80x15.gif" width="80" height="15" border="0" alt="View Kevin Stewart's profile on LinkedIn"></a></p>
 				<p><a href="http://feeds.feedburner.com/workingcode" rel="alternate" type="application/rss+xml"><img src="http://www.feedburner.com/fb/images/pub/feed-icon16x16.png" alt="" style="vertical-align:middle;border:0"/></a>&nbsp;<a href="http://feeds.feedburner.com/workingcode" rel="alternate" type="application/rss+xml">Subscribe in a reader</a></p>
-				<p><strong><a href="/archives.html">archives</a></strong></p>
 		    </div>
 	
 		    <div>
     			<p><strong>Recently</strong></p>
 				
-			      <span>2010-07-19 00:00:00 -0700</span> &raquo; <a href="/2010/07/19/flip-the-script.html">Flip The Script</a><br />
+			      <span>30 Aug 2010</span> &raquo; <a href="/2010/08/30/urban-planning.html">Urban Planning</a><br />
 			    
-			      <span>2010-06-10 00:00:00 -0700</span> &raquo; <a href="/2010/06/10/oil-and-water.html">Oil and Water</a><br />
+			      <span>19 Jul 2010</span> &raquo; <a href="/2010/07/19/flip-the-script.html">Flip The Script</a><br />
 			    
-			      <span>2010-05-18 00:00:00 -0700</span> &raquo; <a href="/2010/05/18/lamp-is-dead-long-live-dylan.html">LAMP Is Dead. Long Live...DyLAN?</a><br />
+			      <span>10 Jun 2010</span> &raquo; <a href="/2010/06/10/oil-and-water.html">Oil and Water</a><br />
 			    
-			      <span>2010-04-30 00:00:00 -0700</span> &raquo; <a href="/2010/04/30/mostly-cloudy.html">Mostly Cloudy</a><br />
+			      <span>18 May 2010</span> &raquo; <a href="/2010/05/18/lamp-is-dead-long-live-dylan.html">LAMP Is Dead. Long Live...DyLAN?</a><br />
 			    
-			      <span>2010-03-14 00:00:00 -0800</span> &raquo; <a href="/2010/03/14/3-Is-The-Magic-Number.html">3 Is The Magic Number</a><br />
+			      <span>30 Apr 2010</span> &raquo; <a href="/2010/04/30/mostly-cloudy.html">Mostly Cloudy</a><br />
 			    
-				<div></div>
+				<div><p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives.html">view all archives</a></strong></p></p></div>
+				
 		    </div>
 	
 			<div class="last">
