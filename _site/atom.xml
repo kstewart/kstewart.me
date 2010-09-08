@@ -4,13 +4,52 @@
  <title>[working code]</title>
  <link href="http://working-code.com/atom.xml" rel="self"/>
  <link href="http://working-code.com/"/>
- <updated>2010-09-02T09:27:20-07:00</updated>
+ <updated>2010-09-07T16:59:29-07:00</updated>
  <id>http://working-code.com</id>
  <author>
    <name>Kevin Stewart</name>
    <email>kevin@working-code.com</email>
  </author>
  
+ 
+ <entry>
+   <title>Don't Hate the Playa, Hate the Game</title>
+   <link href="http://working-code.com/2010/09/07/dont-hate-the-playa-hate-the-game.html"/>
+   <updated>2010-09-07T00:00:00-07:00</updated>
+   <id>http://working-code.com/2010/09/07/dont-hate-the-playa-hate-the-game</id>
+   <content type="html">&lt;p&gt;Lately, I have been more inclined to use &lt;a href=&quot;http://www.mongodb.org/&quot;&gt;MongoDB&lt;/a&gt; or &lt;a href=&quot;http://redis.io/&quot;&gt;Redis&lt;/a&gt; in my day-to-day work than stalwarts such as &lt;a href=&quot;http://www.mysql.com/&quot;&gt;MySQL&lt;/a&gt; or &lt;a href=&quot;http://www.postgresql.org/&quot;&gt;PostgreSQL&lt;/a&gt;. This is not due to cargo cult fanboyism, but the simple realization that the poorly-named NoSQL databases are the best tool for the job &lt;em&gt;for early stage, greenfield projects.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If anything, the folks clinging to their RDBMSes are &lt;strong&gt;more&lt;/strong&gt; guilty of treating every problem as a nail, thus they whip out their favorite hammer. Why is it that almost every Web framework assumes we want/need to persist our data in an RDBMS? Even the ones that support pluggable persistence models tend to favor relational databases, specifically MySQL and SQLite.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve already given &lt;a href=&quot;http://working-code.com/2010/05/18/lamp-is-dead-long-live-dylan.html&quot;&gt;my thoughts&lt;/a&gt; on this situation a bit. This time, I want to come at it from a different angle.&lt;/p&gt;
+
+&lt;h1&gt;The Principle of Most Privilege&lt;/h1&gt;
+
+&lt;p&gt;In a relational model, the assumption is that one not only &lt;strong&gt;knows&lt;/strong&gt; the shape of their data, but that it is relatively &lt;strong&gt;stable&lt;/strong&gt;. For transaction-oriented, business process style applications this is likely to be true. But, if you are trying to create something new then it is even more likely that you &lt;em&gt;have no idea&lt;/em&gt; what your data looks like which, by definition, means it is unstable.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;THIS&lt;/strong&gt; is the actual value proposition of NoSQL databases. The ability to have a flexible schema early in development is a productivity gain. Right now, developers have to commit to a schema and deal with change via tools like &lt;a href=&quot;http://guides.rubyonrails.org/migrations.html&quot;&gt;migrations&lt;/a&gt;. While definitely an elegant solution to the problem, migrations solve the &lt;strong&gt;wrong&lt;/strong&gt; problem. Migrations hide the mechanics of altering and dropping tables to make working with an RDBMS &lt;em&gt;feel&lt;/em&gt; dynamic. That&amp;rsquo;s the problem. The relational model is the &lt;strong&gt;static typing&lt;/strong&gt; of persistence models.&lt;/p&gt;
+
+&lt;p&gt;As opposed to attacking SQL, developers should articulate their desire to use the most flexible tools possible at the beginning of a project. The reasoning for this is simple&amp;hellip;in the beginning, &lt;strong&gt;you don&amp;rsquo;t know what you&amp;rsquo;re doing&lt;/strong&gt;. Software development is exploration and your chances for success are higher if you don&amp;rsquo;t have to spend all your time circumnavigating obstacles.&lt;/p&gt;
+
+&lt;p&gt;For non-transactional applications (which includes the majority of Web applications), the need is simply to persist and retrieve data. As JSON steadily replaces XML as the preferred serialization format, having a persistence engine that deals with it natively is a boon. Almost every language imaginable has a JSON parser available and if you&amp;rsquo;re a Web developer you&amp;rsquo;re already using JavaScript.&lt;/p&gt;
+
+&lt;p&gt;That said, there is one thing that seems weird to me. Why are all these Web developers always reaching for an &lt;a href=&quot;http://en.wikipedia.org/wiki/Object-relational_mapping&quot;&gt;ORM&lt;/a&gt; to use with these NoSQL databases? First, the &lt;strong&gt;R&lt;/strong&gt; kinda tells you what problem is being addressed and we&amp;rsquo;re not in that world. Second, in NoSQL your data is essentially a serialized hash so what exactly are we &amp;ldquo;mapping&amp;rdquo;? Finally, why introduce another layer unless it is adding value?&lt;/p&gt;
+
+&lt;p&gt;I think &lt;a href=&quot;http://twitter.com/jnunemaker&quot;&gt;John Nunemaker&lt;/a&gt; is The Man, but I don&amp;rsquo;t think most &lt;a href=&quot;http://mongomapper.com/&quot;&gt;MongoMapper&lt;/a&gt; users know &lt;strong&gt;why&lt;/strong&gt; they are using it. ORMs for NoSQL mostly bridge the learning gap in moving from an RDBMS to a NoSQL database if you&amp;rsquo;re using a framework like Rails where you spend most of your time fiddling with &lt;a href=&quot;http://ar.rubyonrails.org/&quot;&gt;ActiveRecord&lt;/a&gt;. However, there is a lot less &amp;ldquo;mapping&amp;rdquo; with NoSQL as opposed to &lt;em&gt;unflattening&lt;/em&gt;. IMNSHO, I think developers would be better served using the raw drivers for NoSQL databases instead of investing time and energy in ORMs.&lt;/p&gt;
+
+&lt;p&gt;Instead, I&amp;rsquo;d challenge developers to consider a different tool. More of a static analysis tool that could bring the benefits of fixed schemas to NoSQL &lt;strong&gt;after&lt;/strong&gt; you&amp;rsquo;ve solidified your data model. This tool may help indexing or making queries more efficient because now you know what your data looks like for the most part. It would be analogous to proposals for optional typing in languages, such as JavaScript. This would, possibly, lead to the best of both worlds.&lt;/p&gt;
+
+&lt;h1&gt;It Is A Poor Craftsman&amp;hellip;&lt;/h1&gt;
+
+&lt;p&gt;Of course, developers can be wildly enthusiastic about their latest silver bullet. NoSQL is not a panacea. If you have a problem that is best solved with an RDBMS, then use one dammit! Or, if it doesn&amp;rsquo;t matter whether or not you use an RDBMS for the application but it would make your ops engineers' lives easier, then you should consider that.&lt;/p&gt;
+
+&lt;p&gt;What always ends up happening, however, is that people make poor choices for their application then blame &lt;em&gt;the tools!&lt;/em&gt; This week, &lt;a href=&quot;http://digg.com&quot;&gt;Digg&lt;/a&gt; &lt;a href=&quot;http://techcrunch.com/2010/09/07/digg-struggles-vp-engineering-door/&quot;&gt;fired&lt;/a&gt; their VP of Engineering for their continued failures with V4. &lt;a href=&quot;http://news.ycombinator.com/item?id=1669645&quot;&gt;Hacker News&lt;/a&gt; has been quite active with people armchair-quarterbacking the situation. Most are blaming the decision to use &lt;a href=&quot;http://cassandra.apache.org/&quot;&gt;Cassandra&lt;/a&gt;. I find this as amusing as when people were blaming Ruby on Rails for Twitter&amp;rsquo;s downtime woes.&lt;/p&gt;
+
+&lt;p&gt;Digg&amp;rsquo;s issues &lt;strong&gt;might&lt;/strong&gt; have something to do with Cassandra, but there is no evidence of that yet. There &lt;strong&gt;IS&lt;/strong&gt; evidence of an immature engineering culture and poor planning. A wholesale reengineering of their core architecture with no ability to revert screams of amateur hour. If they at least phased in the new infrastructure under the old interface, Digg would have been able to isolate problems more effectively. By throwing the baby out with the bathwater, they&amp;rsquo;ll be firefighting for months and not be able to improve their product. Or, in this case reach parity with the previous version. The worst part is that &lt;a href=&quot;http://techcrunch.com/2010/09/07/kevin-rose-responds-to-digg-criticism-on-diggnation-mostly-tells-users-to-chill/&quot;&gt;their founder was quick to blame the technology&lt;/a&gt;. You know the guy who was an intern on TechTV, drinks beer on Diggnation and is not an engineer?&lt;/p&gt;
+
+&lt;p&gt;I think more developer should read &lt;a href=&quot;http://pragprog.com/titles/tpp/the-pragmatic-programmer&quot;&gt;The Pragmatic Programmer&lt;/a&gt;, especially the parts about choosing tools. Hopefully, this will lead to more of an awareness about &lt;strong&gt;how&lt;/strong&gt; to choose tools. Stop depending on &lt;em&gt;magic&lt;/em&gt; and tools that do everything (including &lt;strong&gt;thinking&lt;/strong&gt;) for you. I know it&amp;rsquo;s hard and all, but ummm&amp;hellip;.that&amp;rsquo;s why it&amp;rsquo;s considered &lt;em&gt;knowledge work&lt;/em&gt;. You need to have some knowledge to make it work. If you want easy, mindless work&amp;hellip;well, I can&amp;rsquo;t help you. ANy suggestion I make would be stereotypical and demeaning to the people in those professions. Instead, I recommend you have some respect for &lt;strong&gt;your  profession, your craft&lt;/strong&gt; and use the tool that matters most. &lt;em&gt;Your brain.&lt;/em&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Urban Planning</title>

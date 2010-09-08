@@ -20,28 +20,40 @@
 
 
 <div class="post">
-  <h1><a href="/2010/08/30/urban-planning.html">Urban Planning</a></h1>
-<p class="byline">Posted by <strong>kstewart</strong> on 30 Aug 2010</p>
+  <h1><a href="/2010/09/07/dont-hate-the-playa-hate-the-game.html">Don't Hate the Playa, Hate the Game</a></h1>
+<p class="byline">Posted by <strong>kstewart</strong> on 07 Sep 2010</p>
 
-<blockquote><p>An organic build approach says plant a seed, watch it grow.  First, a sprout appears, with roots a stem and leaves.  The stem gets thicker, the roots grow deeper, and more leaves sprout. Branches grow. Flowers bud and fruit appears. When requirements change some pruning and grafting is required, but you don&rsquo;t have to tear down the tree and plan a new one from scratch or start a new tree on the side. The tree will grow around power lines and rocks and other trees as needed.</p>
+<p>Lately, I have been more inclined to use <a href="http://www.mongodb.org/">MongoDB</a> or <a href="http://redis.io/">Redis</a> in my day-to-day work than stalwarts such as <a href="http://www.mysql.com/">MySQL</a> or <a href="http://www.postgresql.org/">PostgreSQL</a>. This is not due to cargo cult fanboyism, but the simple realization that the poorly-named NoSQL databases are the best tool for the job <em>for early stage, greenfield projects.</em></p>
 
-<p><a href="http://walkingoncoals.blogspot.com/2010/08/growing-tree-versus-building-house.html">Paul Boal, Growing a Tree versus Building a House</a></p></blockquote>
+<p>If anything, the folks clinging to their RDBMSes are <strong>more</strong> guilty of treating every problem as a nail, thus they whip out their favorite hammer. Why is it that almost every Web framework assumes we want/need to persist our data in an RDBMS? Even the ones that support pluggable persistence models tend to favor relational databases, specifically MySQL and SQLite.</p>
 
-<p>The construction metaphor for software development has been around seemingly since the beginning of time. With the advent of agile, more organic memes have taken root (pun intended). As much as I identify with the idea of <em>growing software</em>, we shouldn&rsquo;t dismiss all aspects of the construction metaphor.</p>
+<p>I&rsquo;ve already given <a href="http://working-code.com/2010/05/18/lamp-is-dead-long-live-dylan.html">my thoughts</a> on this situation a bit. This time, I want to come at it from a different angle.</p>
 
-<p>As I&rsquo;ve been working on my latest project, a multitenant Web application, the construction metaphor became evident. However, it was on a much larger scale than it&rsquo;s usually applied. Most people who compare developing software to erecting buildings tend to scope the discussion to a single structure. In my not particularly original opinion, building Web applications is a lot like <strong>urban planning</strong>.</p>
+<h1>The Principle of Most Privilege</h1>
 
-<blockquote><p>To developers, the most conspicuous difference between Web-based and desktop software is that a Web-based application is not a single piece of code. It will be a collection of programs of different types rather than a single big binary. And so designing Web-based software is like designing a city rather than a building: as well as buildings you need roads, street signs, utilities, police and fire departments, and plans for both growth and various kinds of disasters.</p>
+<p>In a relational model, the assumption is that one not only <strong>knows</strong> the shape of their data, but that it is relatively <strong>stable</strong>. For transaction-oriented, business process style applications this is likely to be true. But, if you are trying to create something new then it is even more likely that you <em>have no idea</em> what your data looks like which, by definition, means it is unstable.</p>
 
-<p><a href="http://paulgraham.com/road.html">Paul Graham, The Other Road Ahead</a></p></blockquote>
+<p><strong>THIS</strong> is the actual value proposition of NoSQL databases. The ability to have a flexible schema early in development is a productivity gain. Right now, developers have to commit to a schema and deal with change via tools like <a href="http://guides.rubyonrails.org/migrations.html">migrations</a>. While definitely an elegant solution to the problem, migrations solve the <strong>wrong</strong> problem. Migrations hide the mechanics of altering and dropping tables to make working with an RDBMS <em>feel</em> dynamic. That&rsquo;s the problem. The relational model is the <strong>static typing</strong> of persistence models.</p>
 
-<p>Much of my design process has involved this sort of thinking. One of the first decisions was splitting up the main site/administrative application from the multitenant application. That decision led to the idea of deploying to 2 different clouds, Heroku (which sits atop Amazon&rsquo;s EC2) and the Rackspace Cloud. This split affords a bit of fault tolerance as well as the ability to scale portions of the application independently. In the event of an outage on one cloud, it should be possible to redeploy to the other, thanks to the power of tools like <a href="http://www.puppetlabs.com/">Puppet</a> and <a href="http://opscode.com/chef/">Chef</a>.</p>
+<p>As opposed to attacking SQL, developers should articulate their desire to use the most flexible tools possible at the beginning of a project. The reasoning for this is simple&hellip;in the beginning, <strong>you don&rsquo;t know what you&rsquo;re doing</strong>. Software development is exploration and your chances for success are higher if you don&rsquo;t have to spend all your time circumnavigating obstacles.</p>
 
-<p>A Web application without an API is a eunuch. So, I&rsquo;ll be providing one. One school of thought is to build the API first and then make the Web app a client of the API. I favor this approach as it reflects the <em>eat your own dogfood</em> mentality. The other school of thought is to build the API adjacent to the Web app, usually starting with a read-only version, then adding write capability. As the API is really for the application&rsquo;s tenants, I am considering a hybrid approach: build the overall API infrastructure but only expose the read-only functionality initially. How am I going to do it? Job queues to the <a href="http://github.com/defunkt/resque">Resque</a>!</p>
+<p>For non-transactional applications (which includes the majority of Web applications), the need is simply to persist and retrieve data. As JSON steadily replaces XML as the preferred serialization format, having a persistence engine that deals with it natively is a boon. Almost every language imaginable has a JSON parser available and if you&rsquo;re a Web developer you&rsquo;re already using JavaScript.</p>
 
-<p>Outsourcing is not just for call centers. It works for subsystems as well. I COULD set up <a href="http://www.mongodb.org/">MongoDB</a> and <a href="http://code.google.com/p/redis/">Redis</a> myself. Or, I could subcontract that work to <a href="https://mongohq.com/home">MongoHQ</a> and <a href="http://redistogo.com/">Redis To Go</a>, respectively. And, every city needs workers so I&rsquo;m sure I&rsquo;ll have at least half a dozen daemons running around autonomously taking care of sundry tasks.</p>
+<p>That said, there is one thing that seems weird to me. Why are all these Web developers always reaching for an <a href="http://en.wikipedia.org/wiki/Object-relational_mapping">ORM</a> to use with these NoSQL databases? First, the <strong>R</strong> kinda tells you what problem is being addressed and we&rsquo;re not in that world. Second, in NoSQL your data is essentially a serialized hash so what exactly are we &ldquo;mapping&rdquo;? Finally, why introduce another layer unless it is adding value?</p>
 
-<p>Blogs. Forums. Issue Trackers. Chat Systems. Each of these is like a small park or shared garden. Their placement can be integral to the overall experience you are trying to create. Your Web application is a living, vibrant city. Be the mayor.</p>
+<p>I think <a href="http://twitter.com/jnunemaker">John Nunemaker</a> is The Man, but I don&rsquo;t think most <a href="http://mongomapper.com/">MongoMapper</a> users know <strong>why</strong> they are using it. ORMs for NoSQL mostly bridge the learning gap in moving from an RDBMS to a NoSQL database if you&rsquo;re using a framework like Rails where you spend most of your time fiddling with <a href="http://ar.rubyonrails.org/">ActiveRecord</a>. However, there is a lot less &ldquo;mapping&rdquo; with NoSQL as opposed to <em>unflattening</em>. IMNSHO, I think developers would be better served using the raw drivers for NoSQL databases instead of investing time and energy in ORMs.</p>
+
+<p>Instead, I&rsquo;d challenge developers to consider a different tool. More of a static analysis tool that could bring the benefits of fixed schemas to NoSQL <strong>after</strong> you&rsquo;ve solidified your data model. This tool may help indexing or making queries more efficient because now you know what your data looks like for the most part. It would be analogous to proposals for optional typing in languages, such as JavaScript. This would, possibly, lead to the best of both worlds.</p>
+
+<h1>It Is A Poor Craftsman&hellip;</h1>
+
+<p>Of course, developers can be wildly enthusiastic about their latest silver bullet. NoSQL is not a panacea. If you have a problem that is best solved with an RDBMS, then use one dammit! Or, if it doesn&rsquo;t matter whether or not you use an RDBMS for the application but it would make your ops engineers' lives easier, then you should consider that.</p>
+
+<p>What always ends up happening, however, is that people make poor choices for their application then blame <em>the tools!</em> This week, <a href="http://digg.com">Digg</a> <a href="http://techcrunch.com/2010/09/07/digg-struggles-vp-engineering-door/">fired</a> their VP of Engineering for their continued failures with V4. <a href="http://news.ycombinator.com/item?id=1669645">Hacker News</a> has been quite active with people armchair-quarterbacking the situation. Most are blaming the decision to use <a href="http://cassandra.apache.org/">Cassandra</a>. I find this as amusing as when people were blaming Ruby on Rails for Twitter&rsquo;s downtime woes.</p>
+
+<p>Digg&rsquo;s issues <strong>might</strong> have something to do with Cassandra, but there is no evidence of that yet. There <strong>IS</strong> evidence of an immature engineering culture and poor planning. A wholesale reengineering of their core architecture with no ability to revert screams of amateur hour. If they at least phased in the new infrastructure under the old interface, Digg would have been able to isolate problems more effectively. By throwing the baby out with the bathwater, they&rsquo;ll be firefighting for months and not be able to improve their product. Or, in this case reach parity with the previous version. The worst part is that <a href="http://techcrunch.com/2010/09/07/kevin-rose-responds-to-digg-criticism-on-diggnation-mostly-tells-users-to-chill/">their founder was quick to blame the technology</a>. You know the guy who was an intern on TechTV, drinks beer on Diggnation and is not an engineer?</p>
+
+<p>I think more developer should read <a href="http://pragprog.com/titles/tpp/the-pragmatic-programmer">The Pragmatic Programmer</a>, especially the parts about choosing tools. Hopefully, this will lead to more of an awareness about <strong>how</strong> to choose tools. Stop depending on <em>magic</em> and tools that do everything (including <strong>thinking</strong>) for you. I know it&rsquo;s hard and all, but ummm&hellip;.that&rsquo;s why it&rsquo;s considered <em>knowledge work</em>. You need to have some knowledge to make it work. If you want easy, mindless work&hellip;well, I can&rsquo;t help you. ANy suggestion I make would be stereotypical and demeaning to the people in those professions. Instead, I recommend you have some respect for <strong>your  profession, your craft</strong> and use the tool that matters most. <em>Your brain.</em></p>
  
 </div>
 
@@ -61,6 +73,8 @@
 		    <div>
     			<p><strong>Recently</strong></p>
 				
+			      <span>07 Sep 2010</span> &raquo; <a href="/2010/09/07/dont-hate-the-playa-hate-the-game.html">Don't Hate the Playa, Hate the Game</a><br />
+			    
 			      <span>30 Aug 2010</span> &raquo; <a href="/2010/08/30/urban-planning.html">Urban Planning</a><br />
 			    
 			      <span>19 Jul 2010</span> &raquo; <a href="/2010/07/19/flip-the-script.html">Flip The Script</a><br />
@@ -68,8 +82,6 @@
 			      <span>10 Jun 2010</span> &raquo; <a href="/2010/06/10/oil-and-water.html">Oil and Water</a><br />
 			    
 			      <span>18 May 2010</span> &raquo; <a href="/2010/05/18/lamp-is-dead-long-live-dylan.html">LAMP Is Dead. Long Live...DyLAN?</a><br />
-			    
-			      <span>30 Apr 2010</span> &raquo; <a href="/2010/04/30/mostly-cloudy.html">Mostly Cloudy</a><br />
 			    
 				<div><p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives.html">view all archives</a></strong></p></p></div>
 				
