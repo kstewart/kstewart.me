@@ -4,13 +4,92 @@
  <title>[working code]</title>
  <link href="http://working-code.com/atom.xml" rel="self"/>
  <link href="http://working-code.com/"/>
- <updated>2010-09-07T16:59:29-07:00</updated>
+ <updated>2010-09-26T15:36:08-07:00</updated>
  <id>http://working-code.com</id>
  <author>
    <name>Kevin Stewart</name>
    <email>kevin@working-code.com</email>
  </author>
  
+ 
+ <entry>
+   <title>The Way I Want To Work</title>
+   <link href="http://working-code.com/2010/09/26/the-way-i-want-to-work.html"/>
+   <updated>2010-09-26T00:00:00-07:00</updated>
+   <id>http://working-code.com/2010/09/26/the-way-i-want-to-work</id>
+   <content type="html">&lt;p&gt;A number of factors inspired me to write this post. First, one of my top 3 pet peeves is when people &lt;strong&gt;force me to repeat myself.&lt;/strong&gt; &lt;em&gt;(yes, I am a software development manager&amp;hellip;the irony is NOT lost on me!)&lt;/em&gt; Over the past year, I&amp;rsquo;ve had a noticeable increase in the number of recruiters trying to get me to interview for some position or the other. Ignoring them didn&amp;rsquo;t seem to work; I&amp;rsquo;d just get more emails and phone calls. Every once in a while, I&amp;rsquo;d take the time to talk to one or two of them just to see what they were trying to sell me on. &lt;em&gt;I didn&amp;rsquo;t miss out on anything&amp;hellip;so far.&lt;/em&gt; I ended up replying to the emails with a &amp;ldquo;Thanks, but not interested. Here&amp;rsquo;s what I AM interested in and I will not compromise on these items&amp;rdquo; response. Ended up being &lt;strong&gt;much&lt;/strong&gt; more effective. So, if I wrote this up as a blog post I could send an even shorter response&amp;hellip;the URL.&lt;/p&gt;
+
+&lt;p&gt;Another factor was the fact that I was on a 4-week sabbatical from work and had a little stay-cation. I had the opportunity to work on a side project with the folks at &lt;a href=&quot;http://pinchzoom.com&quot;&gt;pinch/zoom&lt;/a&gt;, a Web and mobile development shop in Seattle. While doing that I also ended up doing a talk at &lt;a href=&quot;http://www.iosdevcamp.org/&quot;&gt;iOS DevCamp Seattle&lt;/a&gt; on &lt;a href=&quot;http://www.slideshare.net/kstewart/introduct-5030740&quot;&gt;Apple&amp;rsquo;s iAd and mobile Web development&lt;/a&gt;. The change in environment, work style and product focus opened up the floodgates of introspectiveness.&lt;/p&gt;
+
+&lt;p&gt;Finally, I recently started on a new team at the day job. My last few projects have been successful on the engineering side, but have been lacking in terms of impact. This, is turn, has affected my motivation and added to my introspectiveness. However, I am a &lt;strong&gt;firm&lt;/strong&gt; believer in the idea that &lt;em&gt;you&lt;/em&gt; are responsible for your career. If I want things to change, then I have to make that change real.&lt;/p&gt;
+
+&lt;h1&gt;Inspiration&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.inc.com/&quot;&gt;Inc. Magazine&lt;/a&gt; has a great series called &lt;strong&gt;The Way I Work&lt;/strong&gt; featuring several entrepreneurs including &lt;a href=&quot;http://www.inc.com/magazine/20091101/the-way-i-work-jason-fried-of-37signals.html&quot;&gt;Jason Fried&lt;/a&gt; and &lt;a href=&quot;http://www.inc.com/magazine/20090601/the-way-i-work-matt-mullenweg.html&quot;&gt;Matt Mullenweg&lt;/a&gt;. This quote from Jason articulated a change in work style I made years ago&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;We rarely have meetings. I hate them. They&amp;rsquo;re a huge waste of time, and they&amp;rsquo;re costly. It&amp;rsquo;s not one hour; it&amp;rsquo;s 10, because you pulled 10 people away from their real work. Plus, they chop your day into small bits, so you have only 20 minutes of free time here or 45 minutes there. Creative people need unstructured time to get in the zone. You can&amp;rsquo;t do that in 20 minutes.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: Large companies have a hard time adjusting to the idea of no meetings. I&amp;rsquo;ve watched them try with misguided attempts like &lt;em&gt;no meetings on Fridays&lt;/em&gt;. It&amp;rsquo;s kind of like people making New Year&amp;rsquo;s resolutions to lose weight. They give it a good go, but within a month or two they&amp;rsquo;ve fallen back into their bad habits.&lt;/p&gt;
+
+&lt;h1&gt;The Way I Want To Work&lt;/h1&gt;
+
+&lt;p&gt;Unlike the aforementioned articles, I am not describing how I currently go about my day-to-day responsibilities. Instead, I&amp;rsquo;m going to describe my ideal (&lt;em&gt;at this moment in time&lt;/em&gt;) state.&lt;/p&gt;
+
+&lt;h2&gt;Small Company&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;(where &lt;strong&gt;small&lt;/strong&gt; &amp;lt; 30)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;For most of my career, I&amp;rsquo;ve worked at small companies. I made a conscious choice to work at a larger company (my &lt;a href=&quot;http://adobe.com&quot;&gt;current&lt;/a&gt; employer) so that I could actually get the experience. After almost 6 years, I think I have enough data.&lt;/p&gt;
+
+&lt;p&gt;Large companies can simulate small, startup environments but it&amp;rsquo;s not their natural state. The problem boils down to &lt;strong&gt;communication&lt;/strong&gt;, which I outlined in a &lt;a href=&quot;http://working-code.com/2010/03/14/3-Is-The-Magic-Number.html&quot;&gt;previous post&lt;/a&gt;. It&amp;rsquo;s just &lt;em&gt;so much&lt;/em&gt; harder to communicate with so many people and, subsequently, harder to Get Things Done. People say there&amp;rsquo;s no such thing as &lt;strong&gt;over-communicating&lt;/strong&gt; but that&amp;rsquo;s a crock. If the overall value of the communication is low because the people you are forced to communicate with do not help you accomplish the task at hand, then you are over-communicating. Or, more simply &lt;em&gt;wasting time&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Product Company&lt;/h2&gt;
+
+&lt;p&gt;Joel Spolsky has a great essay called &lt;a href=&quot;http://www.joelonsoftware.com/articles/FiveWorlds.html&quot;&gt;Five Worlds&lt;/a&gt; that attempts to define the different environments that software developers might work in. This categorization was intended to help developers better understand the target audience for various books, conferences and methodologies. But, it is also useful as a way to identify exactly what kind of work environment stimulates you. I&amp;rsquo;m definitely at home in the &lt;em&gt;commercial, Web-based software&lt;/em&gt; category.&lt;/p&gt;
+
+&lt;p&gt;For me, companies like &lt;a href=&quot;http://github.com&quot;&gt;GitHub&lt;/a&gt;, &lt;a href=&quot;http://posterous.com&quot;&gt;Posterous&lt;/a&gt; and &lt;a href=&quot;http://gowalla.com&quot;&gt;Gowalla&lt;/a&gt; that typify the environment I find most palatable. That said, there may be &lt;a href=&quot;http://amazon.com&quot;&gt;one&lt;/a&gt; or &lt;a href=&quot;http://apple.com&quot;&gt;two&lt;/a&gt; exceptions to my small company rule.&lt;/p&gt;
+
+&lt;h2&gt;Virtual Company (or Virtual with Co-Location Option)&lt;/h2&gt;
+
+&lt;p&gt;The nature of software development has shifted enough that while I still favor co-location, it&amp;rsquo;s not as necessary as it once was. In &lt;a href=&quot;http://www.inc.com/magazine/20090601/the-way-i-work-matt-mullenweg.html&quot;&gt;Matt&amp;rsquo;s article&lt;/a&gt;, he describes how &lt;a href=&quot;http://automattic.com&quot;&gt;Automattic&lt;/a&gt; works and they are completely virtual (with an available office for meetings).&lt;/p&gt;
+
+&lt;p&gt;Besides hating my commute (&lt;em&gt;down to 2 hours a day from 4 hours once I moved out to Seattle&lt;/em&gt;), my role is less of a people manager and more of a technical lead. That&amp;rsquo;s not a bad thing. In fact, I prefer it and feel that is the present and future of software development manager. In the type of environment I prefer, developers are self-motivated and driven. They don&amp;rsquo;t need hand-holding&amp;hellip;they need feedback. There are so many ways to provide that without having to be face-to-face 5 days a week.&lt;/p&gt;
+
+&lt;p&gt;On my current project, it&amp;rsquo;s just me and one developer while I wait for the headcount fairy to arrive. We don&amp;rsquo;t need to have meetings. We have our &lt;a href=&quot;http://jabber.org&quot;&gt;Jabber&lt;/a&gt; clients open all day and can shoot quick messages to each other when necessary. Often, we go have coffee in the morning and discuss the project and what we&amp;rsquo;re going to do for the day. That&amp;rsquo;s about 20 minutes, which is essentially the time it takes us to walk to Caffe Ladro, get our drinks and walk back to the office. Then, we&amp;rsquo;re working until lunch. Sometimes, we discuss the project over lunch&amp;hellip;often, we&amp;rsquo;re just bitching about something or the other. And, twice a week he works from home.&lt;/p&gt;
+
+&lt;p&gt;The point is, most of our actual communication is short and bursty. IM messages. Short emails. Coffee walks. Git commit messages. The face-to-face time satisfies a basic human need, but why does that have to be filled by &lt;em&gt;co-workers&lt;/em&gt;. I&amp;rsquo;m writing this in a coffee shop now and a bunch of people have come up to me to tell me how much they like my &lt;a href=&quot;http://twitter.com/kstewart/status/25625420129&quot;&gt;laptop&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, if I don&amp;rsquo;t have to live where my company&amp;rsquo;s office is located in order to work then I can live &lt;strong&gt;anywhere&lt;/strong&gt;. I could see my team in person once a quarter instead of every single day because that&amp;rsquo;s probably about the right frequency. I think that is the &lt;strong&gt;real&lt;/strong&gt; definition of &lt;a href=&quot;http://en.wikipedia.org/wiki/Work%E2%80%93life_balance&quot;&gt;work-life balance.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Stuff That Matters&lt;/h2&gt;
+
+&lt;p&gt;If you haven&amp;rsquo;t read Tim O'Reilly&amp;rsquo;s &lt;a href=&quot;http://radar.oreilly.com/2009/01/work-on-stuff-that-matters-fir.html&quot;&gt;Work on Stuff That Matters&lt;/a&gt;, please stop reading this post and go read it now!&lt;/p&gt;
+
+&lt;p&gt;Done? No? I&amp;rsquo;m serious&amp;hellip;&lt;a href=&quot;http://radar.oreilly.com/2009/01/work-on-stuff-that-matters-fir.html&quot;&gt;go read it!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;What matters most to me (and most good engineers I know) is making things people want to use. I often couple that with making things that help people create. Zed Shaw had a variation of this in &lt;a href=&quot;http://sheddingbikes.com/posts/1285436217.html&quot;&gt;Products for People Who Make Products for People&lt;/a&gt;. I cannot articulate it any better than Zed, so read that post too! (*oh, and why not &lt;a href=&quot;http://mongrel2.org/wiki?name=Donate&quot;&gt;donate&lt;/a&gt; to the &lt;a href=&quot;http://mongrel2.org/home&quot;&gt;Mongrel2&lt;/a&gt; project while you&amp;rsquo;re at it?)&lt;/p&gt;
+
+&lt;p&gt;On the next priority rung, these things matter to me:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Working closely with designers: cross-functional teams, not cross-functional management&lt;/li&gt;
+&lt;li&gt;Work on my Mac with &lt;strong&gt;no&lt;/strong&gt; compromises (&lt;em&gt;no Microsoft Office or Exchange required&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;Use Git and GitHub to collaborate with team&lt;/li&gt;
+&lt;li&gt;Create Open Source by-products from day-to-day work (&lt;em&gt;you gotta give back!&lt;/em&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h1&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;So, what does this all mean? Am I quitting my job to make this all happen? No. The first step was just to document all of this. I needed to know what I wanted out of life&amp;hellip;what&amp;rsquo;s going to make me happy. Mission Accomplished.&lt;/p&gt;
+
+&lt;p&gt;The next step is to make subtle changes in my current environment to see if I can get what I want without complete disruption. That would be ideal.&lt;/p&gt;
+
+&lt;p&gt;However, if that is unsuccessful then I&amp;rsquo;ll figure out a different set of next steps. That may include following Martin Fowler&amp;rsquo;s sage advice:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;&lt;a href=&quot;http://martinfowler.com/articles/xp2000.html&quot;&gt;If you can&amp;rsquo;t change your organization, change your organization.&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Don't Hate the Playa, Hate the Game</title>
@@ -35,19 +114,19 @@
 
 &lt;p&gt;That said, there is one thing that seems weird to me. Why are all these Web developers always reaching for an &lt;a href=&quot;http://en.wikipedia.org/wiki/Object-relational_mapping&quot;&gt;ORM&lt;/a&gt; to use with these NoSQL databases? First, the &lt;strong&gt;R&lt;/strong&gt; kinda tells you what problem is being addressed and we&amp;rsquo;re not in that world. Second, in NoSQL your data is essentially a serialized hash so what exactly are we &amp;ldquo;mapping&amp;rdquo;? Finally, why introduce another layer unless it is adding value?&lt;/p&gt;
 
-&lt;p&gt;I think &lt;a href=&quot;http://twitter.com/jnunemaker&quot;&gt;John Nunemaker&lt;/a&gt; is The Man, but I don&amp;rsquo;t think most &lt;a href=&quot;http://mongomapper.com/&quot;&gt;MongoMapper&lt;/a&gt; users know &lt;strong&gt;why&lt;/strong&gt; they are using it. ORMs for NoSQL mostly bridge the learning gap in moving from an RDBMS to a NoSQL database if you&amp;rsquo;re using a framework like Rails where you spend most of your time fiddling with &lt;a href=&quot;http://ar.rubyonrails.org/&quot;&gt;ActiveRecord&lt;/a&gt;. However, there is a lot less &amp;ldquo;mapping&amp;rdquo; with NoSQL as opposed to &lt;em&gt;unflattening&lt;/em&gt;. IMNSHO, I think developers would be better served using the raw drivers for NoSQL databases instead of investing time and energy in ORMs.&lt;/p&gt;
+&lt;p&gt;I think &lt;a href=&quot;http://twitter.com/jnunemaker&quot;&gt;John Nunemaker&lt;/a&gt; is The Man, but I don&amp;rsquo;t think most &lt;a href=&quot;http://mongomapper.com/&quot;&gt;MongoMapper&lt;/a&gt; users know &lt;strong&gt;why&lt;/strong&gt; they are using it. ORMs for NoSQL mostly bridge the learning gap in moving from an RDBMS to a NoSQL database if you&amp;rsquo;re using a framework like Rails where you spend most of your time fiddling with &lt;a href=&quot;http://ar.rubyonrails.org/&quot;&gt;ActiveRecord&lt;/a&gt;. However, there is a lot less &amp;ldquo;mapping&amp;rdquo; with NoSQL as opposed to &lt;em&gt;un-flattening&lt;/em&gt;. IMNSHO, I think developers would be better served using the raw drivers for NoSQL databases instead of investing time and energy in ORMs.&lt;/p&gt;
 
-&lt;p&gt;Instead, I&amp;rsquo;d challenge developers to consider a different tool. More of a static analysis tool that could bring the benefits of fixed schemas to NoSQL &lt;strong&gt;after&lt;/strong&gt; you&amp;rsquo;ve solidified your data model. This tool may help indexing or making queries more efficient because now you know what your data looks like for the most part. It would be analogous to proposals for optional typing in languages, such as JavaScript. This would, possibly, lead to the best of both worlds.&lt;/p&gt;
+&lt;p&gt;Instead, I&amp;rsquo;d challenge developers to consider a different tool. More of a static analysis tool that could bring the benefits of fixed schemas to NoSQL &lt;strong&gt;after&lt;/strong&gt; you&amp;rsquo;ve solidified your data model. This tool may help indexing or making queries more efficient because now you know what your data looks like for the most part. It would be analogous to proposals for optional typing in languages such as JavaScript. This would, possibly, lead to the best of both worlds.&lt;/p&gt;
 
 &lt;h1&gt;It Is A Poor Craftsman&amp;hellip;&lt;/h1&gt;
 
 &lt;p&gt;Of course, developers can be wildly enthusiastic about their latest silver bullet. NoSQL is not a panacea. If you have a problem that is best solved with an RDBMS, then use one dammit! Or, if it doesn&amp;rsquo;t matter whether or not you use an RDBMS for the application but it would make your ops engineers' lives easier, then you should consider that.&lt;/p&gt;
 
-&lt;p&gt;What always ends up happening, however, is that people make poor choices for their application then blame &lt;em&gt;the tools!&lt;/em&gt; This week, &lt;a href=&quot;http://digg.com&quot;&gt;Digg&lt;/a&gt; &lt;a href=&quot;http://techcrunch.com/2010/09/07/digg-struggles-vp-engineering-door/&quot;&gt;fired&lt;/a&gt; their VP of Engineering for their continued failures with V4. &lt;a href=&quot;http://news.ycombinator.com/item?id=1669645&quot;&gt;Hacker News&lt;/a&gt; has been quite active with people armchair-quarterbacking the situation. Most are blaming the decision to use &lt;a href=&quot;http://cassandra.apache.org/&quot;&gt;Cassandra&lt;/a&gt;. I find this as amusing as when people were blaming Ruby on Rails for Twitter&amp;rsquo;s downtime woes.&lt;/p&gt;
+&lt;p&gt;What always ends up happening, however, is that people make poor choices for their application then blame &lt;em&gt;the tools!&lt;/em&gt; This week, &lt;a href=&quot;http://techcrunch.com/2010/09/07/digg-struggles-vp-engineering-door/&quot;&gt;Digg fired&lt;/a&gt; their VP of Engineering for their continued failures with V4. &lt;a href=&quot;http://news.ycombinator.com/item?id=1669645&quot;&gt;Hacker News&lt;/a&gt; has been quite active with people armchair-quarterbacking the situation. Most are blaming the decision to use &lt;a href=&quot;http://cassandra.apache.org/&quot;&gt;Cassandra&lt;/a&gt;. I find this as amusing as when people were blaming Ruby on Rails for Twitter&amp;rsquo;s downtime woes.&lt;/p&gt;
 
-&lt;p&gt;Digg&amp;rsquo;s issues &lt;strong&gt;might&lt;/strong&gt; have something to do with Cassandra, but there is no evidence of that yet. There &lt;strong&gt;IS&lt;/strong&gt; evidence of an immature engineering culture and poor planning. A wholesale reengineering of their core architecture with no ability to revert screams of amateur hour. If they at least phased in the new infrastructure under the old interface, Digg would have been able to isolate problems more effectively. By throwing the baby out with the bathwater, they&amp;rsquo;ll be firefighting for months and not be able to improve their product. Or, in this case reach parity with the previous version. The worst part is that &lt;a href=&quot;http://techcrunch.com/2010/09/07/kevin-rose-responds-to-digg-criticism-on-diggnation-mostly-tells-users-to-chill/&quot;&gt;their founder was quick to blame the technology&lt;/a&gt;. You know the guy who was an intern on TechTV, drinks beer on Diggnation and is not an engineer?&lt;/p&gt;
+&lt;p&gt;Digg&amp;rsquo;s issues &lt;strong&gt;might&lt;/strong&gt; have something to do with Cassandra, but there is no evidence of that yet. There &lt;strong&gt;IS&lt;/strong&gt; evidence of an immature engineering culture and poor planning. A wholesale re-engineering of their core architecture with no ability to revert to the previous version screams of amateur hour. If they at least phased in the new infrastructure under the old interface, Digg would have been able to isolate problems more effectively. By throwing the baby out with the bathwater, they&amp;rsquo;ll be firefighting for months instead of improving their product. Or, in this case, reach parity with the previous version. The worst part is that &lt;a href=&quot;http://techcrunch.com/2010/09/07/kevin-rose-responds-to-digg-criticism-on-diggnation-mostly-tells-users-to-chill/&quot;&gt;their founder was quick to blame the technology&lt;/a&gt;. You know the guy who was an intern on TechTV, drinks beer on Diggnation and is not an engineer?&lt;/p&gt;
 
-&lt;p&gt;I think more developer should read &lt;a href=&quot;http://pragprog.com/titles/tpp/the-pragmatic-programmer&quot;&gt;The Pragmatic Programmer&lt;/a&gt;, especially the parts about choosing tools. Hopefully, this will lead to more of an awareness about &lt;strong&gt;how&lt;/strong&gt; to choose tools. Stop depending on &lt;em&gt;magic&lt;/em&gt; and tools that do everything (including &lt;strong&gt;thinking&lt;/strong&gt;) for you. I know it&amp;rsquo;s hard and all, but ummm&amp;hellip;.that&amp;rsquo;s why it&amp;rsquo;s considered &lt;em&gt;knowledge work&lt;/em&gt;. You need to have some knowledge to make it work. If you want easy, mindless work&amp;hellip;well, I can&amp;rsquo;t help you. ANy suggestion I make would be stereotypical and demeaning to the people in those professions. Instead, I recommend you have some respect for &lt;strong&gt;your  profession, your craft&lt;/strong&gt; and use the tool that matters most. &lt;em&gt;Your brain.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I think more developer should read &lt;a href=&quot;http://pragprog.com/titles/tpp/the-pragmatic-programmer&quot;&gt;The Pragmatic Programmer&lt;/a&gt;, especially the parts about choosing tools. Hopefully, this will lead to more of an awareness about &lt;strong&gt;how&lt;/strong&gt; to choose tools. Stop depending on &lt;em&gt;magic&lt;/em&gt; and tools that do everything (including &lt;strong&gt;thinking&lt;/strong&gt;) for you. I know it&amp;rsquo;s hard and all, but ummm&amp;hellip;.that&amp;rsquo;s why it&amp;rsquo;s considered &lt;em&gt;knowledge work&lt;/em&gt;. You need to have some knowledge to make it work. If you want easy, mindless work&amp;hellip;well, I can&amp;rsquo;t help you. Any suggestion I make would be stereotypical and demeaning to the people in those professions. Instead, I recommend you have some respect for &lt;strong&gt;your  profession, your craft&lt;/strong&gt; and use the tool that matters most. &lt;em&gt;Your brain.&lt;/em&gt;&lt;/p&gt;
 </content>
  </entry>
  
