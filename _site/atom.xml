@@ -4,13 +4,110 @@
  <title>[working code]</title>
  <link href="http://working-code.com/atom.xml" rel="self"/>
  <link href="http://working-code.com/"/>
- <updated>2010-09-26T15:36:08-07:00</updated>
+ <updated>2011-02-17T23:12:38-08:00</updated>
  <id>http://working-code.com</id>
  <author>
    <name>Kevin Stewart</name>
    <email>kevin@working-code.com</email>
  </author>
  
+ 
+ <entry>
+   <title>There IS an "I" in Team</title>
+   <link href="http://working-code.com/2011/02/17/there-is-an-i-in-team.html"/>
+   <updated>2011-02-17T00:00:00-08:00</updated>
+   <id>http://working-code.com/2011/02/17/there-is-an-i-in-team</id>
+   <content type="html">&lt;p&gt;A little over a week ago the team at &lt;a href=&quot;http://datagraph.org&quot;&gt;Datagraph&lt;/a&gt; launched &lt;a href=&quot;http://dydra.com&quot;&gt;Dydra&lt;/a&gt;, an RDF cloud service. I immediately congratulated &lt;a href=&quot;http://twitter.com/bendiken&quot;&gt;Arto&lt;/a&gt; via Twitter. You see, his small team launched exactly what I had been building at Adobe for a couple of years. In fact, that&amp;rsquo;s how I &amp;ldquo;met&amp;rdquo; Arto. We had been neck deep in the world of metadata and came across &lt;a href=&quot;http://rdf.rubyforge.org&quot;&gt;RDF.rb&lt;/a&gt;, a &lt;strong&gt;fantastic&lt;/strong&gt; Ruby library. One of my engineers, &lt;a href=&quot;http://twitter.com/seacycle&quot;&gt;John&lt;/a&gt; forked it and submitted a few patches to it as we were going to replace our existing Ruby RDF library with it. Since then, I&amp;rsquo;ve followed Datagraph&amp;rsquo;s work and GitHub projects even though they were in stealth mode. I suspected all along that they were building the same thing we were, but who cares? We&amp;rsquo;re not playing a zero-sum game here; there&amp;rsquo;s room for everyone at this party.&lt;/p&gt;
+
+&lt;p&gt;While I was (and still am) completely excited and happy for Arto and crew, I was also a little annoyed. My team spent about 2 years building this service. So, did Datagraph. The only difference is &lt;em&gt;we were a year ahead of them&lt;/em&gt;. Looking through their site, we had pretty much all the same features they had at launch (plus one or two features they &lt;strong&gt;don&amp;rsquo;t&lt;/strong&gt; have). We had roughly the same size team as they did and our technology stacks were similar. The only difference? I worked at a large company. They didn&amp;rsquo;t.&lt;/p&gt;
+
+&lt;p&gt;This post details the history of my project and the lessons I learned. While this is mostly cathartic for me, I am hoping that others get some benefit from this war story.&lt;/p&gt;
+
+&lt;h1&gt;&amp;ldquo;What Do We Work On Next?&amp;rdquo;&lt;/h1&gt;
+
+&lt;p&gt;This was the question that what was left of my team asked me after the train wreck that was our component of Creative Suite 3. THAT story will be the subject of a separate blog post. So here I was with only 2 engineers, John and &lt;a href=&quot;http://twitter.com/stevebalo&quot;&gt;Steve&lt;/a&gt; and not much to do. We helped fix bugs in Acrobat for a couple of months, but that was just busywork.&lt;/p&gt;
+
+&lt;p&gt;I was tired of desktop software (again) and wanted to get back into Web applications and Web services. At the time, we were in Adobe&amp;rsquo;s Core Technology group. However, we were pretty much outcasts. That group prided itself on working on &amp;ldquo;high science&amp;rdquo; problems and we were just a bunch of generalists who liked to play with cutting edge technology. The CoreTech team mostly delivered C++ libraries for integration in the point products and Suites.&lt;/p&gt;
+
+&lt;p&gt;Given that model, I proposed that CoreTech move into services. We should take our delivery model and apply it to services in addition to libraries. In fact, I suggested that we review our portfolio of components and see what made sense as a service. Since no one on my team was a graphics or text layout expert, we settled on metadata. We all understood what metadata was and how it could be applied. In the context of a Web service, we decided to build a multi-tenant metadata repository on top of Adobe&amp;rsquo;s &lt;a href=&quot;http://www.adobe.com/products/xmp&quot;&gt;Extensible Metadata Platform (XMP)&lt;/a&gt; libraries. As we were building atop XMP, we initially codenamed our service &lt;strong&gt;xmplary&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1&gt;&amp;ldquo;I Don&amp;rsquo;t Want To Wear A Beeper&amp;rdquo;&lt;/h1&gt;
+
+&lt;p&gt;That&amp;rsquo;s what our VP said. He had worked at Real Networks and didn&amp;rsquo;t want to deal with servers and on-call rotations. Never mind the fact that the company was moving in this direction and that our organization was having a harder and harder time securing funding. My proposal was that we become an internal version of &lt;a href=&quot;http://aws.amazon.com&quot;&gt;Amazon Web Services&lt;/a&gt;, but providing Web services that leveraged Adobe&amp;rsquo;s intellectual property for use by Adobe teams and third-party developers.&lt;/p&gt;
+
+&lt;p&gt;We basically got the go-ahead to prototype or &lt;em&gt;play-to-learn&lt;/em&gt;. Primarily, it was a decision made to shut us up, keep us busy and out of the way. That was fine by us. We moved up to the third floor of the Seattle office behind a conference room. Out of sight, out of mind.&lt;/p&gt;
+
+&lt;p&gt;We started simple at first. Steve created a Ruby wrapper around the XMP library. John set up our infrastructure and wrote the low-level persistence code. I designed and wrote the initial API. We learned Ruby, RSpec, Git and a host of other technologies. It was great.&lt;/p&gt;
+
+&lt;h1&gt;&amp;ldquo;You Need To Get A Customer&amp;rdquo;&lt;/h1&gt;
+
+&lt;p&gt;My manager told me that he had met with our VP who seemed to be going on the warpath and looking to kill all unfunded projects (the very ones he approved). Luckily, I had kept my ear to the ground and knew there was a project that needed the very service we were building. My plan was to approach them once we were further along. However, my survival instincts were kicking in and I guessed (correctly) that if I didn&amp;rsquo;t align with them &lt;strong&gt;now&lt;/strong&gt; there would be no &lt;em&gt;later&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I pitched the service to this team and the idea that we work together. The director running the project loved the idea. Unfortunately, we were brought on as virtual team members and were &amp;ldquo;forced&amp;rdquo; to give up our identity. Goodbye, xmplary.&lt;/p&gt;
+
+&lt;p&gt;For the next few months, we continued to work on the service. We realized the limitations with using XMP as our canonical format and made the transition to Resource Description Format (RDF). XMP was based, erroneously, on the RDF/XML serialization format instead of the RDF data model. John worked to implement round-trip support for XMP to RDF. I revised the API accordingly and Steve started to build a Web application that would be the frontend for the service.&lt;/p&gt;
+
+&lt;h1&gt;Our Data Is Very Meta&lt;/h1&gt;
+
+&lt;p&gt;As we made the transition to RDF, we realized the value of our service was purely as infrastructure. We could only guess what kinds of applications could be built with it. Our primary focus was metadata search, particularly for rich media. Adobe&amp;rsquo;s tools are used for the majority of content creation and generate a ton of metadata. Most of that data gets discarded in the rendering process for final assets. Search engines like Google couldn&amp;rsquo;t index those assets without help.&lt;/p&gt;
+
+&lt;p&gt;Our goal was to encourage content creators to preserve and enhance that metadata for use downstream. By creating better metadata editing facilities within the Suite that was linked to our cloud-based metadata repository, we would be able to offer a pipeline to search engines and offer metadata that would enrich their indexes (for a price of course). So, when you search for &lt;em&gt;Ezekiel 25:17&lt;/em&gt; you would get a video clip in your search results that would start playing at one of my favorite scenes from &lt;strong&gt;Pulp Fiction&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;We also decided to focus primarily on our API. Inspired by &lt;a href=&quot;http://al3x.net&quot;&gt;Alex Payne&amp;rsquo;s&lt;/a&gt; work at Twitter, we saw that there was more value to be created by providing a simple but powerful API. In fact, our API was a &lt;strong&gt;meta-API&lt;/strong&gt;. RDF and the SPARQL query language was the foundation and we would provide support and tools for Adobe teams to build APIs that were wrappers around our RDF core. They would define their data and we would model it with RDF and create SPARQL queries that would map to their custom APIs. Over time, we would have added tools to make this a self-service operation.&lt;/p&gt;
+
+&lt;h1&gt;If Three People Are Good, Thirty Must Be Better&lt;/h1&gt;
+
+&lt;p&gt;It never ceases to amaze me that software companies tend to be the most unfamiliar with Brooks' Law (both the real version and the misquoted one). A constant refrain was &lt;em&gt;&amp;ldquo;We can&amp;rsquo;t build this with just 3 guys from CoreTech&amp;rdquo;&lt;/em&gt;. A funny statement considering the fact that that&amp;rsquo;s exactly what was happening. We just shook our heads and kept working.&lt;/p&gt;
+
+&lt;p&gt;Around month 5, we were told that we were going to get &amp;ldquo;help&amp;rdquo; from one of our non-US teams. They had no familiarity with metadata or our technology choices. They were all good engineers, just inexperienced. While we mostly enjoyed working with them, we lost 3 months essentially training them when we could have been finishing features.&lt;/p&gt;
+
+&lt;p&gt;Right about the time our stakeholders realized that the non-US team might not have been helping us move the ball forward, another US team just had their project cancelled. Surprise! &lt;strong&gt;THEY&lt;/strong&gt; got added to our project as well. By Christmas, we had an overall team of over 30 people and was incredibly management heavy. Our product vision was all over the place. We were going to solve every problem under the sun, including world hunger. It was a mess.&lt;/p&gt;
+
+&lt;p&gt;With a bunch of new people, leaders needed to be identified. I was asked if I wanted to lead the overall engineering effort. I said &lt;strong&gt;no&lt;/strong&gt;. I suspected that the project would eventually get into trouble and since I was from an external, shared technology group I would be the obvious scapegoat. In fact, given the management involved on the stakeholder team I was &lt;em&gt;sure&lt;/em&gt; that would be the case. Instead, I said I would just focus on the core metadata repository and not the overall product. This was a mistake on my part and, ultimately, would contribute to the project&amp;rsquo;s failure.&lt;/p&gt;
+
+&lt;h1&gt;&amp;ldquo;What Exactly Are We Building Again?&amp;rdquo;&lt;/h1&gt;
+
+&lt;p&gt;The next year was both exhilarating and frustrating. We cleaned up our API, added support for four different persistence engines, added Web hooks, supported OAuth, wrote tons of documentation and examples and evolved our continuous deployment infrastructure. We moved from Merb to Sinatra, Mongrel to Unicorn, ActiveMQ to beanstalk and RubyRDF to RDF.rb. On the engineering front, we were having a great time and always had working software that was ready to ship. We evangelized RDF internally, found some supporters and started to make some headway. As part of all of this, we re-asserted our identity separate from our client&amp;rsquo;s project. We codenamed our service Triad. RDF geeks will get the joke, as will Chinese gangsters.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, our internal clients were frequently changing the message about which of the many problems we were trying to solve. With over 30 people on the &amp;ldquo;team&amp;rdquo;, everyone had a different idea as to what we were building. It didn&amp;rsquo;t help that &lt;em&gt;metadata&lt;/em&gt; was a particularly ambiguous term and could&amp;rsquo;ve have had vastly different meetings depending on who you were talking to at that moment in time. No one really knew what we were building. At one point, we were one of the most important projects in the company. At another point, we were a punchline.&lt;/p&gt;
+
+&lt;p&gt;After multiple resets and changes in our Product Management, our clients &lt;strong&gt;finally&lt;/strong&gt; came around to what they believed to be the value proposition for our service. Metadata search. The domain area we had started with almost 2 years earlier. The feature that was powering part of another Adobe service that was launching with Creative Suite 5. All this time and energy wasted to settle back on the simple principle we started with all along. Metadata search.&lt;/p&gt;
+
+&lt;p&gt;A month later, our client&amp;rsquo;s project was cancelled.&lt;/p&gt;
+
+&lt;h1&gt;&amp;ldquo;We Come To Bury Triad, Not To Praise It&amp;rdquo;&lt;/h1&gt;
+
+&lt;p&gt;The project cancellation happened to coincide with a company &amp;ldquo;realignment&amp;rdquo; (layoffs). Luckily, we weren&amp;rsquo;t affected but we &lt;strong&gt;were&lt;/strong&gt; reorganized. We were still in CoreTech, but not in the emerging technologies team. We were back with the high science practitioners. No one was happy, especially since given the new reorg we were a lateral move away from a group that actually &lt;strong&gt;was&lt;/strong&gt; evolving into Adobe&amp;rsquo;s internal AWS. After much lobbying, I got what I asked for&amp;hellip;a move into this new services group. Without Steve.&lt;/p&gt;
+
+&lt;p&gt;Yep, Steve (and 2 other developers I managed to snag along the way) were reassigned to other groups. John and I were transferred (that&amp;rsquo;s the polite way to put it) to the services team. I was now a &lt;strong&gt;Manager of One&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;John and I spent the next few months scoping out a new service we were asked to build. I had a month-long sabbatical coming up, so I was slightly checked out. OK, I was &lt;strong&gt;completely&lt;/strong&gt; checked out. After my sabbatical, I spent the next few months decommissioning Triad. It was painful, but necessary. We had no executive support to continue the project even though all we wanted to do at that point was release it on &lt;a href=&quot;http://labs.adobe.com&quot;&gt;Adobe Labs&lt;/a&gt; and get feedback from third-party developers on what they wanted to see from the service. By December 2010, Triad was no more.&lt;/p&gt;
+
+&lt;h1&gt;&amp;ldquo;Dude, I&amp;rsquo;m Getting The Band Back Together&amp;rdquo;&lt;/h1&gt;
+
+&lt;p&gt;The silver lining to this story came in October 2010, though. I pretty much had one foot out the door when a colleague told me about an internal opportunity that seemed to too good to be true. A domain area that I actually was passionate about, a good team to work with that had a shipping service that I would take over and a promotion to Senior Engineering Manager. Two weeks of interviews and the position was mine.&lt;/p&gt;
+
+&lt;p&gt;Two weeks after that, John joined the team.&lt;/p&gt;
+
+&lt;p&gt;A month later, Steve did too.&lt;/p&gt;
+
+&lt;p&gt;I am really lucky. And happy.&lt;/p&gt;
+
+&lt;h1&gt;Intrapreneurship&lt;/h1&gt;
+
+&lt;p&gt;Earlier, I said it was a mistake for me not to lead the overall engineering effort for my client&amp;rsquo;s project. Previous experience (that &lt;strong&gt;other&lt;/strong&gt; blog post I have to write) had made me gun shy about being the front man for Big, Hairy, Audacious Goals. While I had proven multiple times that I could assemble good teams, deliver working software that met requirements on time and under ridiculous conditions I often ended up drawing the short straw.&lt;/p&gt;
+
+&lt;p&gt;The thing is, I was suppressing my strength. I &lt;strong&gt;am&lt;/strong&gt; an intrapreneur. I &lt;em&gt;like&lt;/em&gt; taking on huge challenges with small teams. I don&amp;rsquo;t care about the money or the titles. I&amp;rsquo;m in it for the glory.&lt;/p&gt;
+
+&lt;p&gt;By not leading the whole project, I could not move the ball forward. I lacked the leverage and influence to make things happen. Some organizations are driven by titles and roles and if you don&amp;rsquo;t have them, your sphere of influence can be so small as to be non-existent. More importantly, I did not contribute in the way that would have most helped my team. I let my fears suppress my more useful attributes: tech lead, evangelist, bullshit artist.&lt;/p&gt;
+
+&lt;p&gt;The break between Triad and my current project allowed me to gain some perspective. I rediscovered my passion for developing products and realized that I needed to be in the part of the organization that &lt;em&gt;did that&lt;/em&gt;. Shared technology is often necessary, but poorly executed in a lot of organizations.&lt;/p&gt;
+
+&lt;p&gt;My strengths lie in taking a germ of an idea, blowing it up several orders of magnitude, assembling the talent and then &lt;strong&gt;pulling it off&lt;/strong&gt;. To some people, that may sound pretty arrogant. Maybe it is, maybe it isn&amp;rsquo;t. All I know is that I am not the type to &amp;ldquo;climb the corporate ladder&amp;rdquo;. I am definitely &lt;strong&gt;not&lt;/strong&gt; a 9-to-5 wage slave. I&amp;rsquo;m also not an entrepreneur&amp;hellip;yet. I&amp;rsquo;m a change agent. A radical. A revolutionary. A professional pain in the ass.&lt;/p&gt;
+
+&lt;p&gt;There &lt;strong&gt;is&lt;/strong&gt; an &amp;ldquo;I&amp;rdquo; in team. The &amp;ldquo;I&amp;rdquo; is for intrapreneur.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>The Way I Want To Work</title>
@@ -53,7 +150,7 @@
 
 &lt;p&gt;The nature of software development has shifted enough that while I still favor co-location, it&amp;rsquo;s not as necessary as it once was. In &lt;a href=&quot;http://www.inc.com/magazine/20090601/the-way-i-work-matt-mullenweg.html&quot;&gt;Matt&amp;rsquo;s article&lt;/a&gt;, he describes how &lt;a href=&quot;http://automattic.com&quot;&gt;Automattic&lt;/a&gt; works and they are completely virtual (with an available office for meetings).&lt;/p&gt;
 
-&lt;p&gt;Besides hating my commute (&lt;em&gt;down to 2 hours a day from 4 hours once I moved out to Seattle&lt;/em&gt;), my role is less of a people manager and more of a technical lead. That&amp;rsquo;s not a bad thing. In fact, I prefer it and feel that is the present and future of software development manager. In the type of environment I prefer, developers are self-motivated and driven. They don&amp;rsquo;t need hand-holding&amp;hellip;they need feedback. There are so many ways to provide that without having to be face-to-face 5 days a week.&lt;/p&gt;
+&lt;p&gt;Besides hating my commute (&lt;em&gt;down to 2 hours a day from 4 hours once I moved out to Seattle&lt;/em&gt;), my role is less of a people manager and more of a technical lead. That&amp;rsquo;s not a bad thing. In fact, I prefer it and feel that is the present and future of software development management. In the type of environment I prefer, developers are self-motivated and driven. They don&amp;rsquo;t need hand-holding&amp;hellip;they need feedback. There are so many ways to provide that without having to be face-to-face 5 days a week.&lt;/p&gt;
 
 &lt;p&gt;On my current project, it&amp;rsquo;s just me and one developer while I wait for the headcount fairy to arrive. We don&amp;rsquo;t need to have meetings. We have our &lt;a href=&quot;http://jabber.org&quot;&gt;Jabber&lt;/a&gt; clients open all day and can shoot quick messages to each other when necessary. Often, we go have coffee in the morning and discuss the project and what we&amp;rsquo;re going to do for the day. That&amp;rsquo;s about 20 minutes, which is essentially the time it takes us to walk to Caffe Ladro, get our drinks and walk back to the office. Then, we&amp;rsquo;re working until lunch. Sometimes, we discuss the project over lunch&amp;hellip;often, we&amp;rsquo;re just bitching about something or the other. And, twice a week he works from home.&lt;/p&gt;
 
@@ -67,7 +164,7 @@
 
 &lt;p&gt;Done? No? I&amp;rsquo;m serious&amp;hellip;&lt;a href=&quot;http://radar.oreilly.com/2009/01/work-on-stuff-that-matters-fir.html&quot;&gt;go read it!&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;What matters most to me (and most good engineers I know) is making things people want to use. I often couple that with making things that help people create. Zed Shaw had a variation of this in &lt;a href=&quot;http://sheddingbikes.com/posts/1285436217.html&quot;&gt;Products for People Who Make Products for People&lt;/a&gt;. I cannot articulate it any better than Zed, so read that post too! (*oh, and why not &lt;a href=&quot;http://mongrel2.org/wiki?name=Donate&quot;&gt;donate&lt;/a&gt; to the &lt;a href=&quot;http://mongrel2.org/home&quot;&gt;Mongrel2&lt;/a&gt; project while you&amp;rsquo;re at it?)&lt;/p&gt;
+&lt;p&gt;What matters most to me (and most good engineers I know) is making things people want to use. I often couple that with making things that help people create. Zed Shaw had a variation of this in &lt;a href=&quot;http://sheddingbikes.com/posts/1285436217.html&quot;&gt;Products for People Who Make Products for People&lt;/a&gt;. I cannot articulate it any better than Zed, so read that post too! &lt;em&gt;(oh, and why not &lt;a href=&quot;http://mongrel2.org/wiki?name=Donate&quot;&gt;donate&lt;/a&gt;&lt;/em&gt; to the &lt;a href=&quot;http://mongrel2.org/home&quot;&gt;Mongrel2&lt;/a&gt; project while you&amp;rsquo;re at it?)&lt;/p&gt;
 
 &lt;p&gt;On the next priority rung, these things matter to me:&lt;/p&gt;
 
