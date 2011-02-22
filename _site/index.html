@@ -20,98 +20,70 @@
 
 
 <div class="post">
-  <h1><a href="/2011/02/17/there-is-an-i-in-team.html">There IS an "I" in Team</a></h1>
-<p class="byline">Posted by <strong>kstewart</strong> on 17 Feb 2011</p>
+  <h1><a href="/2011/02/21/framework-of-reference.html">Frame(work) of Reference</a></h1>
+<p class="byline">Posted by <strong>kstewart</strong> on 21 Feb 2011</p>
 
-<p>A little over a week ago the team at <a href="http://datagraph.org">Datagraph</a> launched <a href="http://dydra.com">Dydra</a>, an RDF cloud service. I immediately congratulated <a href="http://twitter.com/bendiken">Arto</a> via Twitter. You see, his small team launched exactly what I had been building at Adobe for a couple of years. In fact, that&rsquo;s how I &ldquo;met&rdquo; Arto. We had been neck deep in the world of metadata and came across <a href="http://rdf.rubyforge.org">RDF.rb</a>, a <strong>fantastic</strong> Ruby library. One of my engineers, <a href="http://twitter.com/seacycle">John</a> forked it and submitted a few patches to it as we were going to replace our existing Ruby RDF library with it. Since then, I&rsquo;ve followed Datagraph&rsquo;s work and GitHub projects even though they were in stealth mode. I suspected all along that they were building the same thing we were, but who cares? We&rsquo;re not playing a zero-sum game here; there&rsquo;s room for everyone at this party.</p>
+<p>A lot of people think that because I like Ruby I must do Web development using Ruby on Rails. They would be wrong. Actually, I tend to prefer <a href="http://www.sinatrarb.com">Sinatra</a>. What?!? I&rsquo;m not on the bandwagon with everyone else? How could this be?</p>
 
-<p>While I was (and still am) completely excited and happy for Arto and crew, I was also a little annoyed. My team spent about 2 years building this service. So, did Datagraph. The only difference is <em>we were a year ahead of them</em>. Looking through their site, we had pretty much all the same features they had at launch (plus one or two features they <strong>don&rsquo;t</strong> have). We had roughly the same size team as they did and our technology stacks were similar. The only difference? I worked at a large company. They didn&rsquo;t.</p>
+<h1>Microsoft Foundation Classes (MFC) vs ObjectWindows Library (OWL)</h1>
 
-<p>This post details the history of my project and the lessons I learned. While this is mostly cathartic for me, I am hoping that others get some benefit from this war story.</p>
+<p>In the early nineties, I was writing code on the Microsoft Windows platform <em>(shock!)</em>. I had previously been developing command line applications on DOS and Unix and was trying to learn Windows. My first glance at the Windows API invoked my gag reflex. They reminded me too much of X-Windows' needless complexity. Luckily, many vendors like Whitewater Group were trying to make object-oriented development tools for Windows, such as Actor. I was a budding OO enthusiast and liked C++, but there were few good tools for that language.</p>
 
-<h1>&ldquo;What Do We Work On Next?&rdquo;</h1>
+<p>Then, Microsoft C/C++ 7.0 came out with the Microsoft Foundation Classes (MFC), soon to be followed by Visual C++ 1.0. MFC looked to be the solution, a class library that encapsulated the Windows API. Unfortunately, MFC was a <em>thin wrapper</em> around the Windows API. It was so thin, in fact, that I wondered why Microsoft bothered. It barely abstracted <strong>anything</strong>. What was the point?</p>
 
-<p>This was the question that what was left of my team asked me after the train wreck that was our component of Creative Suite 3. THAT story will be the subject of a separate blog post. So here I was with only 2 engineers, John and <a href="http://twitter.com/stevebalo">Steve</a> and not much to do. We helped fix bugs in Acrobat for a couple of months, but that was just busywork.</p>
+<p>Fortunately, Borland International came out with Borland C++ and the ObjectWindows Library (OWL). OWL had much better abstractions, in my opinion, than MFC. For instance, you could write something as simple as:</p>
 
-<p>I was tired of desktop software (again) and wanted to get back into Web applications and Web services. At the time, we were in Adobe&rsquo;s Core Technology group. However, we were pretty much outcasts. That group prided itself on working on &ldquo;high science&rdquo; problems and we were just a bunch of generalists who liked to play with cutting edge technology. The CoreTech team mostly delivered C++ libraries for integration in the point products and Suites.</p>
+<pre><code>TBitmap bitmap = new TBitmap("path to bitmap file on disk")
+</code></pre>
 
-<p>Given that model, I proposed that CoreTech move into services. We should take our delivery model and apply it to services in addition to libraries. In fact, I suggested that we review our portfolio of components and see what made sense as a service. Since no one on my team was a graphics or text layout expert, we settled on metadata. We all understood what metadata was and how it could be applied. In the context of a Web service, we decided to build a multi-tenant metadata repository on top of Adobe&rsquo;s <a href="http://www.adobe.com/products/xmp">Extensible Metadata Platform (XMP)</a> libraries. As we were building atop XMP, we initially codenamed our service <strong>xmplary</strong>.</p>
+<p>whereas MFC required half a page of code (at the time) to perform one of the most basic functions anyone working with graphics at the time needed to do.</p>
 
-<h1>&ldquo;I Don&rsquo;t Want To Wear A Beeper&rdquo;</h1>
+<p>So, like most developers, I would evangelize my tool selection to all my co-workers. One of my colleagues, who would eventually become my mentor, would push back and tell me to learn MFC and more importantly, the Windows API. Our conversations would tend to go like this:</p>
 
-<p>That&rsquo;s what our VP said. He had worked at Real Networks and didn&rsquo;t want to deal with servers and on-call rotations. Never mind the fact that the company was moving in this direction and that our organization was having a harder and harder time securing funding. My proposal was that we become an internal version of <a href="http://aws.amazon.com">Amazon Web Services</a>, but providing Web services that leveraged Adobe&rsquo;s intellectual property for use by Adobe teams and third-party developers.</p>
+<pre><code>Me: OWL!
+Him: MFC!
+Me: OWL!
+Him: Noob!
+Me: Fight!
+</code></pre>
 
-<p>We basically got the go-ahead to prototype or <em>play-to-learn</em>. Primarily, it was a decision made to shut us up, keep us busy and out of the way. That was fine by us. We moved up to the third floor of the Seattle office behind a conference room. Out of sight, out of mind.</p>
+<p>Eventually, he won the argument (he was senior to me) and, of course, I was bummed. <em>OK, I was pissed</em>.</p>
 
-<p>We started simple at first. Steve created a Ruby wrapper around the XMP library. John set up our infrastructure and wrote the low-level persistence code. I designed and wrote the initial API. We learned Ruby, RSpec, Git and a host of other technologies. It was great.</p>
+<p>One of our projects was an early entrant in the streaming media race, around the same time Real Networks came out. I was debugging some code for our control protocol when other team members starting reporting playback problems on Win95. Hours of frustrated debugging had us going into the MFC source code. The MFC source code took us down the Windows API route. A few support calls to Microsoft finally uncovered the problem, a discrepancy in the Windows Multimedia APIs between Windows 95 and Windows NT.</p>
 
-<h1>&ldquo;You Need To Get A Customer&rdquo;</h1>
+<p>This experience allowed me to finally understand the point my mentor had been trying to make. At some point, your problems become complex enough that you need to know how things work <strong>at the lowest levels</strong>.</p>
 
-<p>My manager told me that he had met with our VP who seemed to be going on the warpath and looking to kill all unfunded projects (the very ones he approved). Luckily, I had kept my ear to the ground and knew there was a project that needed the very service we were building. My plan was to approach them once we were further along. However, my survival instincts were kicking in and I guessed (correctly) that if I didn&rsquo;t align with them <strong>now</strong> there would be no <em>later</em>.</p>
+<h1>Web Frameworks</h1>
 
-<p>I pitched the service to this team and the idea that we work together. The director running the project loved the idea. Unfortunately, we were brought on as virtual team members and were &ldquo;forced&rdquo; to give up our identity. Goodbye, xmplary.</p>
+<p>After that experience, I got pretty serious into Web development. I started with Active Server Pages (ASP) and VBScript since I was still a Microsoft guy at the time. Then, I switched to Java, Java Servlets and Java Server Pages (JSP) for quite some time. During this period, there were tons of frameworks popping up like Velocity, Freemarker and Struts. And, of course, when J2EE hit the scene people lost their damn minds.</p>
 
-<p>For the next few months, we continued to work on the service. We realized the limitations with using XMP as our canonical format and made the transition to Resource Description Format (RDF). XMP was based, erroneously, on the RDF/XML serialization format instead of the RDF data model. John worked to implement round-trip support for XMP to RDF. I revised the API accordingly and Steve started to build a Web application that would be the frontend for the service.</p>
+<p>I, stubbornly, stuck to servlets and JSP with JDBC for accessing the database. Why? &lsquo;Cause they <strong>worked</strong>. The fundamental nature of the Web had not changed with these new frameworks. The HTTP request/response cycle had not changed. You were still getting a request on a socket with some environment variables and a body. You were still setting some headers and returning a body and a response code. When you needed data from the database, you still were generating a SQL statement that had to hit the database.</p>
 
-<h1>Our Data Is Very Meta</h1>
+<p>Fast-forward several years and I was trying to decide between learning Python or Ruby. I had started poking around with Python, but due to all the talk about how awesome Rails was I started playing with it. Ruby was indeed a nice language, but Rails smelled like OWL to me. Nice abstractions, but hiding the bare metal too much.</p>
 
-<p>As we made the transition to RDF, we realized the value of our service was purely as infrastructure. We could only guess what kinds of applications could be built with it. Our primary focus was metadata search, particularly for rich media. Adobe&rsquo;s tools are used for the majority of content creation and generate a ton of metadata. Most of that data gets discarded in the rendering process for final assets. Search engines like Google couldn&rsquo;t index those assets without help.</p>
+<p>Not long after, people started talking about Merb. Merb tried to address the performance and modularity problems of Rails at the time. When the time came to select a framework for our Web service, we started prototyping in Rails but immediately switched to Merb. Merb was minimalist and modular (for a while). As Merb evolved, we hit a few frustrations with it as some core features kept changing. But, it eventually hit 1.0 and stabilized a little. Then, the Merb project decided to merge with Rails.</p>
 
-<p>Our goal was to encourage content creators to preserve and enhance that metadata for use downstream. By creating better metadata editing facilities within the Suite that was linked to our cloud-based metadata repository, we would be able to offer a pipeline to search engines and offer metadata that would enrich their indexes (for a price of course). So, when you search for <em>Ezekiel 25:17</em> you would get a video clip in your search results that would start playing at one of my favorite scenes from <strong>Pulp Fiction</strong>.</p>
+<p>That story is well-documented so I won&rsquo;t rehash it here. However, I was concerned. Merb originally arose out of the inability to get certain things in Rails fixed. This would no longer be the case. However, how many of the features and opinions that we appreciated in Merb would survive the Rails transition?</p>
 
-<p>We also decided to focus primarily on our API. Inspired by <a href="http://al3x.net">Alex Payne&rsquo;s</a> work at Twitter, we saw that there was more value to be created by providing a simple but powerful API. In fact, our API was a <strong>meta-API</strong>. RDF and the SPARQL query language was the foundation and we would provide support and tools for Adobe teams to build APIs that were wrappers around our RDF core. They would define their data and we would model it with RDF and create SPARQL queries that would map to their custom APIs. Over time, we would have added tools to make this a self-service operation.</p>
+<p>More importantly, how much was Merb helping us? A few of the frustrations we had were caused by &ldquo;magic&rdquo; that the Merb developers introduced to make the framework more friendly. Ironically, one of the things that the Merb team railed against (pun intended) was Rails extensive use of metaprogarmming &ldquo;magic&rdquo;.</p>
 
-<h1>If Three People Are Good, Thirty Must Be Better</h1>
+<blockquote><p>Frameworks are very good at generic tasks. They’re meant to be: they abstract away common difficulties. But as applications grow in scale, they need to get more and more domain specific to be able to deal with scale.
+As your site grows, you start to feel a bit of pain, and need to replace some bits of the framework with domain specific bits. This usually isn’t too bad: most frameworks, Django included, are modular enough that you can easily swap out the more common non-scalable bits.
+Then one day you become Twitter, and all hell breaks loose. You end up having to essentially ditch the framework and re-write everything, from scratch, in very very specific ways, just to deal with the crazy, mind-boggling amounts of traffic you’ve got.
+Frameworks work incredibly well to get you off the ground quickly… and then usually fail miserably when faced with the specific needs of big sites.
+Frameworks ought to gracefully fade away as you replace them, bit by bit, with domain-specific code. (This is what I meant, above, that inter-op is also a scaling issue.) Right now, they don’t.</p>
 
-<p>It never ceases to amaze me that software companies tend to be the most unfamiliar with Brooks' Law (both the real version and the misquoted one). A constant refrain was <em>&ldquo;We can&rsquo;t build this with just 3 guys from CoreTech&rdquo;</em>. A funny statement considering the fact that that&rsquo;s exactly what was happening. We just shook our heads and kept working.</p>
+<p><a href="http://jacobian.org/writing/snakes-on-the-web/">Jacob Kaplan-Moss, Snakes on the Web</a></p></blockquote>
 
-<p>Around month 5, we were told that we were going to get &ldquo;help&rdquo; from one of our non-US teams. They had no familiarity with metadata or our technology choices. They were all good engineers, just inexperienced. While we mostly enjoyed working with them, we lost 3 months essentially training them when we could have been finishing features.</p>
+<p>Enter Sinatra. Sinatra is a simple domain-specific language (DSL) for creating Web applications. It is a thin layer over the <a href="http://rack.rubyforge.org/">Rack</a> specification. Rack, like WSGI in Python which inspired it, is essentially the Common Gateway Interface (CGI) done right. Rack encapsulates a CGI-like approach for interfacing Web servers with applications. Sinatra models a language that is pretty much HTTP. The DSL methods map to the standard HTTP methods and match against URL patterns. The code within the Ruby block executes when there is a match of the incoming HTTP request.</p>
 
-<p>Right about the time our stakeholders realized that the non-US team might not have been helping us move the ball forward, another US team just had their project cancelled. Surprise! <strong>THEY</strong> got added to our project as well. By Christmas, we had an overall team of over 30 people and was incredibly management heavy. Our product vision was all over the place. We were going to solve every problem under the sun, including world hunger. It was a mess.</p>
+<p>That&rsquo;s it. No magic. A simple Ruby library that implements a DSL that is a thin wrapper for HTTP. You can actually read the code for Sinatra and Rack in an afternoon. Debugging is simpler as you can look at the URL for the part of your application that is misbehaving and pretty easily find the Ruby block that is executing code for that URL.</p>
 
-<p>With a bunch of new people, leaders needed to be identified. I was asked if I wanted to lead the overall engineering effort. I said <strong>no</strong>. I suspected that the project would eventually get into trouble and since I was from an external, shared technology group I would be the obvious scapegoat. In fact, given the management involved on the stakeholder team I was <em>sure</em> that would be the case. Instead, I said I would just focus on the core metadata repository and not the overall product. This was a mistake on my part and, ultimately, would contribute to the project&rsquo;s failure.</p>
+<p>Sinatra lacks some of the Model-View-Controller niceties that Rails provides. However, frameworks like <a href="http://www.padrinorb.com/">Padrino</a> puts some of this functionality back while preserving the minimalist nature of Sinatra. This is accomplished through the application of <strong>Rack middleware</strong>. Middleware are just Rack applications that can be chained together, like Unix pipes. Another model of simplicity.</p>
 
-<h1>&ldquo;What Exactly Are We Building Again?&rdquo;</h1>
+<p>A lot of these opinions hold for <strong>object-relational mappers (ORMs)</strong> as well. At the end of the day, the ORM is generating SQL. If it generates inefficient SQL (as ActiveRecord in Rails used to do) and you don&rsquo;t know SQL, how can you address your problems? Try explaining to your users and/or customers that your site is down because you were afraid to learn a little SQL.</p>
 
-<p>The next year was both exhilarating and frustrating. We cleaned up our API, added support for four different persistence engines, added Web hooks, supported OAuth, wrote tons of documentation and examples and evolved our continuous deployment infrastructure. We moved from Merb to Sinatra, Mongrel to Unicorn, ActiveMQ to beanstalk and RubyRDF to RDF.rb. On the engineering front, we were having a great time and always had working software that was ready to ship. We evangelized RDF internally, found some supporters and started to make some headway. As part of all of this, we re-asserted our identity separate from our client&rsquo;s project. We codenamed our service Triad. RDF geeks will get the joke, as will Chinese gangsters.</p>
-
-<p>Unfortunately, our internal clients were frequently changing the message about which of the many problems we were trying to solve. With over 30 people on the &ldquo;team&rdquo;, everyone had a different idea as to what we were building. It didn&rsquo;t help that <em>metadata</em> was a particularly ambiguous term and could&rsquo;ve have had vastly different meetings depending on who you were talking to at that moment in time. No one really knew what we were building. At one point, we were one of the most important projects in the company. At another point, we were a punchline.</p>
-
-<p>After multiple resets and changes in our Product Management, our clients <strong>finally</strong> came around to what they believed to be the value proposition for our service. Metadata search. The domain area we had started with almost 2 years earlier. The feature that was powering part of another Adobe service that was launching with Creative Suite 5. All this time and energy wasted to settle back on the simple principle we started with all along. Metadata search.</p>
-
-<p>A month later, our client&rsquo;s project was cancelled.</p>
-
-<h1>&ldquo;We Come To Bury Triad, Not To Praise It&rdquo;</h1>
-
-<p>The project cancellation happened to coincide with a company &ldquo;realignment&rdquo; (layoffs). Luckily, we weren&rsquo;t affected but we <strong>were</strong> reorganized. We were still in CoreTech, but not in the emerging technologies team. We were back with the high science practitioners. No one was happy, especially since given the new reorg we were a lateral move away from a group that actually <strong>was</strong> evolving into Adobe&rsquo;s internal AWS. After much lobbying, I got what I asked for&hellip;a move into this new services group. Without Steve.</p>
-
-<p>Yep, Steve (and 2 other developers I managed to snag along the way) were reassigned to other groups. John and I were transferred (that&rsquo;s the polite way to put it) to the services team. I was now a <strong>Manager of One</strong>.</p>
-
-<p>John and I spent the next few months scoping out a new service we were asked to build. I had a month-long sabbatical coming up, so I was slightly checked out. OK, I was <strong>completely</strong> checked out. After my sabbatical, I spent the next few months decommissioning Triad. It was painful, but necessary. We had no executive support to continue the project even though all we wanted to do at that point was release it on <a href="http://labs.adobe.com">Adobe Labs</a> and get feedback from third-party developers on what they wanted to see from the service. By December 2010, Triad was no more.</p>
-
-<h1>&ldquo;Dude, I&rsquo;m Getting The Band Back Together&rdquo;</h1>
-
-<p>The silver lining to this story came in October 2010, though. I pretty much had one foot out the door when a colleague told me about an internal opportunity that seemed to too good to be true. A domain area that I actually was passionate about, a good team to work with that had a shipping service that I would take over and a promotion to Senior Engineering Manager. Two weeks of interviews and the position was mine.</p>
-
-<p>Two weeks after that, John joined the team.</p>
-
-<p>A month later, Steve did too.</p>
-
-<p>I am really lucky. And happy.</p>
-
-<h1>Intrapreneurship</h1>
-
-<p>Earlier, I said it was a mistake for me not to lead the overall engineering effort for my client&rsquo;s project. Previous experience (that <strong>other</strong> blog post I have to write) had made me gun shy about being the front man for Big, Hairy, Audacious Goals. While I had proven multiple times that I could assemble good teams, deliver working software that met requirements on time and under ridiculous conditions I often ended up drawing the short straw.</p>
-
-<p>The thing is, I was suppressing my strength. I <strong>am</strong> an intrapreneur. I <em>like</em> taking on huge challenges with small teams. I don&rsquo;t care about the money or the titles. I&rsquo;m in it for the glory.</p>
-
-<p>By not leading the whole project, I could not move the ball forward. I lacked the leverage and influence to make things happen. Some organizations are driven by titles and roles and if you don&rsquo;t have them, your sphere of influence can be so small as to be non-existent. More importantly, I did not contribute in the way that would have most helped my team. I let my fears suppress my more useful attributes: tech lead, evangelist, bullshit artist.</p>
-
-<p>The break between Triad and my current project allowed me to gain some perspective. I rediscovered my passion for developing products and realized that I needed to be in the part of the organization that <em>did that</em>. Shared technology is often necessary, but poorly executed in a lot of organizations.</p>
-
-<p>My strengths lie in taking a germ of an idea, blowing it up several orders of magnitude, assembling the talent and then <strong>pulling it off</strong>. To some people, that may sound pretty arrogant. Maybe it is, maybe it isn&rsquo;t. All I know is that I am not the type to &ldquo;climb the corporate ladder&rdquo;. I am definitely <strong>not</strong> a 9-to-5 wage slave. I&rsquo;m also not an entrepreneur&hellip;yet. I&rsquo;m a change agent. A radical. A revolutionary. A professional pain in the ass.</p>
-
-<p>There <strong>is</strong> an &ldquo;I&rdquo; in team. The &ldquo;I&rdquo; is for intrapreneur.</p>
+<p>HTTP and SQL are pretty much the <strong>true</strong> foundations of Web application development. As are HTML, CSS and JavaScript. These are the most basic tools you need to have in your toolbox and you need to know them well. Once you do, you can then choose tools that eliminate some of the drudge work, but choose wisely! Your tools should help you <em>do</em> the job, not <strong>be</strong> the job.</p>
  
 </div>
 
@@ -131,6 +103,8 @@
 		    <div>
     			<p><strong>Recently</strong></p>
 				
+			      <span>21 Feb 2011</span> &raquo; <a href="/2011/02/21/framework-of-reference.html">Frame(work) of Reference</a><br />
+			    
 			      <span>17 Feb 2011</span> &raquo; <a href="/2011/02/17/there-is-an-i-in-team.html">There IS an "I" in Team</a><br />
 			    
 			      <span>26 Sep 2010</span> &raquo; <a href="/2010/09/26/the-way-i-want-to-work.html">The Way I Want To Work</a><br />
@@ -138,8 +112,6 @@
 			      <span>07 Sep 2010</span> &raquo; <a href="/2010/09/07/dont-hate-the-playa-hate-the-game.html">Don't Hate the Playa, Hate the Game</a><br />
 			    
 			      <span>30 Aug 2010</span> &raquo; <a href="/2010/08/30/urban-planning.html">Urban Planning</a><br />
-			    
-			      <span>19 Jul 2010</span> &raquo; <a href="/2010/07/19/flip-the-script.html">Flip The Script</a><br />
 			    
 				<div><p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives.html">view all archives</a></strong></p></p></div>
 				
