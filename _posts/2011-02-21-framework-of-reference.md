@@ -49,7 +49,7 @@ More importantly, how much was Merb helping us? A few of the frustrations we had
 As your site grows, you start to feel a bit of pain, and need to replace some bits of the framework with domain specific bits. This usually isn’t too bad: most frameworks, Django included, are modular enough that you can easily swap out the more common non-scalable bits.
 Then one day you become Twitter, and all hell breaks loose. You end up having to essentially ditch the framework and re-write everything, from scratch, in very very specific ways, just to deal with the crazy, mind-boggling amounts of traffic you’ve got.
 Frameworks work incredibly well to get you off the ground quickly… and then usually fail miserably when faced with the specific needs of big sites.
-Frameworks ought to gracefully fade away as you replace them, bit by bit, with domain-specific code. (This is what I meant, above, that inter-op is also a scaling issue.) Right now, they don’t.
+Frameworks ought to gracefully fade away as you replace them, bit by bit, with domain-specific code. Right now, they don’t.
 
 > [Jacob Kaplan-Moss, Snakes on the Web](http://jacobian.org/writing/snakes-on-the-web/)
 
