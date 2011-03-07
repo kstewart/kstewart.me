@@ -58,7 +58,7 @@ This incredibly simple system has **one fatal flaw**. At least, it appears to be
 Instead of driving towards a date, teams should drive towards a **scope**. This is embodied in the practices of [Lean Software Development](http://oreilly.com/catalog/9780596517311) and [Lean Startups](http://www.startuplessonslearned.com/2008/09/lean-startup.html). Essentially, you should be doing this:
 
 1. Initially, define your Minimum Viable Product (MVP) and create your backlog
-2. Incrementally build and deploy the feature for your MVP
+2. Incrementally build and deploy the features for your MVP
 3. When you've implemented your last MVP feature, **ship it!**
 4. Gather feedback and metrics from your MVP launch
 5. Add features to your backlog, refine and re-prioritize
