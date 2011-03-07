@@ -4,13 +4,153 @@
  <title>[working code]</title>
  <link href="http://working-code.com/atom.xml" rel="self"/>
  <link href="http://working-code.com/"/>
- <updated>2011-02-21T16:52:29-08:00</updated>
+ <updated>2011-03-06T17:24:30-08:00</updated>
  <id>http://working-code.com</id>
  <author>
    <name>Kevin Stewart</name>
    <email>kevin@working-code.com</email>
  </author>
  
+ 
+ <entry>
+   <title>On Managing Software Projects</title>
+   <link href="http://working-code.com/2011/03/06/on-managing-software-projects.html"/>
+   <updated>2011-03-06T00:00:00-08:00</updated>
+   <id>http://working-code.com/2011/03/06/on-managing-software-projects</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;TL;DR&lt;/strong&gt;: There is no such thing as &lt;em&gt;managing a software project.&lt;/em&gt; &lt;strong&gt;Eliminate the management functions.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Every development manager has a routine that involves a set of different tools. For instance, most mornings I log in and do a scrub for new bugs in our proprietary bug tracking tool. For each of my projects, I look at the state of our ongoing feature development in our feature tracking tools. On one project, we are using an in-house Scrum tool. On the other, we use &lt;a href=&quot;http://pivotaltracker.com&quot;&gt;Pivotal Tracker&lt;/a&gt;. Multiple times during the day, I get email notifications with new git commit messages. I, of course, can ignore these if I want because I can also get the RSS feed for this. No matter the medium, I am interested in the actual content of the commit messages. I also have iChat and my mail client open all day long, since the bulk of my job is about communication. People have questions for me or ask questions of others that I know will open Pandora&amp;rsquo;s Box. So, I need to stay on top of those. I try to keep our wiki up to date, but occasionally I fall behind. Every few weeks I do some wiki gardening to keep the content fresh. Mostly, I use the wiki as an aggregation point to collect data from all the previous systems and make it consumable to all the various interested parties. That way when I am asked for information I can give them the answer and, more importantly, a URL.&lt;/p&gt;
+
+&lt;p&gt;All of this is fine, but the thing that has historically driven me insane are the meetings. Not all meetings, of course. Just the inane, redundant and self-important status meetings that are often called by project managers. Often, those meetings are called to educate them (the project managers) about the current state of the project. The irritating aspect of this is that oftentimes it is the project managers that get involved in tool selection because &lt;strong&gt;they&lt;/strong&gt; are the ones that need to roll up status information in order to communicate to stakeholders. And yet, even when they get a seat at the table they remain unable to either understand or communicate accurately the state of the project.&lt;/p&gt;
+
+&lt;p&gt;Software project management, both tooling and process, is &lt;strong&gt;fundamentally broken&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h1&gt;One Size Does Not Fit All&lt;/h1&gt;
+
+&lt;p&gt;First, let me establish the context. Here are the types of software projects, I am &lt;strong&gt;NOT&lt;/strong&gt; talking about in this post:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;In-house, internal applications&lt;/li&gt;
+&lt;li&gt;Software developed by consultants/contractors for SMBs or enterprise customers&lt;/li&gt;
+&lt;li&gt;Game development&lt;/li&gt;
+&lt;li&gt;Embedded systems&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Instead, I will focus on commercial software projects intended for consumers and professionals. While it more directly applies to Web-based software, I contend that a lot of the points would also apply to desktop software assuming that one can let go of historical artifacts of the development process.&lt;/p&gt;
+
+&lt;p&gt;Earlier, I mentioned that on one of my projects we used an in-house Scrum tool. I was asked to be a stakeholder during the development of this project. I made it very clear that I was against the project, but would give (mostly) constructive criticism. Why was I against the project? Two reasons:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;There was an abundance of existing Scrum tools, Open Source and commercial, that either had all the features we needed or had APIs/plugins that we could use to extend and integrate with our other systems.&lt;/li&gt;
+&lt;li&gt;One tool cannot work for both &lt;em&gt;development teams&lt;/em&gt; and &lt;em&gt;stakeholders&lt;/em&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Time and time again, internal tools teams would be formed to create a tool or a system that development teams would use in order to generate metrics which project/program managers would then utilize in their reporting. Things to note:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Development teams almost never were the ones asking for these tools&lt;/li&gt;
+&lt;li&gt;Project/program managers were almost &lt;strong&gt;always&lt;/strong&gt; the ones asking for these tools&lt;/li&gt;
+&lt;li&gt;These projects were almost always unnecessarily complex, expensive and delivered late&lt;/li&gt;
+&lt;li&gt;Many development teams would either not use the tool or get their project/program manager to do the data entry (&lt;em&gt;can you say self-reported data is useless?&lt;/em&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;The constructive criticism I offered in the early stages of this tool&amp;rsquo;s development was to &lt;em&gt;stop trying to force status gathering tools down development teams' throats&lt;/em&gt;. All of these tools try to address two, distinctly different audiences. They target development teams who essentially need a prioritized task tracker, where tasks can be stories, features, issues, bugs, chores, cases, &amp;lt;&lt;em&gt;insert your terminology here&lt;/em&gt;&amp;gt;, etc. In addition, they target project managers by introducing features like work breakdown structures (WBS), estimating, standard reports, custom reports, reporting engines, etc.&lt;/p&gt;
+
+&lt;p&gt;The problem with almost all of these tools is that there is a huge disconnect between the data that the development team works with on a daily basis and the information that a project manager is trying to collect and disseminate. So, these tools end up taking the same failed approach as &lt;a href=&quot;http://en.wikipedia.org/wiki/Knowledge_Management&quot;&gt;knowledge management systems&lt;/a&gt;. They attempt to change or add to a development team&amp;rsquo;s workflow without adding any benefit &lt;em&gt;for the development team&lt;/em&gt;. Without any real incentive, these systems fall into disuse or become yet another silo of unreliable project information.&lt;/p&gt;
+
+&lt;p&gt;The concrete advice I gave was for project/program management to figure out the types of reports and graphs they wanted to create and then define the data that would support them. Since every team worked differently, it made no sense to get them to all use the same tool. However, if you told teams &amp;ldquo;&lt;em&gt;Use whatever tool you like, as long as you can export this data for us.&lt;/em&gt;&amp;rdquo; Essentially, project/program management needed a data warehouse so they could slice and dice metrics till they were blue in the face. Development teams probably generated the bulk of this data in their day to day work anyway, but it wasn&amp;rsquo;t getting captured in a form that was usable to stakeholders. Unfortunately, if teams are forced to use a tool that does nothing for them it doesn&amp;rsquo;t get used and the data is not generated or remains where it originated. If the data can be pushed from developers' existing toolchain into the data warehouse, project/program managers would be happy. If developers had to make minimal, if any, changes to their workflow and could remove mindless status meetings from their lives they would be happy. Win-win.&lt;/p&gt;
+
+&lt;p&gt;So, why does the current situation still persist? Precisely because organizations still employ traditional project managers and create hierarchical organizational structures. This breeds a culture where a significant portion of the population is given the job of collecting and spreading information. The fact that this is probably better accomplished by well-designed software is irrelevant. Command and control is still the norm, unfortunately, in many software development shops. I suspect that this is due to a combination of project managers wanting to demonstrate value to the organization as well as a general lack of trust. The Agile movement has tried to address these issues, but I think that all they have done is create an environment in which consultants can peddle shiny, new &lt;strong&gt;Agile tools&lt;/strong&gt; to the project managers.&lt;/p&gt;
+
+&lt;h1&gt;We&amp;rsquo;re Doing This Ass Backwards&lt;/h1&gt;
+
+&lt;p&gt;Let&amp;rsquo;s start with one of the core problems in software project management: determining the current state of the project. I propose The Simplest Thing That Could Possibly Work for solving this problem:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Give everyone the URL for the latest known working version of the application. This application is continuously built and deployed.&lt;/li&gt;
+&lt;li&gt;For desktop software, see previous step.
+This may sound patronizing, but you&amp;rsquo;d be surprised by how often this isn&amp;rsquo;t done. However, one could follow these steps and still not communicate status effectively. So, let&amp;rsquo;s add a step:&lt;/li&gt;
+&lt;li&gt;Conduct a regular (weekly or bi-weekly) demo meeting to show the latest features of the application.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;There is &lt;strong&gt;absolutely, positively no substitute for working software&lt;/strong&gt; when it comes to communicating status. Every other approach is more ambiguous, numeric scales, percentage complete, red-yellow-green and so forth are completely subjective. Now, there is ambiguity with working software as well. The team can say that a feature is done, but the demo can surface missing or misunderstood functionality. Still, &lt;strong&gt;that&lt;/strong&gt; communicates status more effectively than any scalar value in a status report.&lt;/p&gt;
+
+&lt;p&gt;This incredibly simple system has &lt;strong&gt;one fatal flaw&lt;/strong&gt;. At least, it appears to be fatal flaw to project/program managers. This type of status does not convey whether or not the software will be ready &lt;em&gt;on schedule&lt;/em&gt;. I contend that &lt;strong&gt;Schedule-Driven Development&lt;/strong&gt; is the fatal flaw at the heart of most software projects. Even though it has pretty much been proven that it is difficult, if not impossible, to predict with sufficient precision when a software project will be done we keep using management methods based on that principle.&lt;/p&gt;
+
+&lt;p&gt;Instead of driving towards a date, teams should drive towards a &lt;strong&gt;scope&lt;/strong&gt;. This is embodied in the practices of &lt;a href=&quot;http://oreilly.com/catalog/9780596517311&quot;&gt;Lean Software Development&lt;/a&gt; and &lt;a href=&quot;http://www.startuplessonslearned.com/2008/09/lean-startup.html&quot;&gt;Lean Startups&lt;/a&gt;. Essentially, you should be doing this:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Initially, define your Minimum Viable Product (MVP) and create your backlog&lt;/li&gt;
+&lt;li&gt;Incrementally build and deploy the feature for your MVP&lt;/li&gt;
+&lt;li&gt;When you&amp;rsquo;ve implemented your last MVP feature, &lt;strong&gt;ship it!&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Gather feedback and metrics from your MVP launch&lt;/li&gt;
+&lt;li&gt;Add features to your backlog, refine and re-prioritize&lt;/li&gt;
+&lt;li&gt;Implement your next set of features&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ship them!!&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Go back to Step 4&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Now, of course, there are scenarios where the date is more important. However, that is more the exception than the rule these days. Unless you are targeting the holiday shopping season or tax season, how much does a date on the calendar determine your business success? Schedule-driven development is mostly historical due to the logistics of shipping boxed software. In a network economy, that is less of an issue minus a few outliers. Moving to Scope-Driven Development is a huge cultural shift and not all organizations will make the transition.&lt;/p&gt;
+
+&lt;h1&gt;The Other Customer&lt;/h1&gt;
+
+&lt;p&gt;Now, that I&amp;rsquo;ve beaten up on project/program management sufficiently (&lt;em&gt;actually, I could probably keep going on that subject for a while&lt;/em&gt;) let&amp;rsquo;s look at the other customers of software project management tools and processes. The development team.&lt;/p&gt;
+
+&lt;p&gt;Aside from their editors or IDEs (or design tools&amp;hellip;designers are developers, too!), what tools are essential for the development team?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Email (still. unfortunately.)&lt;/li&gt;
+&lt;li&gt;Instant messenger&lt;/li&gt;
+&lt;li&gt;Version Control&lt;/li&gt;
+&lt;li&gt;Automated tools (e.g. continuous integration tools, monitoring systems, etc.)&lt;/li&gt;
+&lt;li&gt;Bug/Issue Tracker&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Essentially, these are all &lt;em&gt;communication tools&lt;/em&gt;. All of these tools are needed because the &lt;em&gt;what&lt;/em&gt; and the &lt;em&gt;how&lt;/em&gt; of the communication varies and requires different solutions. That said, they all have the same flaw. Each tool maintains its own &lt;strong&gt;information silo&lt;/strong&gt;. The value to individual members of the team and the team as a whole is the ability to &lt;strong&gt;aggregate&lt;/strong&gt; and &lt;strong&gt;filter&lt;/strong&gt; the information in these various silos using a &lt;em&gt;single tool&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Why a single tool? Because as the number of tools that contain relevant information increases, the more difficult it is to get teams to adopt them. There are a handful of tools that a developer will keep running all day long. Those are the ones that are critical to their workflow. Some will always have the focus, while others will be in the background but always easily accessible. An example of this would be a developer&amp;rsquo;s editor and shell (or IDE) and IM client. The editor is the focal point as that&amp;rsquo;s where the code is manipulated and the shell is used to run auxiliary processes surrounding development. The IM client is there for asking quick questions to individuals or the team asynchronously and receiving notifications from automated processes.&lt;/p&gt;
+
+&lt;p&gt;Small teams and startups have adopted group chat tools like &lt;a href=&quot;http://campfirenow.com/&quot;&gt;Campfire&lt;/a&gt; and &lt;a href=&quot;https://www.hipchat.com/&quot;&gt;HipChat&lt;/a&gt; as essential tools for their workflow. They offer:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Realtime collaboration&lt;/li&gt;
+&lt;li&gt;Persistent chat rooms&lt;/li&gt;
+&lt;li&gt;Ad hoc file sharing&lt;/li&gt;
+&lt;li&gt;Plug-ins/integration with external tools&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;These group chat tools can replace email and generic IM for most teams, while acting as the aggregation/filter mechanism by acting as a sink for version control tools, other automated tools and your issue tracker. Still, these tools are intended for generic team collaboration. There is still room for a tool that is designed around the specific needs of a software development team.&lt;/p&gt;
+
+&lt;h1&gt;Winning&lt;/h1&gt;
+
+&lt;p&gt;In my opinion, traditional software project management has been dead for a while. The tools and processes have not kept up primarily because the incentives weren&amp;rsquo;t there. Large software companies try to adopt agile practices, but their very organizational structure and culture prevent real agility from taking hold. Thus, a tool vendor builds and sells the tools that will generate revenue, not change.&lt;/p&gt;
+
+&lt;p&gt;The tool I want is designed for &lt;strong&gt;the development team&lt;/strong&gt;. It&amp;rsquo;s primary focus should be on the realtime collaboration interface. It should assume little about any individual&amp;rsquo;s or team&amp;rsquo;s workflow. This tool should have a powerful plugin/integration model so as new, powerful tools become available they can be seamlessly integrated into this new &amp;ldquo;developer&amp;rsquo;s HUD (heads-up display)&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;More importantly, the developer&amp;rsquo;s HUD can act as one of many sources for a team-wide data warehouse. The data that flows through it can be selectively funneled to the warehouse where stakeholders can retrieve their &lt;em&gt;status substitutes&lt;/em&gt; if they so desire. Ideally, they would get what they need from the regular demos but I&amp;rsquo;ll be pragmatic. Change don&amp;rsquo;t come easy.&lt;/p&gt;
+
+&lt;p&gt;The data warehouse, though, can be useful for the team as well. Being able to perform analytics on team dynamics and behavior has value. But, it should be optional and possibly even serendipitous. No one wants a prescriptive knowledge management system, but an empirical one might be useful.&lt;/p&gt;
+
+&lt;p&gt;I started this post describing my current workflow. It seems obvious to me how a more refined version of Campfire or HipChat could replace 3-5 of those tools. But, that&amp;rsquo;s just the easy part of the problem I want to solve.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;How do I change the culture at my company?&lt;/li&gt;
+&lt;li&gt;How do I change the culture at other companies?&lt;/li&gt;
+&lt;li&gt;How do I redefine or eliminate traditional software project management?&lt;/li&gt;
+&lt;li&gt;How do I help teams effectively communicate and successfully build and launch software?&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;I may have just defined my next side project. Looks like a big one.&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Frame(work) of Reference</title>
@@ -65,7 +205,7 @@ Me: Fight!
 As your site grows, you start to feel a bit of pain, and need to replace some bits of the framework with domain specific bits. This usually isn’t too bad: most frameworks, Django included, are modular enough that you can easily swap out the more common non-scalable bits.
 Then one day you become Twitter, and all hell breaks loose. You end up having to essentially ditch the framework and re-write everything, from scratch, in very very specific ways, just to deal with the crazy, mind-boggling amounts of traffic you’ve got.
 Frameworks work incredibly well to get you off the ground quickly… and then usually fail miserably when faced with the specific needs of big sites.
-Frameworks ought to gracefully fade away as you replace them, bit by bit, with domain-specific code. (This is what I meant, above, that inter-op is also a scaling issue.) Right now, they don’t.&lt;/p&gt;
+Frameworks ought to gracefully fade away as you replace them, bit by bit, with domain-specific code. Right now, they don’t.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://jacobian.org/writing/snakes-on-the-web/&quot;&gt;Jacob Kaplan-Moss, Snakes on the Web&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
 
