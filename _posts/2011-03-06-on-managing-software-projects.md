@@ -97,7 +97,7 @@ These group chat tools can replace email and generic IM for most teams, while ac
 
 In my opinion, traditional software project management has been dead for a while. The tools and processes have not kept up primarily because the incentives weren't there. Large software companies try to adopt agile practices, but their very organizational structure and culture prevent real agility from taking hold. Thus, a tool vendor builds and sells the tools that will generate revenue, not change.
 
-The tool I want is designed for **the development team**. It's primary focus should be on the realtime collaboration interface. It should assume little about any individual's or team's workflow. This tool should have a powerful plugin/integration model so as new, powerful tools become available they can be seamlessly integrated into this new "developer's HUD (heads-up display)".
+The tool I want is designed for **the development team**. It's primary focus should be on the realtime collaboration interface. It should assume little about any individual's or team's workflow. This tool should have a powerful plugin/integration model so as new, powerful tools become available they can be seamlessly integrated into this new **developer's HUD (heads-up display)**.
 
 More importantly, the developer's HUD can act as one of many sources for a team-wide data warehouse. The data that flows through it can be selectively funneled to the warehouse where stakeholders can retrieve their *status substitutes* if they so desire. Ideally, they would get what they need from the regular demos but I'll be pragmatic. Change don't come easy.
 
