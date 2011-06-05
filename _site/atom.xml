@@ -4,13 +4,251 @@
  <title>[working code]</title>
  <link href="http://working-code.com/atom.xml" rel="self"/>
  <link href="http://working-code.com/"/>
- <updated>2011-03-06T17:24:30-08:00</updated>
+ <updated>2011-06-04T22:18:22-07:00</updated>
  <id>http://working-code.com</id>
  <author>
    <name>Kevin Stewart</name>
    <email>kevin@working-code.com</email>
  </author>
  
+ 
+ <entry>
+   <title>WTF Is The Mobile Web?</title>
+   <link href="http://working-code.com/2011/06/04/wtf-is-the-mobile-web.html"/>
+   <updated>2011-06-04T00:00:00-07:00</updated>
+   <id>http://working-code.com/2011/06/04/wtf-is-the-mobile-web</id>
+   <content type="html">&lt;p&gt;&lt;strong&gt;TL;DR: Those who don&amp;rsquo;t know history are destined to repeat it.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been pretty busy on my latest project, so I&amp;rsquo;ve only been able to
+dip into Twitter here and there. Lately, I&amp;rsquo;ve seen a lot of people I
+follow &lt;em&gt;waxing idiotic&lt;/em&gt; over whether or not they should be building
+native, hybrid or Mobile Web applications. I like and respect a lot of
+these people, but the fact that this is even a discussion topic makes me
+shake my head in disgust. I pretty much expect this question from
+developers, but when I see designers and entrepreneurs wasting their
+time on this it annoys me no end. Let me spell it out for you:&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Who Cares?&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Seriously? More importantly, &lt;em&gt;do your customers care?&lt;/em&gt; THAT should be
+your criteria. However, if you really need instruction in this area I&amp;rsquo;ll
+be happy to assist you.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;If your customers care about the platform, &lt;strong&gt;build native&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;If you care about the platform, &lt;strong&gt;build native&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;If you are going for broad reach and your app fits the Web model,
+&lt;strong&gt;build for the Web&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;If you built a Web application, but you or your customer need to
+deploy it in an app store for some reason, either &lt;strong&gt;make a hybrid
+application&lt;/strong&gt; using a tool like &lt;a href=&quot;http://www.phonegap.com/&quot;&gt;PhoneGap&lt;/a&gt; or
+&lt;strong&gt;rewrite it as a native app&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;To be fair, I understand why designers and entrepreneurs can be tricked
+into thinking that there is an important decision point here. It&amp;rsquo;s
+because developers have an agenda that&amp;rsquo;s different from theirs.
+Designers and entrepreneurs are focused on the user experience while
+developers are focused on their own productivity, technical merit and
+engaging in flamewars. I&amp;rsquo;m grossly stereotyping both camps, but I think
+my points will still be valid.&lt;/p&gt;
+
+&lt;p&gt;Most designers and entrepreneurs are technical enough to be dangerous.
+However, they are usually &lt;strong&gt;not&lt;/strong&gt; technical enough to engage in a
+prolonged technical debate with a developer. And, &lt;strong&gt;that&lt;/strong&gt; tends to be
+their undoing.&lt;/p&gt;
+
+&lt;h1&gt;The Developers' Fountain of Youth&lt;/h1&gt;
+
+&lt;p&gt;Or, silver bullet or goose that laid the golden egg. Whatever you want
+to call it. &lt;strong&gt;I&lt;/strong&gt; call it the &lt;em&gt;fool&amp;rsquo;s errand&lt;/em&gt; that every developer ends
+up chasing&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The ultimate cross-platform development tool.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For those of us old enough to remember the early days of the Windows vs.
+Mac debates, the current battles between Android and iOS seem&amp;hellip;quaint.
+Let me drop some names on you:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;zApp&lt;/li&gt;
+&lt;li&gt;Wind/U&lt;/li&gt;
+&lt;li&gt;InterViews&lt;/li&gt;
+&lt;li&gt;Visual C++ 2.0 Cross-Platform Edition for Macintosh&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;These were but &lt;strong&gt;some&lt;/strong&gt; of the tools that were sold that purported to
+allow a developer to write cross-platform application code. They all
+worked to varying degrees. They were expensive and had huge learning
+curves. They either took a Least Common Denominator (LCD) or Greatest
+Common Multiple (GCM) approach.&lt;/p&gt;
+
+&lt;p&gt;They all failed.&lt;/p&gt;
+
+&lt;p&gt;In the end, these tools only served two audiences:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Bean counters: looking to save money on costly developers for every
+platform they needed to support&lt;/li&gt;
+&lt;li&gt;Developers: looking to find a way to deal with the &lt;strong&gt;incredibly hard
+work&lt;/strong&gt; of developing applications on multiple platforms&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Cross-platform development has always been and will always be incredibly
+difficult, no matter what your toolset. Platforms are inherently
+different. And people are attracted to those platforms because of those
+differences. So, when developers try to homogenize platforms by using
+cross-platform toolkits, they also alienate potential customers.&lt;/p&gt;
+
+&lt;p&gt;Macintosh users may remember the hated Microsoft Word 6.0. There was a
+high profile attempt to develop a cross-platform application using a
+shared codebase. Unfortunately, while Microsoft successfully achieved
+their goal Word 6.0 was a dog. It acted like a Windows application, just
+running on the Mac. If Mac users wanted Windows, they&amp;rsquo;d have been running
+Windows on some PC clone! Somehow, the Redmondtonians missed that little detail.&lt;/p&gt;
+
+&lt;p&gt;Developers always attempted to save time and effort via cross-platform
+development. To support both Windows and the Macintosh was more than an
+issue of hardware and superficial UI differences. The differences ran
+&lt;strong&gt;deep&lt;/strong&gt;. Different languages, toolsets, programming models, windowing
+models, networking stacks&amp;hellip; the list went on and on. And for corporate
+developers especially, they needed to get apps done quickly. For
+commercial developers, their major bugaboo was support. Cross-platform
+tools to the rescue.&lt;/p&gt;
+
+&lt;p&gt;Except they weren&amp;rsquo;t. And people wanted their apps to behave &lt;em&gt;natively&lt;/em&gt;
+on their platform of choice. It mattered. It still does.&lt;/p&gt;
+
+&lt;h1&gt;Then, Along Came The Web&lt;/h1&gt;
+
+&lt;p&gt;Tim Berners-Lee invented the World Wide Web. Marc Andreessen made NCSA
+mosaic, which begat Netscape Navigator. And, a subsequent development
+solved the cross-platform development issue once and for all.&lt;/p&gt;
+
+&lt;p&gt;If you said &lt;em&gt;Ajax&lt;/em&gt;, you&amp;rsquo;d be wrong. It was the Common Gateway
+Interface, or &lt;strong&gt;CGI&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;You see, at least for corporate developers, most applications were (and
+still are) master-detail views on top of a database. Web browsers had
+their own conventions that were simple and functional. As people started
+to spend more of their time in browsers, the containing platform became
+less of an issue for most people. Forms and CGI led to applications that
+ran in the browser, mostly consistently.&lt;/p&gt;
+
+&lt;p&gt;This was the true inflection point, though very few noticed. When Google
+released GMail and Google Maps, the point was emphasized even more. Many
+types of applications could be built on the Web platform instead of the
+native one and users could be satisfied. Some apps would still benefit
+from being native, either due to a necessarily complex user interface or
+demanding CPU and I/O requirements. However, each new generation of
+hardware would reduce the number of applications that fit those
+criteria. Yet, no matter how capable Web applications have become some
+users just &lt;strong&gt;prefer&lt;/strong&gt; native applications and how they &lt;em&gt;feel&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1&gt;Mobile Web, Mobile Context, Mobile First&amp;hellip;STFU&lt;/h1&gt;
+
+&lt;p&gt;Seriously, shut up. Your ignorance is showing. Listening to all of these
+wannabe pundits, intellectuals and &lt;em&gt;thought leaders&lt;/em&gt; is like listening
+to Sarah Palin giving a history lesson about &lt;a href=&quot;http://www.youtube.com/watch?v=oS4C7bvHv2w&quot;&gt;Paul Revere&amp;rsquo;s ride&lt;/a&gt;. It&amp;rsquo;s embarrassing.&lt;/p&gt;
+
+&lt;p&gt;The Web is an application on the Internet. Nowehere in the definition of
+the Web is any restriction on the type of device or application that can
+work with it. There is an application protocol, HyperText Transport
+Protocol (HTTP). Using that protocol is the main prerequisite for
+participating on the Web.&lt;/p&gt;
+
+&lt;p&gt;If you want to be pedantic, you can also assert that to be on the Web
+you must deal with documents and links. I&amp;rsquo;d even grant you that&amp;hellip;that
+would be the damn definition of &lt;em&gt;the Web&lt;/em&gt;. A Web of interconnected
+documents (or data). I&amp;rsquo;m not going to argue about One Web &amp;lsquo;cause that&amp;rsquo;s
+a stupid argument that took a simple idea out of context. And prefixing
+&amp;ldquo;Web&amp;rdquo; with modifiers like &lt;em&gt;One&lt;/em&gt;, &lt;em&gt;Social&lt;/em&gt;, &lt;em&gt;Semantic&lt;/em&gt; and &lt;em&gt;Mobile&lt;/em&gt; just shows that
+you don&amp;rsquo;t understand the Web. (&lt;em&gt;even TBL backed off the Semantic Web and
+went with Linked Data to describe what he was trying to achieve&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;I understand that the new generation of browsers have given you even
+more powerful implementations of JavaScript and you&amp;rsquo;re finally realizing
+how powerful that language truly is. It&amp;rsquo;s great that you can now use
+CSS3 to declaratively do things that were once the province of animation
+engines. And HTML5 is evolving into a markup language for applications
+as well as documents.&lt;/p&gt;
+
+&lt;p&gt;But, if you try to use Web technology to faithfully replicate &lt;strong&gt;native&lt;/strong&gt;
+applications you are making &lt;em&gt;exactly the same mistake the cross-platform
+toolkit vendors made&lt;/em&gt;. The Web is The Web is The Web. Period. Embrace
+it. Design for it. Develop for it. Leverage its capabilities no
+matter what the client device happens to be. But, respect it as its own
+entity.&lt;/p&gt;
+
+&lt;h1&gt;We&amp;rsquo;re All Lazy&lt;/h1&gt;
+
+&lt;p&gt;When you say &lt;em&gt;Mobile Web&lt;/em&gt;, I hear &lt;em&gt;The Web&lt;/em&gt;. When you say &lt;em&gt;the Cloud&lt;/em&gt;, I
+hear &lt;em&gt;the Internet&lt;/em&gt;. At the end of the day, most applications today are
+Internet-enabled applications. We tend to use &lt;strong&gt;the Web&lt;/strong&gt; because HTTP
+has pretty much become the de facto network protocol. Again, I&amp;rsquo;ll show
+my age by name-dropping some more:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;FTP&lt;/li&gt;
+&lt;li&gt;Gopher&lt;/li&gt;
+&lt;li&gt;z39.50&lt;/li&gt;
+&lt;li&gt;Kermit&lt;/li&gt;
+&lt;li&gt;NNTP&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Heard of any of those? Did you use any of the clients back in the day?
+If so, you know that HTTP eventually overtook them all as it provided
+the primitives that could satisfy the functions of most of those other
+protocols. But, there was a time when developers would actually
+&lt;strong&gt;create&lt;/strong&gt; application protocols over TCP/IP. However, as the Web became
+the preferred choice for users developers did the pragmatic thing and
+built their applications atop HTTP. This allowed them to focus on the
+value their application could provide instead of getting bogged down in
+infrastructure.&lt;/p&gt;
+
+&lt;p&gt;The unfortunate side effect of all of this is that developers rarely
+venture outside of the constraints of the Web. How often have developers
+opted to create a new protocol in order to power a new type of
+application. Hardly ever. They tunnel their data over port 80 and bitch
+about the results. Or, they bend over backwards trying to make HTML
+scroll as smoothly as a UIScrollView. Madness.&lt;/p&gt;
+
+&lt;h1&gt;Technology Supports User Experience, Not The Other Way Around&lt;/h1&gt;
+
+&lt;p&gt;Native vs. hybrid vs. Web is masturbation for technologists. There&amp;rsquo;s no
+polite way to say it. The problem you are trying to solve informs the
+user experience you will try and create. That user experience will lend
+itself to a particular technology solution. Stop letting developers
+compromise user experience to satisfy their technical agenda. &lt;em&gt;I&amp;rsquo;m
+telling you this as a developer!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Granted, there will always be some perfectly valid reason for engaging
+in this debate:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Availability of developers&lt;/li&gt;
+&lt;li&gt;Cost of development&lt;/li&gt;
+&lt;li&gt;Number of platforms&lt;/li&gt;
+&lt;li&gt;Inability to predict the future&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Thing is, all of the items above are outside your control. If they
+prevent you from following the guidelines I provided at the beginning of
+this essay then, I hate to say it, &lt;strong&gt;you&amp;rsquo;re screwed&lt;/strong&gt;. And, if you&amp;rsquo;re
+that screwed, the argument is meaningless. You can&amp;rsquo;t execute so now
+you&amp;rsquo;re just navel gazing.&lt;/p&gt;
+
+&lt;p&gt;However, if you are actually in the position to develop an application
+there is only one Golden Rule&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Focus on your users' needs, not your own.&lt;/strong&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>On Managing Software Projects</title>
@@ -85,7 +323,7 @@ This may sound patronizing, but you&amp;rsquo;d be surprised by how often this i
 
 &lt;ol&gt;
 &lt;li&gt;Initially, define your Minimum Viable Product (MVP) and create your backlog&lt;/li&gt;
-&lt;li&gt;Incrementally build and deploy the feature for your MVP&lt;/li&gt;
+&lt;li&gt;Incrementally build and deploy the features for your MVP&lt;/li&gt;
 &lt;li&gt;When you&amp;rsquo;ve implemented your last MVP feature, &lt;strong&gt;ship it!&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;Gather feedback and metrics from your MVP launch&lt;/li&gt;
 &lt;li&gt;Add features to your backlog, refine and re-prioritize&lt;/li&gt;
@@ -132,7 +370,7 @@ This may sound patronizing, but you&amp;rsquo;d be surprised by how often this i
 
 &lt;p&gt;In my opinion, traditional software project management has been dead for a while. The tools and processes have not kept up primarily because the incentives weren&amp;rsquo;t there. Large software companies try to adopt agile practices, but their very organizational structure and culture prevent real agility from taking hold. Thus, a tool vendor builds and sells the tools that will generate revenue, not change.&lt;/p&gt;
 
-&lt;p&gt;The tool I want is designed for &lt;strong&gt;the development team&lt;/strong&gt;. It&amp;rsquo;s primary focus should be on the realtime collaboration interface. It should assume little about any individual&amp;rsquo;s or team&amp;rsquo;s workflow. This tool should have a powerful plugin/integration model so as new, powerful tools become available they can be seamlessly integrated into this new &amp;ldquo;developer&amp;rsquo;s HUD (heads-up display)&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;The tool I want is designed for &lt;strong&gt;the development team&lt;/strong&gt;. It&amp;rsquo;s primary focus should be on the realtime collaboration interface. It should assume little about any individual&amp;rsquo;s or team&amp;rsquo;s workflow. This tool should have a powerful plugin/integration model so as new, powerful tools become available they can be seamlessly integrated into this new &lt;strong&gt;developer&amp;rsquo;s HUD (heads-up display)&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;More importantly, the developer&amp;rsquo;s HUD can act as one of many sources for a team-wide data warehouse. The data that flows through it can be selectively funneled to the warehouse where stakeholders can retrieve their &lt;em&gt;status substitutes&lt;/em&gt; if they so desire. Ideally, they would get what they need from the regular demos but I&amp;rsquo;ll be pragmatic. Change don&amp;rsquo;t come easy.&lt;/p&gt;
 

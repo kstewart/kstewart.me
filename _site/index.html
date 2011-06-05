@@ -20,141 +20,239 @@
 
 
 <div class="post">
-  <h1><a href="/2011/03/06/on-managing-software-projects.html">On Managing Software Projects</a></h1>
-<p class="byline">Posted by <strong>kstewart</strong> on 06 Mar 2011</p>
+  <h1><a href="/2011/06/04/wtf-is-the-mobile-web.html">WTF Is The Mobile Web?</a></h1>
+<p class="byline">Posted by <strong>kstewart</strong> on 04 Jun 2011</p>
 
-<p><strong>TL;DR</strong>: There is no such thing as <em>managing a software project.</em> <strong>Eliminate the management functions.</strong></p>
+<p><strong>TL;DR: Those who don&rsquo;t know history are destined to repeat it.</strong></p>
 
-<p>Every development manager has a routine that involves a set of different tools. For instance, most mornings I log in and do a scrub for new bugs in our proprietary bug tracking tool. For each of my projects, I look at the state of our ongoing feature development in our feature tracking tools. On one project, we are using an in-house Scrum tool. On the other, we use <a href="http://pivotaltracker.com">Pivotal Tracker</a>. Multiple times during the day, I get email notifications with new git commit messages. I, of course, can ignore these if I want because I can also get the RSS feed for this. No matter the medium, I am interested in the actual content of the commit messages. I also have iChat and my mail client open all day long, since the bulk of my job is about communication. People have questions for me or ask questions of others that I know will open Pandora&rsquo;s Box. So, I need to stay on top of those. I try to keep our wiki up to date, but occasionally I fall behind. Every few weeks I do some wiki gardening to keep the content fresh. Mostly, I use the wiki as an aggregation point to collect data from all the previous systems and make it consumable to all the various interested parties. That way when I am asked for information I can give them the answer and, more importantly, a URL.</p>
+<p>I&rsquo;ve been pretty busy on my latest project, so I&rsquo;ve only been able to
+dip into Twitter here and there. Lately, I&rsquo;ve seen a lot of people I
+follow <em>waxing idiotic</em> over whether or not they should be building
+native, hybrid or Mobile Web applications. I like and respect a lot of
+these people, but the fact that this is even a discussion topic makes me
+shake my head in disgust. I pretty much expect this question from
+developers, but when I see designers and entrepreneurs wasting their
+time on this it annoys me no end. Let me spell it out for you:</p>
 
-<p>All of this is fine, but the thing that has historically driven me insane are the meetings. Not all meetings, of course. Just the inane, redundant and self-important status meetings that are often called by project managers. Often, those meetings are called to educate them (the project managers) about the current state of the project. The irritating aspect of this is that oftentimes it is the project managers that get involved in tool selection because <strong>they</strong> are the ones that need to roll up status information in order to communicate to stakeholders. And yet, even when they get a seat at the table they remain unable to either understand or communicate accurately the state of the project.</p>
+<blockquote><p>Who Cares?</p></blockquote>
 
-<p>Software project management, both tooling and process, is <strong>fundamentally broken</strong>.</p>
-
-<h1>One Size Does Not Fit All</h1>
-
-<p>First, let me establish the context. Here are the types of software projects, I am <strong>NOT</strong> talking about in this post:</p>
-
-<ul>
-<li>In-house, internal applications</li>
-<li>Software developed by consultants/contractors for SMBs or enterprise customers</li>
-<li>Game development</li>
-<li>Embedded systems</li>
-</ul>
-
-
-<p>Instead, I will focus on commercial software projects intended for consumers and professionals. While it more directly applies to Web-based software, I contend that a lot of the points would also apply to desktop software assuming that one can let go of historical artifacts of the development process.</p>
-
-<p>Earlier, I mentioned that on one of my projects we used an in-house Scrum tool. I was asked to be a stakeholder during the development of this project. I made it very clear that I was against the project, but would give (mostly) constructive criticism. Why was I against the project? Two reasons:</p>
+<p>Seriously? More importantly, <em>do your customers care?</em> THAT should be
+your criteria. However, if you really need instruction in this area I&rsquo;ll
+be happy to assist you.</p>
 
 <ol>
-<li>There was an abundance of existing Scrum tools, Open Source and commercial, that either had all the features we needed or had APIs/plugins that we could use to extend and integrate with our other systems.</li>
-<li>One tool cannot work for both <em>development teams</em> and <em>stakeholders</em>.</li>
+<li>If your customers care about the platform, <strong>build native</strong>.</li>
+<li>If you care about the platform, <strong>build native</strong>.</li>
+<li>If you are going for broad reach and your app fits the Web model,
+<strong>build for the Web</strong>.</li>
+<li>If you built a Web application, but you or your customer need to
+deploy it in an app store for some reason, either <strong>make a hybrid
+application</strong> using a tool like <a href="http://www.phonegap.com/">PhoneGap</a> or
+<strong>rewrite it as a native app</strong>.</li>
 </ol>
 
 
-<p>Time and time again, internal tools teams would be formed to create a tool or a system that development teams would use in order to generate metrics which project/program managers would then utilize in their reporting. Things to note:</p>
+<p>To be fair, I understand why designers and entrepreneurs can be tricked
+into thinking that there is an important decision point here. It&rsquo;s
+because developers have an agenda that&rsquo;s different from theirs.
+Designers and entrepreneurs are focused on the user experience while
+developers are focused on their own productivity, technical merit and
+engaging in flamewars. I&rsquo;m grossly stereotyping both camps, but I think
+my points will still be valid.</p>
 
-<ol>
-<li>Development teams almost never were the ones asking for these tools</li>
-<li>Project/program managers were almost <strong>always</strong> the ones asking for these tools</li>
-<li>These projects were almost always unnecessarily complex, expensive and delivered late</li>
-<li>Many development teams would either not use the tool or get their project/program manager to do the data entry (<em>can you say self-reported data is useless?</em>)</li>
-</ol>
+<p>Most designers and entrepreneurs are technical enough to be dangerous.
+However, they are usually <strong>not</strong> technical enough to engage in a
+prolonged technical debate with a developer. And, <strong>that</strong> tends to be
+their undoing.</p>
 
+<h1>The Developers' Fountain of Youth</h1>
 
-<p>The constructive criticism I offered in the early stages of this tool&rsquo;s development was to <em>stop trying to force status gathering tools down development teams' throats</em>. All of these tools try to address two, distinctly different audiences. They target development teams who essentially need a prioritized task tracker, where tasks can be stories, features, issues, bugs, chores, cases, &lt;<em>insert your terminology here</em>&gt;, etc. In addition, they target project managers by introducing features like work breakdown structures (WBS), estimating, standard reports, custom reports, reporting engines, etc.</p>
+<p>Or, silver bullet or goose that laid the golden egg. Whatever you want
+to call it. <strong>I</strong> call it the <em>fool&rsquo;s errand</em> that every developer ends
+up chasing&hellip;</p>
 
-<p>The problem with almost all of these tools is that there is a huge disconnect between the data that the development team works with on a daily basis and the information that a project manager is trying to collect and disseminate. So, these tools end up taking the same failed approach as <a href="http://en.wikipedia.org/wiki/Knowledge_Management">knowledge management systems</a>. They attempt to change or add to a development team&rsquo;s workflow without adding any benefit <em>for the development team</em>. Without any real incentive, these systems fall into disuse or become yet another silo of unreliable project information.</p>
+<p><strong>The ultimate cross-platform development tool.</strong></p>
 
-<p>The concrete advice I gave was for project/program management to figure out the types of reports and graphs they wanted to create and then define the data that would support them. Since every team worked differently, it made no sense to get them to all use the same tool. However, if you told teams &ldquo;<em>Use whatever tool you like, as long as you can export this data for us.</em>&rdquo; Essentially, project/program management needed a data warehouse so they could slice and dice metrics till they were blue in the face. Development teams probably generated the bulk of this data in their day to day work anyway, but it wasn&rsquo;t getting captured in a form that was usable to stakeholders. Unfortunately, if teams are forced to use a tool that does nothing for them it doesn&rsquo;t get used and the data is not generated or remains where it originated. If the data can be pushed from developers' existing toolchain into the data warehouse, project/program managers would be happy. If developers had to make minimal, if any, changes to their workflow and could remove mindless status meetings from their lives they would be happy. Win-win.</p>
-
-<p>So, why does the current situation still persist? Precisely because organizations still employ traditional project managers and create hierarchical organizational structures. This breeds a culture where a significant portion of the population is given the job of collecting and spreading information. The fact that this is probably better accomplished by well-designed software is irrelevant. Command and control is still the norm, unfortunately, in many software development shops. I suspect that this is due to a combination of project managers wanting to demonstrate value to the organization as well as a general lack of trust. The Agile movement has tried to address these issues, but I think that all they have done is create an environment in which consultants can peddle shiny, new <strong>Agile tools</strong> to the project managers.</p>
-
-<h1>We&rsquo;re Doing This Ass Backwards</h1>
-
-<p>Let&rsquo;s start with one of the core problems in software project management: determining the current state of the project. I propose The Simplest Thing That Could Possibly Work for solving this problem:</p>
-
-<ol>
-<li>Give everyone the URL for the latest known working version of the application. This application is continuously built and deployed.</li>
-<li>For desktop software, see previous step.
-This may sound patronizing, but you&rsquo;d be surprised by how often this isn&rsquo;t done. However, one could follow these steps and still not communicate status effectively. So, let&rsquo;s add a step:</li>
-<li>Conduct a regular (weekly or bi-weekly) demo meeting to show the latest features of the application.</li>
-</ol>
-
-
-<p>There is <strong>absolutely, positively no substitute for working software</strong> when it comes to communicating status. Every other approach is more ambiguous, numeric scales, percentage complete, red-yellow-green and so forth are completely subjective. Now, there is ambiguity with working software as well. The team can say that a feature is done, but the demo can surface missing or misunderstood functionality. Still, <strong>that</strong> communicates status more effectively than any scalar value in a status report.</p>
-
-<p>This incredibly simple system has <strong>one fatal flaw</strong>. At least, it appears to be fatal flaw to project/program managers. This type of status does not convey whether or not the software will be ready <em>on schedule</em>. I contend that <strong>Schedule-Driven Development</strong> is the fatal flaw at the heart of most software projects. Even though it has pretty much been proven that it is difficult, if not impossible, to predict with sufficient precision when a software project will be done we keep using management methods based on that principle.</p>
-
-<p>Instead of driving towards a date, teams should drive towards a <strong>scope</strong>. This is embodied in the practices of <a href="http://oreilly.com/catalog/9780596517311">Lean Software Development</a> and <a href="http://www.startuplessonslearned.com/2008/09/lean-startup.html">Lean Startups</a>. Essentially, you should be doing this:</p>
-
-<ol>
-<li>Initially, define your Minimum Viable Product (MVP) and create your backlog</li>
-<li>Incrementally build and deploy the feature for your MVP</li>
-<li>When you&rsquo;ve implemented your last MVP feature, <strong>ship it!</strong></li>
-<li>Gather feedback and metrics from your MVP launch</li>
-<li>Add features to your backlog, refine and re-prioritize</li>
-<li>Implement your next set of features</li>
-<li><strong>Ship them!!</strong></li>
-<li>Go back to Step 4</li>
-</ol>
-
-
-<p>Now, of course, there are scenarios where the date is more important. However, that is more the exception than the rule these days. Unless you are targeting the holiday shopping season or tax season, how much does a date on the calendar determine your business success? Schedule-driven development is mostly historical due to the logistics of shipping boxed software. In a network economy, that is less of an issue minus a few outliers. Moving to Scope-Driven Development is a huge cultural shift and not all organizations will make the transition.</p>
-
-<h1>The Other Customer</h1>
-
-<p>Now, that I&rsquo;ve beaten up on project/program management sufficiently (<em>actually, I could probably keep going on that subject for a while</em>) let&rsquo;s look at the other customers of software project management tools and processes. The development team.</p>
-
-<p>Aside from their editors or IDEs (or design tools&hellip;designers are developers, too!), what tools are essential for the development team?</p>
+<p>For those of us old enough to remember the early days of the Windows vs.
+Mac debates, the current battles between Android and iOS seem&hellip;quaint.
+Let me drop some names on you:</p>
 
 <ul>
-<li>Email (still. unfortunately.)</li>
-<li>Instant messenger</li>
-<li>Version Control</li>
-<li>Automated tools (e.g. continuous integration tools, monitoring systems, etc.)</li>
-<li>Bug/Issue Tracker</li>
+<li>zApp</li>
+<li>Wind/U</li>
+<li>InterViews</li>
+<li>Visual C++ 2.0 Cross-Platform Edition for Macintosh</li>
 </ul>
 
 
-<p>Essentially, these are all <em>communication tools</em>. All of these tools are needed because the <em>what</em> and the <em>how</em> of the communication varies and requires different solutions. That said, they all have the same flaw. Each tool maintains its own <strong>information silo</strong>. The value to individual members of the team and the team as a whole is the ability to <strong>aggregate</strong> and <strong>filter</strong> the information in these various silos using a <em>single tool</em>.</p>
+<p>These were but <strong>some</strong> of the tools that were sold that purported to
+allow a developer to write cross-platform application code. They all
+worked to varying degrees. They were expensive and had huge learning
+curves. They either took a Least Common Denominator (LCD) or Greatest
+Common Multiple (GCM) approach.</p>
 
-<p>Why a single tool? Because as the number of tools that contain relevant information increases, the more difficult it is to get teams to adopt them. There are a handful of tools that a developer will keep running all day long. Those are the ones that are critical to their workflow. Some will always have the focus, while others will be in the background but always easily accessible. An example of this would be a developer&rsquo;s editor and shell (or IDE) and IM client. The editor is the focal point as that&rsquo;s where the code is manipulated and the shell is used to run auxiliary processes surrounding development. The IM client is there for asking quick questions to individuals or the team asynchronously and receiving notifications from automated processes.</p>
+<p>They all failed.</p>
 
-<p>Small teams and startups have adopted group chat tools like <a href="http://campfirenow.com/">Campfire</a> and <a href="https://www.hipchat.com/">HipChat</a> as essential tools for their workflow. They offer:</p>
+<p>In the end, these tools only served two audiences:</p>
+
+<ol>
+<li>Bean counters: looking to save money on costly developers for every
+platform they needed to support</li>
+<li>Developers: looking to find a way to deal with the <strong>incredibly hard
+work</strong> of developing applications on multiple platforms</li>
+</ol>
+
+
+<p>Cross-platform development has always been and will always be incredibly
+difficult, no matter what your toolset. Platforms are inherently
+different. And people are attracted to those platforms because of those
+differences. So, when developers try to homogenize platforms by using
+cross-platform toolkits, they also alienate potential customers.</p>
+
+<p>Macintosh users may remember the hated Microsoft Word 6.0. There was a
+high profile attempt to develop a cross-platform application using a
+shared codebase. Unfortunately, while Microsoft successfully achieved
+their goal Word 6.0 was a dog. It acted like a Windows application, just
+running on the Mac. If Mac users wanted Windows, they&rsquo;d have been running
+Windows on some PC clone! Somehow, the Redmondtonians missed that little detail.</p>
+
+<p>Developers always attempted to save time and effort via cross-platform
+development. To support both Windows and the Macintosh was more than an
+issue of hardware and superficial UI differences. The differences ran
+<strong>deep</strong>. Different languages, toolsets, programming models, windowing
+models, networking stacks&hellip; the list went on and on. And for corporate
+developers especially, they needed to get apps done quickly. For
+commercial developers, their major bugaboo was support. Cross-platform
+tools to the rescue.</p>
+
+<p>Except they weren&rsquo;t. And people wanted their apps to behave <em>natively</em>
+on their platform of choice. It mattered. It still does.</p>
+
+<h1>Then, Along Came The Web</h1>
+
+<p>Tim Berners-Lee invented the World Wide Web. Marc Andreessen made NCSA
+mosaic, which begat Netscape Navigator. And, a subsequent development
+solved the cross-platform development issue once and for all.</p>
+
+<p>If you said <em>Ajax</em>, you&rsquo;d be wrong. It was the Common Gateway
+Interface, or <strong>CGI</strong>.</p>
+
+<p>You see, at least for corporate developers, most applications were (and
+still are) master-detail views on top of a database. Web browsers had
+their own conventions that were simple and functional. As people started
+to spend more of their time in browsers, the containing platform became
+less of an issue for most people. Forms and CGI led to applications that
+ran in the browser, mostly consistently.</p>
+
+<p>This was the true inflection point, though very few noticed. When Google
+released GMail and Google Maps, the point was emphasized even more. Many
+types of applications could be built on the Web platform instead of the
+native one and users could be satisfied. Some apps would still benefit
+from being native, either due to a necessarily complex user interface or
+demanding CPU and I/O requirements. However, each new generation of
+hardware would reduce the number of applications that fit those
+criteria. Yet, no matter how capable Web applications have become some
+users just <strong>prefer</strong> native applications and how they <em>feel</em>.</p>
+
+<h1>Mobile Web, Mobile Context, Mobile First&hellip;STFU</h1>
+
+<p>Seriously, shut up. Your ignorance is showing. Listening to all of these
+wannabe pundits, intellectuals and <em>thought leaders</em> is like listening
+to Sarah Palin giving a history lesson about <a href="http://www.youtube.com/watch?v=oS4C7bvHv2w">Paul Revere&rsquo;s ride</a>. It&rsquo;s embarrassing.</p>
+
+<p>The Web is an application on the Internet. Nowehere in the definition of
+the Web is any restriction on the type of device or application that can
+work with it. There is an application protocol, HyperText Transport
+Protocol (HTTP). Using that protocol is the main prerequisite for
+participating on the Web.</p>
+
+<p>If you want to be pedantic, you can also assert that to be on the Web
+you must deal with documents and links. I&rsquo;d even grant you that&hellip;that
+would be the damn definition of <em>the Web</em>. A Web of interconnected
+documents (or data). I&rsquo;m not going to argue about One Web &lsquo;cause that&rsquo;s
+a stupid argument that took a simple idea out of context. And prefixing
+&ldquo;Web&rdquo; with modifiers like <em>One</em>, <em>Social</em>, <em>Semantic</em> and <em>Mobile</em> just shows that
+you don&rsquo;t understand the Web. (<em>even TBL backed off the Semantic Web and
+went with Linked Data to describe what he was trying to achieve</em>)</p>
+
+<p>I understand that the new generation of browsers have given you even
+more powerful implementations of JavaScript and you&rsquo;re finally realizing
+how powerful that language truly is. It&rsquo;s great that you can now use
+CSS3 to declaratively do things that were once the province of animation
+engines. And HTML5 is evolving into a markup language for applications
+as well as documents.</p>
+
+<p>But, if you try to use Web technology to faithfully replicate <strong>native</strong>
+applications you are making <em>exactly the same mistake the cross-platform
+toolkit vendors made</em>. The Web is The Web is The Web. Period. Embrace
+it. Design for it. Develop for it. Leverage its capabilities no
+matter what the client device happens to be. But, respect it as its own
+entity.</p>
+
+<h1>We&rsquo;re All Lazy</h1>
+
+<p>When you say <em>Mobile Web</em>, I hear <em>The Web</em>. When you say <em>the Cloud</em>, I
+hear <em>the Internet</em>. At the end of the day, most applications today are
+Internet-enabled applications. We tend to use <strong>the Web</strong> because HTTP
+has pretty much become the de facto network protocol. Again, I&rsquo;ll show
+my age by name-dropping some more:</p>
 
 <ul>
-<li>Realtime collaboration</li>
-<li>Persistent chat rooms</li>
-<li>Ad hoc file sharing</li>
-<li>Plug-ins/integration with external tools</li>
+<li>FTP</li>
+<li>Gopher</li>
+<li>z39.50</li>
+<li>Kermit</li>
+<li>NNTP</li>
 </ul>
 
 
-<p>These group chat tools can replace email and generic IM for most teams, while acting as the aggregation/filter mechanism by acting as a sink for version control tools, other automated tools and your issue tracker. Still, these tools are intended for generic team collaboration. There is still room for a tool that is designed around the specific needs of a software development team.</p>
+<p>Heard of any of those? Did you use any of the clients back in the day?
+If so, you know that HTTP eventually overtook them all as it provided
+the primitives that could satisfy the functions of most of those other
+protocols. But, there was a time when developers would actually
+<strong>create</strong> application protocols over TCP/IP. However, as the Web became
+the preferred choice for users developers did the pragmatic thing and
+built their applications atop HTTP. This allowed them to focus on the
+value their application could provide instead of getting bogged down in
+infrastructure.</p>
 
-<h1>Winning</h1>
+<p>The unfortunate side effect of all of this is that developers rarely
+venture outside of the constraints of the Web. How often have developers
+opted to create a new protocol in order to power a new type of
+application. Hardly ever. They tunnel their data over port 80 and bitch
+about the results. Or, they bend over backwards trying to make HTML
+scroll as smoothly as a UIScrollView. Madness.</p>
 
-<p>In my opinion, traditional software project management has been dead for a while. The tools and processes have not kept up primarily because the incentives weren&rsquo;t there. Large software companies try to adopt agile practices, but their very organizational structure and culture prevent real agility from taking hold. Thus, a tool vendor builds and sells the tools that will generate revenue, not change.</p>
+<h1>Technology Supports User Experience, Not The Other Way Around</h1>
 
-<p>The tool I want is designed for <strong>the development team</strong>. It&rsquo;s primary focus should be on the realtime collaboration interface. It should assume little about any individual&rsquo;s or team&rsquo;s workflow. This tool should have a powerful plugin/integration model so as new, powerful tools become available they can be seamlessly integrated into this new &ldquo;developer&rsquo;s HUD (heads-up display)&rdquo;.</p>
+<p>Native vs. hybrid vs. Web is masturbation for technologists. There&rsquo;s no
+polite way to say it. The problem you are trying to solve informs the
+user experience you will try and create. That user experience will lend
+itself to a particular technology solution. Stop letting developers
+compromise user experience to satisfy their technical agenda. <em>I&rsquo;m
+telling you this as a developer!</em></p>
 
-<p>More importantly, the developer&rsquo;s HUD can act as one of many sources for a team-wide data warehouse. The data that flows through it can be selectively funneled to the warehouse where stakeholders can retrieve their <em>status substitutes</em> if they so desire. Ideally, they would get what they need from the regular demos but I&rsquo;ll be pragmatic. Change don&rsquo;t come easy.</p>
-
-<p>The data warehouse, though, can be useful for the team as well. Being able to perform analytics on team dynamics and behavior has value. But, it should be optional and possibly even serendipitous. No one wants a prescriptive knowledge management system, but an empirical one might be useful.</p>
-
-<p>I started this post describing my current workflow. It seems obvious to me how a more refined version of Campfire or HipChat could replace 3-5 of those tools. But, that&rsquo;s just the easy part of the problem I want to solve.</p>
+<p>Granted, there will always be some perfectly valid reason for engaging
+in this debate:</p>
 
 <ul>
-<li>How do I change the culture at my company?</li>
-<li>How do I change the culture at other companies?</li>
-<li>How do I redefine or eliminate traditional software project management?</li>
-<li>How do I help teams effectively communicate and successfully build and launch software?</li>
+<li>Availability of developers</li>
+<li>Cost of development</li>
+<li>Number of platforms</li>
+<li>Inability to predict the future</li>
 </ul>
 
 
-<p>I may have just defined my next side project. Looks like a big one.</p>
+<p>Thing is, all of the items above are outside your control. If they
+prevent you from following the guidelines I provided at the beginning of
+this essay then, I hate to say it, <strong>you&rsquo;re screwed</strong>. And, if you&rsquo;re
+that screwed, the argument is meaningless. You can&rsquo;t execute so now
+you&rsquo;re just navel gazing.</p>
+
+<p>However, if you are actually in the position to develop an application
+there is only one Golden Rule&hellip;</p>
+
+<p><strong>Focus on your users' needs, not your own.</strong></p>
  
 </div>
 
@@ -174,6 +272,8 @@ This may sound patronizing, but you&rsquo;d be surprised by how often this isn&r
 		    <div>
     			<p><strong>Recently</strong></p>
 				
+			      <span>04 Jun 2011</span> &raquo; <a href="/2011/06/04/wtf-is-the-mobile-web.html">WTF Is The Mobile Web?</a><br />
+			    
 			      <span>06 Mar 2011</span> &raquo; <a href="/2011/03/06/on-managing-software-projects.html">On Managing Software Projects</a><br />
 			    
 			      <span>21 Feb 2011</span> &raquo; <a href="/2011/02/21/framework-of-reference.html">Frame(work) of Reference</a><br />
@@ -181,8 +281,6 @@ This may sound patronizing, but you&rsquo;d be surprised by how often this isn&r
 			      <span>17 Feb 2011</span> &raquo; <a href="/2011/02/17/there-is-an-i-in-team.html">There IS an "I" in Team</a><br />
 			    
 			      <span>26 Sep 2010</span> &raquo; <a href="/2010/09/26/the-way-i-want-to-work.html">The Way I Want To Work</a><br />
-			    
-			      <span>07 Sep 2010</span> &raquo; <a href="/2010/09/07/dont-hate-the-playa-hate-the-game.html">Don't Hate the Playa, Hate the Game</a><br />
 			    
 				<div><p><p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/archives.html">view all archives</a></strong></p></p></div>
 				
