@@ -48,7 +48,7 @@ Internal transfers fall under the open req rule as well. No req, no transfer. An
 
 Except...when your management decides to reorg. This is the only time that I have seen reqs open up, but it's still a mystery on how the distribution works. If you're lucky, you'll get a few reqs thrown your way to fill a gap that the execs think you have which is generally wrong but, you'd be stupid not to take the reqs! The other thing that happens in this process is by far the most damaging. They give you **resources**. Not reqs, but people from other teams in the organization.
 
-Why is this damaging? They were *given* to you, that's why. You had absolutely no say in whether or not you **wanted** the perosn. You probably had no opportunity to screen the person before they were put on your team. Your execs probably thought:
+Why is this damaging? They were *given* to you, that's why. You had absolutely no say in whether or not you **wanted** the person. You probably had no opportunity to screen the person before they were put on your team. Your execs probably thought:
 
 > _"Hey! We're SuperMegaCorp. We only hire the best! The very fact that they work here means they're good. Enjoy your new resources!"_
 
