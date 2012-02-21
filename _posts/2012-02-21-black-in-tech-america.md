@@ -45,7 +45,7 @@ I didn't write all of the above just to give you a mini-biography. I'm just sett
 
 Now, ask yourself why is that? Is it because I did not seek Black engineers out? Maybe. I didn't explicitly say, "Find me some brothers and sistas" to my recruiters. I didn't camp out at Howard University. Why? Because color was never an issue. Talent was. I rarely lacked a large pool of potential hires at any of the companies I worked for in the past. The problem was that there were very few (if any) black people in the pool.
 
-More importantly, I ask myself whether I should have been working harder to recruit and hire Black developers? I am pretty convinced that the answer is *No*. I know some might say that I need to "give back to the community", but which community would that be? The generic Black community? My neighborhood? The tech community? The professional community? 
+More importantly, I ask myself whether I should have been working harder to recruit and hire Black developers? I am pretty convinced that the answer is *No*. I know some might say that I need to "give back to the community", but which community would that be? The Black community? My neighborhood? The tech community? The professional community? 
 
 Not all Blacks have the same experiences, so the stereotypical expectations don't always apply. When I've attended meetings or conferences for Black professionals, they always seemed to rub me the wrong way. They seemed to mostly perpetuate the "We're being held down" mentality of people who are still looking for reparations for slavery. While I am well aware of the social injustices that we've faces as a people, they are not a part of my **identity**.
 
@@ -68,6 +68,8 @@ Ask yourself honestly, if more minority kids had these attributes growing up wou
 # Wrapping Up #
 
 At the beginning of this post, I said I wondered why so many of the NewMe founders were seeking venture capital. For what they were building, why not bootstrap? That would eliminate a lot of the VC "pattern matching". Figure out how to charge money for your product or service and work your way up to a profitable business. Isn't getting rejected by Sequoia or Kleiner Perkins another version of "being held down by The Man"?
+
+> I was watching NBC's [The Voice](http://www.nbc.com/the-voice/) while starting to write this. I think we need something like this for funding. Let's come up with a way to pitch investors "blindly". Maybe if investors can't pattern match and have to judge a startup purely on the idea and proposed business model this might increase the odds of getting more minority-led companies funded. Just a thought...
 
 I'm not chugging haterade. I wish Angela and Wayne nothing but the best with the NewMe Accelerator Program. I may even apply one day. I just grow weary of the constant Racism (or Sexism) in Tech memes. Let's change the nature of the discourse. Talk to me about improving people's notions of parenting and education. Bend my ear about self-sufficiency and independence. Tell me how I can help you start a business that will be long-lived and prosperous, as opposed to trying to win the venture capital lottery. 
 
