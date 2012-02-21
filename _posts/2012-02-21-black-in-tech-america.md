@@ -39,17 +39,17 @@ After graduation, I continued working in the research lab until the start of the
 
 # Am I My Brother's Keeper? #
 
-(If you don't instantly recognize this pop culture, not biblical, reference then stop reading this post now and go watch **New Jack City**. Seriously.)
+(*If you don't instantly recognize this pop culture, not biblical, reference then stop reading this post now and go watch **New Jack City**. Seriously.*)
 
 I didn't write all of the above just to give you a mini-biography. I'm just setting context. You see, while I have experienced more than my share of racism in my life I faced very little of it in my professional career. I've never been passed over for a promotion. In fact I was promoted, given raises and stock and moved into management (and I still code when I can). I've been a hiring manager for over 15 years now and managed engineers of many races, both men and women. In total, I've probably had about 100 people reporting to me throughout my career. Of that group, fewer than 10 were Black.
 
-Now, ask yourself why is that? Is it because I did not seek Black engineers out? Maybe. I didn't explicitly say, "Find me some brothers and sistas" to my recruiters. I didn't camp out at Howard University. Why? Because color was never an issue. Talent was. I rarely lacked a large pool of potential hires at any of the companies I worked for in the past. The problem was that there were very few (if any) black people in the pool.
+Now, ask yourself why is that? Is it because I did not seek Black engineers out? Maybe. I didn't explicitly say, *"Find me some brothers and sistas"* to my recruiters. I didn't camp out at Howard University. Why? Because color was never an issue. Talent was. I rarely lacked a large pool of potential hires at any of the companies I worked for in the past. The problem was that there were very few (if any) black people in the pool.
 
 More importantly, I ask myself whether I should have been working harder to recruit and hire Black developers? I am pretty convinced that the answer is *No*. I know some might say that I need to "give back to the community", but which community would that be? The Black community? My neighborhood? The tech community? The professional community? 
 
-Not all Blacks have the same experiences, so the stereotypical expectations don't always apply. When I've attended meetings or conferences for Black professionals, they always seemed to rub me the wrong way. They seemed to mostly perpetuate the "We're being held down" mentality of people who are still looking for reparations for slavery. While I am well aware of the social injustices that we've faces as a people, they are not a part of my **identity**.
+Not all Blacks have the same experiences, so the stereotypical expectations don't always apply. When I've attended meetings or conferences for Black professionals, they always seemed to rub me the wrong way. They seemed to mostly perpetuate the *"We're being held down"* mentality of people who are still looking for reparations for slavery. While I am well aware of the social injustices that we've faced as a people, they are not a part of my **identity**.
 
-This is just my opinion, but I think there may be a hint of truth in it. I think there is still a lingering bitterness and distrust of white people that is preventing Black people from achieving their goals. If you think you're being held down by **The Man**, then you are. It's just that "The Man" is **you**.
+This is just my opinion, but I think there may be a hint of truth in it. I think there is still a lingering bitterness and distrust of white people that is preventing Black people from achieving their goals. If you think you're being held down by **The Man**, then you are. It's just that *"The Man"* is **you**.
 
 # You Can Hate Me Now #
 
@@ -67,7 +67,7 @@ Ask yourself honestly, if more minority kids had these attributes growing up wou
 
 # Wrapping Up #
 
-At the beginning of this post, I said I wondered why so many of the NewMe founders were seeking venture capital. For what they were building, why not bootstrap? That would eliminate a lot of the VC "pattern matching". Figure out how to charge money for your product or service and work your way up to a profitable business. Isn't getting rejected by Sequoia or Kleiner Perkins another version of "being held down by The Man"?
+At the beginning of this post, I said I wondered why so many of the NewMe founders were seeking venture capital. For what they were building, why not bootstrap? That would eliminate a lot of the VC "pattern matching". Figure out how to charge money for your product or service and work your way up to a profitable business. Isn't getting rejected by Sequoia or Kleiner Perkins another version of *"being held down by The Man"*?
 
 > I was watching NBC's [The Voice](http://www.nbc.com/the-voice/) while starting to write this. I think we need something like this for funding. Let's come up with a way to pitch investors "blindly". Maybe if investors can't pattern match and have to judge a startup purely on the idea and proposed business model this might increase the odds of getting more minority-led companies funded. Just a thought...
 
