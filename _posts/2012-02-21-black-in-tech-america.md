@@ -21,7 +21,7 @@ Black in America triggered a lot of debate in the tech community. The ever-volat
 
 > "So to conclude, no one is accusing Arrington of being a racist. But it's clear he is (or at least his writing reflects him to be) incredibly insensitive to issues of race and privilege."
 
-You see, there's racism and then there's **RACISM**. A lot of what people are quick to call racism is usually attributable to ignorance and/or insensitivity. Believe me, I know the difference as I've experienced both. However, I think that people often mistake the former for the latter. True racism stems from hatred and fear and I've found that a lot of people who are labeled racists do not exhibit the qualities of true hatemongers. They are merely ignorant.
+You see, there's racism and then there's **RACISM**. A lot of what people are quick to call racism is usually attributable to ignorance and/or insensitivity. Believe me, I know the difference as I've experienced both. However, I think that people often mistake the former for the latter. True racism stems from hatred and fear and I've found that a lot of people who are labeled racists do not exhibit the qualities of hatemongers. They are merely ignorant.
 
 Let me tell you a bit about my background. First, if it isn't obvious (or, you couldn't bother to look at my avatar on Twitter or LinkedIn or half a dozen other places) I am a Black man.
 
