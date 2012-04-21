@@ -9,7 +9,7 @@ Along the way, we learned of others at Adobe using Ruby. The team that built [Ph
 
 Interest and usage of Ruby is growing at an amazing rate here at Adobe as more and more teams see what they can do with such a versatile and proven language. They see the passion from the engineers who use Ruby, what they are able to create and how quickly things get done. It's addictive. But, you knew that already!
 
-Both my team and the Typekit team have openings for API engineers. If you love Ruby, OS X and Linux and...OK, I won't ask which text editor you prefer. Use whatever you like (TextMate, Sublime Text, vim, emacs) then you should consider joining us. You can apply using one of the links below or contact me via [Twitter](http://twitter.com/kstewart) or [email me](mailto:kstewart@adobe.com).
+Both my team and the Typekit team have openings for API engineers. You should consider joining us if you love Ruby, OS X and Linux and...(OK, I won't ask which text editor you prefer. TextMate, Sublime Text, vim, emacs... we won't judge you. Much.) You can apply using one of the links below or contact me via [Twitter](http://twitter.com/kstewart) or [email me](mailto:kstewart@adobe.com).
 
 # Adobe Creative Cloud - API Engineer #
 [https://adobe.taleo.net/careersection/2/jobdetail.ftl?lang=en&job=14716](https://adobe.taleo.net/careersection/2/jobdetail.ftl?lang=en&job=14716)
