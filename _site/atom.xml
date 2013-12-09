@@ -4,36 +4,13 @@
  <title>[working code]</title>
  <link href="http://working-code.com/atom.xml" rel="self"/>
  <link href="http://working-code.com/"/>
- <updated>2013-12-08T16:23:07-08:00</updated>
+ <updated>2013-12-08T16:32:09-08:00</updated>
  <id>http://working-code.com</id>
  <author>
    <name>Kevin Stewart</name>
    <email>kevin@working-code.com</email>
  </author>
  
- 
- <entry>
-   <title>Ruby at Adobe</title>
-   <link href="http://working-code.com/2012/04/21/ruby-at-adobe.html"/>
-   <updated>2012-04-21T00:00:00-07:00</updated>
-   <id>http://working-code.com/2012/04/21/ruby-at-adobe</id>
-   <content type="html">&lt;p&gt;Several years ago, I started a skunkworks project at Adobe. With the freedom to choose, I asked the team if we could try Ruby. Since they were all burnt out on C/C++ and had absolutely &lt;strong&gt;no interest&lt;/strong&gt; in writing Java, they jumped in. The skunkworks project failed, but the code morphed into what is now the &lt;a href=&quot;https://creative.adobe.com&quot;&gt;Adobe Creative Cloud&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Along the way, we learned of others at Adobe using Ruby. The team that built &lt;a href=&quot;http://www.photoshop.com/&quot;&gt;Photoshop.com&lt;/a&gt; wrote that backend and the amazing synchronization service for &lt;a href=&quot;http://www.adoberevel.com/&quot;&gt;Adobe Revel&lt;/a&gt; in Ruby. With our acquisition of &lt;a href=&quot;http://typekit.com&quot;&gt;Typekit&lt;/a&gt;, we added another talented team of Rubyists to the Adobe family.&lt;/p&gt;
-
-&lt;p&gt;Interest and usage of Ruby is growing at an amazing rate here at Adobe as more and more teams see what they can do with such a versatile and proven language. They see the passion from the engineers who use Ruby, what they are able to create and how quickly things get done. It&amp;rsquo;s addictive. But, you knew that already!&lt;/p&gt;
-
-&lt;p&gt;Both my team and the Typekit team have openings for API engineers. You should consider joining us if you love Ruby, OS X and Linux and&amp;hellip;(OK, I won&amp;rsquo;t ask which text editor you prefer. TextMate, Sublime Text, vim, emacs&amp;hellip; we won&amp;rsquo;t judge you. Much.) You can apply using one of the links below or contact me via &lt;a href=&quot;http://twitter.com/kstewart&quot;&gt;Twitter&lt;/a&gt; or &lt;a href=&quot;mailto:kstewart@adobe.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1&gt;Adobe Creative Cloud &amp;ndash; API Engineer&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://adobe.taleo.net/careersection/2/jobdetail.ftl?lang=en&amp;amp;job=14716&quot;&gt;https://adobe.taleo.net/careersection/2/jobdetail.ftl?lang=en&amp;amp;job=14716&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1&gt;Typekit &amp;ndash; API Engineer&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://jobs.github.com/positions/a502cf96-5cdf-11e1-9b1c-335dc6cf67cd&quot;&gt;https://jobs.github.com/positions/a502cf96-5cdf-11e1-9b1c-335dc6cf67cd&lt;/a&gt;&lt;/p&gt;
-</content>
- </entry>
  
  <entry>
    <title>Black In (Tech) America</title>
