@@ -27,7 +27,7 @@ If I were the type to rewrite history via blog post, I would delete just about e
 
 # Platform Summit 2014, Revisited
 
-As I struggled with my feelings about my company, the tech industry and what I wanted to do with my life one question kept surfacing: *What can I do to help others in my situation?* It was that question that led me to pay my own money and attend Platform Summit 2014.
+As I struggled with my feelings about my company, the tech industry and what I wanted to do with my life one question kept surfacing: *What can I do to help others in my situation?* It was that question that led me to pay my own way to attend Platform Summit 2014.
 
 Van Jones talks about the founding of [#YesWeCode](http://www.yeswecode.org/) and how Prince made the thought-provoking statement, *When an African-American kid is wearing a hoodie, people think he’s a thug. But when a white kid is wearing a hoodie, people think he’s the next Mark Zuckerberg.* This is real. I have a young son and I have real fear that as he gets older he may lose his life due to some person perceiving him to be a threat.
 
