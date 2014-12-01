@@ -59,7 +59,7 @@ At that point, a senior VP who was busy checking his email at the back of the ro
 
 I smiled. Obviously, he thought I was still in Adobe's Core Technology organization and pitching a competing implementation. I looked at Lonnie as he turned around to face the confused SVP.
 
-Lonnie replied, *He **is** my team.*
+Lonnie replied, *"He **is** my team."*
 
 # Marching Towards MAX
 
