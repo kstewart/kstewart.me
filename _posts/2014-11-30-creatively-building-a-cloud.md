@@ -79,7 +79,7 @@ Still, the pressure was on. By September, as we were finalizing features and doi
 
 *"We're trying to get a signal. Please stop calling!"*
 
-The Day 1 Keynote has just ended and the team is elated. Our CTO, Kevin Lynch, has unveiled Creative Cloud to the world. We were all sitting front and center in the LA Convention Center watching this new direction for Adobe being unveiled. The demos of all the mobile apps were amazing. Our hearts stopped as our Web application was being demoed **live on production**. There was only one minor glitch which few people noticed. Kevin announced the acquisitions of [Typekit](https://typekit.com/) and [PhoneGap](http://phonegap.com/). Unbelievable! I kept checking reactions on Twitter...all positive.
+The Day 1 Keynote has just ended and the team was elated. Our CTO, Kevin Lynch, has unveiled Creative Cloud to the world. We were all sitting front and center in the LA Convention Center watching this new direction for Adobe being unveiled. The demos of all the mobile apps were amazing. Our hearts stopped as our Web application was being demoed **live on production**. There was only one minor glitch which few people noticed. Kevin announced the acquisitions of [Typekit](https://typekit.com/) and [PhoneGap](http://phonegap.com/). Unbelievable! I kept checking reactions on Twitter...all positive.
 
 Until, they tried to go to our site.
 
