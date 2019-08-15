@@ -1,0 +1,37 @@
+baseURL = "localhost:1313"
+languageCode = "en-us"
+title = "kstewart.me"
+theme = "hugo-lodi-theme"
+# googleAnalytics = "UA-XXXXXXXX-Y"
+
+[params]
+    theme_color = "#CE6700"
+    description = "notes on software development, leading teams and changing the way we work"
+    description_photo = "portfolio.jpg"
+    favicon = "favicon.png"
+    logo = "logo.png"
+    twitter = "kstewart"
+    linkedin = "https://www.linkedin.com/in/kstewart"
+    github = "kstewart"
+
+[params.nav]
+    enable = true
+
+[params.hero]
+    enable = true
+    avatar = "headshot.jpg"
+    subtitle = "Kevin Stewart"
+    hero_right = ["**Engineering executive. Builder of teams that build products.**", "My focus is on building cross-functional and inclusive product teams for startups and enterprises. I have experience building and leading fully distributed teams that have successfully delivered consumer and enterprise Software as a Service (SaaS) applications throughout my career. My goal is to enable people to do their best work while delivering successful results for the organization."]
+
+[params.process]
+    enable = false
+    title = "Writing"
+    subtitle = "Articles and Blog Posts"
+
+[params.case_studies]
+    enable = true
+    title = "Portfolio"
+    subtitle = "Presentations and Talks"
+
+[params.footer]
+    enable = true

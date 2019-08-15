@@ -1,5 +1,0 @@
-This is the git repo for my blog, "[working code]":http://working-code.com
-
-Like "mojombo":http://github.com/mojombo/mojombo.github.com/tree/master, I am going to start blogging like a hacker. I've tried "Wordpress":http://wordpress.org and "Mephisto":http://mephistoblog.com and a host of others, but I just don't want to have to use a database for my blog. Also, editing in a textarea is far inferior to writing posts in "TextMate":http://macromates.com.
-
-I am using Mojombo's "Jekyll":http://github.com/mojombo/jekyll to generate the static site. Try it out, it's awesome!
