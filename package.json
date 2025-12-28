@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "This template can be used to create new resumes with 11ty.",
   "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "start": "npm-run-all -p dev:*",
     "build": "run-s build:*",
