@@ -268,6 +268,30 @@
   ],
   "publishes": [
     {
+      "title": "Repurposing hackathons in the age of AI",
+      "date": "2026-04",
+      "link": "https://urbancloud.substack.com/p/repurposing-hackathons-in-the-age",
+      "details": "Something old, something new..."
+    },
+    {
+      "title": "The Inevitability of Atwood’s Law",
+      "date": "2026-02",
+      "link": "https://urbancloud.substack.com/p/techish",
+      "details": "JavaScript, JavaScript...everywhere"
+    },
+    {
+      "title": "PODCAST: The Myth of the Startup in a Large Company with Kevin Stewart",
+      "date": "2025-04",
+      "link": "https://podcast.itdependsbook.net/e/the-myth-of-the-startup-in-a-large-company-with-kevin-stewart/",
+      "details": "In this special episode, Kevin Goldsmith is joined by longtime friend and peer Kevin Stewart, SVP of Engineering at Splice, to challenge the familiar but flawed narrative: that a team inside a big company can `operate like a startup.` Drawing on their shared experiences at Adobe and divergent paths This wide-ranging conversation touches on culture, risk, incentives, and why resource contention, not imagination, derails corporate innovation. Whether you lead a startup or a legacy company trying to move faster, this episode offers valuable perspective."
+    },
+    {
+      "title": "PODCAST: Leading transformation, inspiring vision & empowering teams to operate autonomously",
+      "date": "2025-03",
+      "link": "https://sfelc.com/podcasts/leading-transformation-inspiring-vision-and-empowering-teams-to-operate-autonomously-kevin-stewart-splice",
+      "details": "Kevin Stewart (SVP of Engineering @ Splice) joins us to discuss organizational transformation, inspiring vision, and empowering teams! We break down how to tackle root issues in leadership and decision-making, diagnose and prioritize org problems, make a compelling case for change to stakeholders, and override learned helplessness. Kevin also shares how Splice’s concept video became a catalyst for alignment, motivation, and a shared north star for their strategy rollout. Plus, we discuss strategies for empowering teams to operate autonomously—freeing you to focus on business objectives and strategic work."
+    },
+    {
       "title": "Why the most advanced technology solution isn’t always the correct one",
       "date": "2022-08",
       "link": "https://leaddev.com/software-quality/why-most-advanced-technology-solution-isnt-always-correct-one",
@@ -278,6 +302,12 @@
       "date": "2022-06",
       "link": "https://leaddev.com/communication//how-engineering-design-and-product-form-software-trinity",
       "details": "A guide to effective cross-functional collaboration"
+    },
+    {
+      "title": "PRESENTATION: Building A Startup Engineering Team",
+      "date": "2022-04",
+      "link": "https://elc.community/home/videos/building-a-startup-engineering-team",
+      "details": "In the fast-paced world of startups, building a solid team is a key component to building a great product. However, experience has shown that there’s more to it than just “hiring the best people”. In this session, we will share practices learned from building startups and dive into pragmatic processes that you can implement in your organization."
     },
     {
       "title": "Should engineering managers write code?",
@@ -322,6 +352,12 @@
       "details": "Exploring the biases we hold about technologies"
     },
     {
+      "title": "PODCAST: Short-term Decisions That Need To Be Revisited",
+      "date": "2021-03",
+      "link": "https://maintainable.fm/episodes/kevin-stewart-short-term-decisions-that-need-to-be-revisited",
+      "details": "Robby speaks with Kevin Stewart, VP of Engineering at Harvest. They discuss fighting ideological battles, why time-to-deploy is one of the most valuable metrics to measure and improve, and why teams should be revisiting their technical stack decisions. Kevin also gives advice to developers and shares some approaches to running internship programs."
+    },
+    {
       "title": "Managing technical risk",
       "date": "2021-02",
       "link": "https://leaddev.com/technical-direction/managing-technical-risk",
@@ -346,10 +382,22 @@
       "details": "Kubernetes can lead to over-engineered solutions, but it's a context problem, not a technical one."
     },
     {
+      "title": "PODCAST: What Good Process Looks Like With Harvest's Kevin Stewart",
+      "date": "2020-04",
+      "link": "https://podcasts.apple.com/us/podcast/what-good-process-looks-like-with-harvests-kevin-stewart/id1445050691?i=1000472508062",
+      "details": ""
+    },
+    {
       "title": "How to build a startup engineering team",
       "date": "2019-11",
       "link": "https://increment.com/teams/how-to-build-a-startup-engineering-team/",
       "details": "Advice for when you’re starting from scratch and designing for growth."
+    },
+    {
+      "title": "PODCAST: Enterprising Node.js with NodeSource's VP of Engineering Kevin Stewart",
+      "date": "2015-08",
+      "link": "https://www.hanselminutes.com/489/enterprising-nodejs-with-nodesources-vp-of-engineering-kevin-stewart",
+      "details": "As open source thinking and open source software goes more mainstream, it heads to the Enterprise. What does that mean for a popular framework like node.js? What features does Node need to thrive in a larger company? Scott talks to NodeSource's Kevin Stewart to explore these questions."
     }
   ]
 }
