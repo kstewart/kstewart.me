@@ -35,11 +35,11 @@
   ],
   "worksFor": [
     {
-      "companyName": "Splice",
-      "title": "SVP Engineering",
-      "time_start": "Mar 2023",
+      "companyName": "build dsicipline",
+      "title": "Founder",
+      "time_start": "August 2026",
       "time_end": "Present",
-      "link": "https://splice.com/",
+      "link": "https://builddiscipline.com/",
       "address": {
         "streetAddress": "Demo street 1",
         "addressLocality": "Frankfurt am Main",
@@ -48,6 +48,21 @@
         "addressCountry": "Germany"
       },
       "isCurrent": true
+    },
+    {
+      "companyName": "Splice",
+      "title": "SVP Engineering",
+      "time_start": "Mar 2023",
+      "time_end": "July 2026",
+      "link": "https://splice.com/",
+      "address": {
+        "streetAddress": "Demo street 1",
+        "addressLocality": "Frankfurt am Main",
+        "addressRegion": "Hessen",
+        "postalCode": "89768",
+        "addressCountry": "Germany"
+      },
+      "isCurrent": false
     },
     {
       "companyName": "Harvest",
